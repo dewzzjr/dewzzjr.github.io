@@ -1,0 +1,260 @@
+{
+	"first_name": "Dewangga",
+	"last_name": "Prasetya Praja",
+	"last_name_s": "P. Praja",
+	"description": "I have experience on Web Development Projects as Full-stack Programmer or Back-end Programmer. I am specialize on Python, Java, and PHP Programming Language. I am interest in Data Analyst and Data Scientist especially Natural Language Processing.",
+	"address": "Jalan Gebang Kidul Gg. Puskesmas 28D, Kelurahan Gebang Putih, Kecamatan Sukolilo, Kota SBY, Jawa Timur, Indonesia",
+	"birthplace": "Semarang Regency",
+	"birthday": "1995-11-15",
+	"almamater": "Institute Technology of Sepuluh Nopember",
+	"graduated_on": "September 2018",
+	"personalities": "ESFJ-A",
+	"contacts": {
+		"email": "dewzzpro@gmail.com",
+		"facebook": "https://www.facebook.com/dewzz",
+		"github": "https://github.com/dewzzjr",
+		"instagram": "https://www.instagram.com/dewanggapraja/",
+		"linkedin": "https://www.linkedin.com/in/dewzzjr/",
+		"twitter": "http://twitter.com/dewzzjr",
+		"whatsapp": "+62 856-2747-444"
+	},
+	"experience": [
+		{
+			"name": "Freelance Junior Programmer",
+			"organization": "PT. Bina Informasi Optima Solusindo",
+			"start_date": "2018-07-01",
+			"end_date": "2019-04-01",
+			"description": [
+				"Saya bekerja sebagai pekerja lepas untuk membantu proyek develop perubahan fitur aplikasi Real Estate Management and Other Service (REMOTE) PELINDO III selama 8 bulan. Aplikasi tersebut kami kerjakan menggunakan bahasa C# dan kerangka kerja ASP.NET. Proses Development dikerjakan selama 4 bulan dan Support selama 4 bulan.",
+				"Selain itu saya juga membantu dalam pengerjaan sistem informasi berbasis web untuk PDAM Magelang selama kurang lebih satu bulan. Aplikasi dikerjakan menggunakan kerangka kerja Laravel dan bahasa pemrograman PHP."
+			]
+		}, {
+			"name": "Internship in Information Systems Operation Support Department",
+			"organization": "PT. Telkom Indonesia",
+			"start_date": "2017-06-01",
+			"end_date": "2017-08-01",
+			"description": [
+				"Saya melakukan kerja magang selama tiga bulan di PT. Telkom Indonesia Divisi Regional Jateng dan DIY yang berada pada alamat Jl. Pahlawan 10, Semarang. Saya ditempatkan pada departemen IS Operation Support. Jobdesk utama yang saya dapatkan saat bekerja di departemen ini adalah membuat dashboard untuk monitoring dan perhitungan tingkat performa kepuasan marketing pada produk Indihome.",
+				"Selain itu, proyek yang sempat saya kerjakan dengan partner antara lain membuat simulasi jaringan menggunakan Cisco kemudian mempraktikkan pada perangkat Cisco yang tersedia. Serta pembuatan aplikasi android pendukung marketing Indihome berbasis teknologi Augmented Reality menggunakan Unity 3D."
+			]
+		}, {
+			"name": "Programming Language Course Assistant in Information Systems Department",
+			"organization": "Institute of Technology Sepuluh Nopember",
+			"start_date": "2017-09-01",
+			"end_date": "2017-12-01",
+			"description": [
+				"Saya menjadi asisten matakuliah Bahasa Pemrograman selama dua periode pada semester gasal. Matakuliah ini mengajarkan tentang dasar-dasar pemrograman secara umum untuk mahasiswa tingkat satu. Jobdesk yang dilakukan sebagai asisten matakuliah adalah memberikan praktikum, serta menilai kuis dan ujian mahasiswa."
+			]
+		}, {
+			"name": "Web Based Programming Course Assistant in Information Systems Department",
+			"organization": "Institute of Technology Sepuluh Nopember",
+			"start_date": "2017-09-10",
+			"end_date": "2017-12-01",
+			"description": [
+				"Saya menjadi asisten matakuliah Pemrograman Berbasis Web selama satu periode pada semester genap. Matakuliah ini mengajarkan tentang konsep dasar web dan pengembangan aplikasi berbasis web dengan bahasa pemrograman PHP untuk mahasiswa tingkat dua. Pada matakuliah ini asisten mengajarkan sedikit tentang penggunaan kerangka kerja Codeigniter 3. Jobdesk yang dilakukan sebagai asisten matakuliah adalah menyusun modul, memberikan praktikum, serta menilai tugas kuliah."
+			]
+		}, {
+			"name": "Algorithm and Data Structure Course Assistant in Information Systems Department",
+			"organization": "Institute of Technology Sepuluh Nopember",
+			"start_date": "2017-03-01",
+			"end_date": "2018-06-01",
+			"description": [
+				"Saya menjadi asisten matakuliah Algoritma Struktur Data selama dua periode pada semester genap. Matakuliah ini mengajarkan tentang logika dalam melakukan manipulasi data pada bahasa pemrograman Java untuk mahasiswa tingkat satu. Jobdesk yang dilakukan sebagai asisten matakuliah adalah memberikan praktikum, serta menilai kuis dan ujian mahasiswa."
+			]
+		}
+	],
+	"education": [
+		{
+			"name": "Institute of Technology Sepuluh Nopember",
+			"description": "Faculty of Information Technology & Communication - Information Systems Department",
+			"start_year": 2014,
+			"end_year": 2018,
+			"notes": [
+				"Bachelor of Computer Science",
+				"Major: Data Acquisition & Informations Dissemination",
+				"Thesis: Application for Extracting and Visualizing Event Information in Realtime From Social Media Using Conditional Random Field with Flask Python Framework",
+				"GPA: 3.57"
+			]
+		}, {
+			"name": "SMA Negeri 1 Salatiga",
+			"description": "Senior High School - Science Program",
+			"start_year": 2011,
+			"end_year": 2014, 
+			"notes": [
+				"Participate in Smanssa Robotic Club and Solidaritas Kerohanian Islam"
+			]
+		}, {
+			"name": "SMP Negeri 1 Ungaran",
+			"description": "Junior High School",
+			"start_year": 2008,
+			"end_year": 2011,
+			"notes": [
+				"Participate in Student Council, Science Olympiad and Kerohanian Islam"
+			]
+		}, {
+			"name": "SD Negeri 1 Ungaran",
+			"description": "Elementary School",
+			"start_year": 2002,
+			"end_year": 2008,
+			"notes": [
+				"Participate in Boys Scouts and Mathematic Olympiad"
+			]
+		}
+	],
+	"organization": [
+		{
+			"name": "Sobat Bumi Indonesia",
+			"role": "Surabaya Region Coordinator",
+			"start_year": 2017,
+			"description": "Sobat Bumi Indonesia merupakan wadah kepedulian terhadap lingkungan dalam menunjang pembangunan bangsa Indonesia serta berperan aktif memelihara kelestarian lingkungan hidup untuk generasi sekarang dan masa depan. Saya bertugas mengoordinasikan kegiatan dan anggota untuk Sobat Bumi Regional Surabaya."
+		}, {
+			"name": "Himpunan Mahasiswa Sistem Informasi",
+			"role": "Secretary of Research and Technology Department",
+			"start_year": 2016,
+			"end_year": 2017,
+			"description": "Student Associations of Information Systems, ITS. Responsible for staff management and department administration."
+		}, {
+			"name": "Badan Eksekutif Mahasiswa ITS",
+			"role": "Staff of Social Responsibility Ministry",
+			"start_year": 2015,
+			"end_year": 2016,
+			"description": "Student Executive ITS. Responsible as Chief Executive ITS Green Campaign 2016 Environmental campaign for young generation at junior high school in Surabaya"
+ 		}, {
+ 			"name": "Himpunan Mahasiswa Sistem Informasi",
+ 			"role": "Staff of Technology Application Department",
+ 			"start_year": 2015,
+ 			"end_year": 2016,
+ 			"description": "Student Associations of Information Systems, ITS. Responsible for organizing technology related creation from Information Systems students"
+ 		}
+	],
+	"skills": { 
+		"main": [
+			{
+				"name": "HTML",
+				"icon": "html5",
+				"category": "web-design",
+				"value": 0.98
+			}, {
+				"name": "CSS",
+				"icon": "css3",
+				"category": "web-design",
+				"value": 0.80
+			}, {
+				"name": "JavaScript",
+				"icon": "javascript",
+				"category": "web-design",
+				"value": 0.95
+			}, {
+				"name": "JQuery",
+				"icon": "jquery",
+				"category": "web-design",
+				"value": 0.89
+			}, {
+				"name": "Twitter Bootstrap",
+				"icon": "bootstrap",
+				"category": "web-design",
+				"value": 0.95
+			}, {
+				"name": "Python 3",
+				"icon": "python",
+				"category": "programming",
+				"value": 1
+			}, {
+				"name": "Java",
+				"icon": "java",
+				"category": "programming",
+				"value": 0.90
+			}, {
+				"name": "PHP",
+				"icon": "php",
+				"category": "programming",
+				"value": 1
+			}, {
+				"name": "Android",
+				"icon": "android",
+				"category": "programming",
+				"value": 0.60
+			}, {
+				"name": "CodeIgniter 3",
+				"icon": "codeigniter",
+				"category": "web-framework",
+				"value": 0.85
+			}, {
+				"name": "Laravel",
+				"icon": "laravel",
+				"category": "web-framework",
+				"value": 0.90
+			}, {
+				"name": "Dot NET",
+				"icon": "dot-net",
+				"category": "programming",
+				"value": 0.90
+			}, {
+				"name": "MySQL",
+				"icon": "mysql",
+				"category": "database",
+				"value": 0.80
+			}, {
+				"name": "MongoDB",
+				"icon": "mongodb",
+				"category": "database",
+				"value": 1
+			}, {
+				"name": "Heroku",
+				"icon": "heroku",
+				"category": "platform",
+				"value": 0.80
+			},{
+				"name": "Linux",
+				"icon": "linux",
+				"category": "operating-system",
+				"value": 0.80
+			}, {
+				"name": "Git",
+				"icon": "git",
+				"category": "supporting",
+				"value": 0.85
+			}, 
+			
+			
+			{
+				"name": "Flask",
+				"category": "web-framework",
+				"value": 1
+			}, {
+				"name": "Windows",
+				"icon": "Windows",
+				"category": "operating-system",
+				"value": 0.90
+			}, {
+				"name": "NPM",
+				"icon": "npm",
+				"category": "supporting",
+				"value": 0.70
+			}
+		],
+		"other": [ 
+			{
+				"name": "Office Tools",
+				"app": ["Microsoft Excel", "Microsoft Word", "Power Point"],
+				"value": 0.95
+			}, {
+				"name": "Graphic Design",
+				"app": ["Corel Draw", "Photoshop"],
+				"value": 0.80
+			}, {
+				"name": "Enterprise Resource Planning",
+				"app": ["SAP", "Odoo"],
+				"value": 0.65
+			}, {
+				"name": "Networking Software",
+				"app": ["CISCO Packet Tracer", "Wireshark", "Accunetix", "OWASP"],
+				"value": 0.60
+			}, {
+				"name": "Forecasting and Business Process",
+				"app": ["Vensim PLE", "Bonita", "Accunetix", "Bizagi Modeler"],
+				"value": 0.50
+			}
+		]
+	}
+}
