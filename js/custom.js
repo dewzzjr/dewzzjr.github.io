@@ -58,6 +58,7 @@ var Main = function () {
 							var rendered = Mustache.render(template, data.skills);
 							$('#skills_'+name1+'_template').html(rendered);
 							$('#skills_'+name1+'_template').show();
+							$('[data-toggle="popover"]').popover();
 						}
 					}
 				}
@@ -74,16 +75,6 @@ var Main = function () {
 				
 			}
 		});
-
-		// var view = {
-		// 	title: "Joe",
-		// 	calc: function () {
-		// 	  return 2 + 4;
-		// 	}
-		// };
-		  
-		// var output = Mustache.render("{{title}} spends {{calc}}", view);
-		// console.log(output);
 	}
 	
 	var formatDate = function(date_s, type = "default") {
@@ -141,8 +132,5 @@ var Main = function () {
 
 jQuery(document).ready(function () {
 	Main.init();
-	$(function () {
-		$('[data-toggle="popover"]').popover()
-	})
 });
 
