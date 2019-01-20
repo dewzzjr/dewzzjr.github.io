@@ -1,12 +1,38 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Saira Extra Condensed', serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #343a40;
+}
+
+h1 {
+  font-size: 6rem;
+  line-height: 5.5rem;
+}
+
+h2 {
+  font-size: 3.5rem;
+}
+
+.img-profile {
+  max-width: 10rem;
+  max-height: 10rem;
+  border: 0.5rem solid rgba(255, 255, 255, 0.2);
+}
+
 /* Styles go here */
 
 .page-header, .page-header-space {
-  height: 100px;
+  height: 12rem;
 }
 
 .page-footer, .page-footer-space {
-  height: 50px;
-
+  height: 8rem;
 }
 
 .page-footer {
@@ -37,7 +63,7 @@
    thead {display: table-header-group;} 
    tfoot {display: table-footer-group;}
    
-   button {display: none;}
+   .print {display: none !important;}
    
    body {margin: 0;}
 }
