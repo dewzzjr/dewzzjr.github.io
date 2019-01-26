@@ -1,4 +1,8 @@
+
 var Main = function () {
+	var isPrint = function () {
+		return window.location.href.indexOf("print") > -1
+	}
 	var getJson = function () {
 		$.ajax({
 			type: "GET",
@@ -6,6 +10,10 @@ var Main = function () {
 			contentType: "application/json",
 			dataType: "json",
 			success: function (data) {
+				if (isPrint()) {
+					data.experience = data.experience.slice(0, 2);
+					data.education = data.education.slice(0, 2);
+				}
 				var exp = data.experience;
 				var new_exp = [];
 				exp.forEach(function(e){
@@ -20,6 +28,7 @@ var Main = function () {
 				var new_percent = [];
 				percent.forEach(function(e){
 					e.percent = (e.value * 100) + '%';
+					e.type = (e.value > 0.8 ? "Advance" : e.value > 0.6 ? "Intermediate" : "Beginner");
 					new_percent.push(e);
 				});
 				data.skills.main = new_percent;
@@ -34,6 +43,9 @@ var Main = function () {
 				data.skills.other = new_other;
 				
 				for(name in data) {
+					if (!isPrint() && name == 'contacts_alt') {
+						continue;
+					}
 					if (typeof(data[name]) != "object") {
 						if(name == "birthday") {
 							var date = data[name];
@@ -61,18 +73,30 @@ var Main = function () {
 							$('[data-toggle="popover"]').popover();
 						}
 					}
-				}
-				for(name in data.contacts) {
-					if (name == "email") {
-						$('.email').html(data.contacts[name]);
-						$('.email').attr("href", "mailto:" + data.contacts[name]);
-					} else if (name == "whatsapp") {
-						$('.whatsapp').html(data.contacts[name]);
-					} else {
-						$('.' + name).attr("href", data.contacts[name]);
+					
+					if (name == 'skills') {
+						for(name1 in data.skills) {
+							var template = $('#skills_'+name1+'_template').html();
+							Mustache.parse(template);   // optional, speeds up future uses
+							var rendered = Mustache.render(template, data.skills);
+							$('#skills_'+name1+'_template').html(rendered);
+							$('#skills_'+name1+'_template').show();
+							$('[data-toggle="popover"]').popover();
+						}
 					}
 				}
-				
+				if (!isPrint()) {
+					for(name in data.contacts) {
+						if (name == "email") {
+							$('.email').html(data.contacts[name]);
+							$('.email').attr("href", "mailto:" + data.contacts[name]);
+						} else if (name == "whatsapp") {
+							$('.whatsapp').html(data.contacts[name]);
+						} else {
+							$('.' + name).attr("href", data.contacts[name]);
+						}
+					}
+				}
 			}
 		});
 	}

@@ -22,8 +22,11 @@
       <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="Profile Picture">
     </a>
     <div>
-      <h1>Dewangga Prasetya Praja</h1>
-      <small>Jl. bla bla</small>
+      <h1>
+        <span class="text-primary first_name"></span>
+        <span class="last_name"></span>
+      </h1>
+      <small class="address"></small>
     </div>
     <div>
       <button type="button" onClick="window.print()" class="btn btn-info print float-right">
@@ -33,7 +36,21 @@
   </div>
 
   <div class="page-footer">
-    I'm The Footer
+    <div id="contacts_alt_template" type="x-tmpl-mustache" style="display: none;">
+      <div class="row m-0 flex-wrap justify-content-between">
+      {{#contacts_alt}}
+      <div class="col text-center">
+        <a href="" class="{{name}} pl-2 text-nowrap" target="_blank">
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-{{name}} fa-stack-1x fa-inverse white"></i>
+          </span>
+          <span class="text-muted text-nowrap my-auto {{name}}">{{address}}</span>
+        </a>
+      </div>
+      {{/contacts_alt}}
+      </div>
+    </div>
   </div>
 
   <table>
@@ -51,25 +68,119 @@
       <tr>
         <td>
           <!--*** CONTENT GOES HERE ***-->
-          <div class="page">PAGE 1</div>
-          <div class="page">PAGE 2</div>
-          <div class="page" style="line-height: 3;">
-            PAGE 3 - Long Content
-            <br/> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tincidunt metus eu consectetur rutrum. Praesent tempor facilisis dapibus. Aliquam cursus diam ac vehicula pulvinar. Integer lacinia non odio et condimentum. Aenean faucibus cursus
-            mi, sed interdum turpis sagittis a. Quisque quis pellentesque mi. Ut erat eros, posuere sed scelerisque ut, pharetra vitae tellus. Suspendisse ligula sapien, laoreet ac hendrerit sit amet, viverra vel mi. Pellentesque faucibus nisl et dolor
-            pharetra, vel mattis massa venenatis. Integer congue condimentum nisi, sed tincidunt velit tincidunt non. Nulla sagittis sed lorem pretium aliquam. Praesent consectetur volutpat nibh, quis pulvinar est volutpat id. Cras maximus odio posuere
-            suscipit venenatis. Donec rhoncus scelerisque metus, in tempus erat rhoncus sed. Morbi massa sapien, porttitor id urna vel, volutpat blandit velit. Cras sit amet sem eros. Quisque commodo facilisis tristique. Proin pellentesque sodales rutrum.
-            Vestibulum purus neque, congue vel dapibus in, venenatis ut felis. Donec et ligula enim. Sed sapien sapien, tincidunt vitae lectus quis, ultricies rhoncus mi. Nunc dapibus nulla tempus nunc interdum, sed facilisis ex pellentesque. Nunc vel
-            lorem leo. Cras pharetra sodales metus. Cras lacus ex, consequat at consequat vel, laoreet ac dui. Curabitur aliquam, sapien quis congue feugiat, nisi nisl feugiat diam, sed vehicula velit nulla ac nisl. Aliquam quis nisi euismod massa blandit
-            pharetra nec eget nunc. Etiam eros ante, auctor sit amet quam vel, fringilla faucibus leo. Morbi a pulvinar nulla. Praesent sed vulputate nisl. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean commodo
-            mollis iaculis. Maecenas consectetur enim vitae mollis venenatis. Ut scelerisque pretium orci id laoreet. In sit amet pharetra diam. Vestibulum in molestie lorem. Nunc gravida, eros non consequat fermentum, ex orci vestibulum orci, non accumsan
-            sem velit ac lectus. Vivamus malesuada lacus nec velit dignissim, ac fermentum nulla pretium. Aenean mi nisi, convallis sed tempor in, porttitor eu libero. Praesent et molestie ante. Duis suscipit vitae purus sit amet aliquam. Vestibulum lectus
-            justo, lobortis a purus a, dapibus efficitur metus. Suspendisse potenti. Duis dictum ex lorem. Suspendisse nec ligula consectetur magna hendrerit ullamcorper et eget mauris. Etiam vestibulum sodales diam, eget venenatis nunc luctus quis. Ut
-            fermentum placerat neque nec elementum. Praesent orci erat, rhoncus vitae est eu, dictum molestie metus. Cras et fermentum elit. Aenean eget augue lacinia, varius ante in, ullamcorper dolor. Cras viverra purus non egestas consectetur. Nulla
-            nec dolor ac lectus convallis aliquet sed a metus. Suspendisse eu imperdiet nunc, id pulvinar risus. Maecenas varius sagittis est, vel fermentum risus accumsan at. Vestibulum sollicitudin dui pharetra sapien volutpat, id convallis mi vestibulum.
-            Phasellus commodo sit amet lorem quis imperdiet. Proin nec diam sed urna euismod ultricies at sed urna. Quisque ornare, nulla et vehicula ultrices, massa purus vehicula urna, ac sodales lacus leo vitae mi. Sed congue placerat justo at placerat.
-            Aenean suscipit fringilla vehicula. Quisque iaculis orci vitae arcu commodo maximus. Maecenas nec nunc rutrum, cursus elit quis, porttitor sapien. Sed ac hendrerit ipsum, lacinia fringilla velit. Donec ultricies feugiat dictum.
+          <div class="page container">
+            <p class="text-justify mb-3">I was student of <span class="almamater"></span>. Graduate on <span class="graduated_on"></span>. Born at <span class="birthplace"></span>, <strong class="birthday"></strong>. I am <span id="age"></span> years old. <span class="description"></span></p>
+            
+            <div class="row">
+              <section class="resume-section col p-2 vr" id="experience">
+                <div class="my-auto">
+                  <h2 class="mb-3">Experience</h2>
+
+                  <div id="experience_template" type="x-tmpl-mustache" style="display: none;">
+                    {{#experience}}
+                    <div  class="resume-item d-flex flex-column flex-md-row mb-3"  >
+                      <div class="resume-content mr-auto">
+                        <h3 class="mb-0">{{name}}</h3>
+                        <div class="subheading mb-3">{{organization}}</div>
+                        {{#description}}
+                        <p class="text-justify mb-1">{{.}}</p>
+                        {{/description}}
+                      </div>
+                      <div class="resume-date text-right mb-2">
+                        <span class="text-primary">{{f_start_date}} - {{f_end_date}}</span>
+                      </div>
+                    </div>
+                    {{/experience}}
+                  </div>
+                </div>
+              </section>
+
+              <section class="resume-section col-sm p-2" id="education">
+                <div class="my-auto">
+                  <h2 class="mb-3">Education</h2>
+                  <div id="education_template" type="x-tmpl-mustache" style="display: none;">
+                      {{#education}}
+                      <div class="resume-item d-flex flex-column flex-md-row mb-3">
+                        <div class="resume-content mr-auto">
+                          <h3 class="mb-0">{{name}}</h3>
+                          <div class="subheading mb-3">{{description}}</div>
+                          {{#notes}}
+                          <p class="text-justify mb-1">{{.}}</p>
+                          {{/notes}}
+                        </div>
+                        <div class="resume-date text-right mb-3">
+                          <span class="text-primary">{{start_year}} - {{end_year}}</span>
+                        </div>
+                      </div>
+                      {{/education}}
+                  </div>
+                </div>
+              </section>
+            </div>
           </div>
+
+          <div class="page">
+            <section class="resume-section p-2 p-lg-5 d-flex flex-column" id="skills">
+              <div class="my-auto">
+                <h2 class="mb-3">Skills</h2>
+
+                <div class="subheading mb-3">Programming Languages &amp; Tools</div>
+                <ul id="skills_main_template" class="list-inline list-icons flex-wrap flex-column" type="x-tmpl-mustache" style="display: none;">
+                  {{#main}}
+                  <li class="list-inline-item pl-3" data-toggle="popover" data-trigger="hover" data-container="body" data-placement="top" data-content="{{name}}: {{percent}}">
+                    <i class="devicon-{{icon}}-plain colored"></i> {{name}}: {{type}} Level
+                  </li>
+                  {{/main}}
+                </ul>
+
+                <div class="subheading mb-3">Other Supporting Skill</div>
+                <ul id="skills_other_template" class="fa-ul mb-0" type="x-tmpl-mustache" style="display: none;">
+                  {{#other}}
+                  <li>
+                    <i class="fa-li fa fa-check"  data-toggle="popover" data-trigger="hover" data-container="body" data-placement="top" data-content="{{name}}: {{percent}}"></i>
+                    {{type}} {{name}}: {{#app}}{{.}}, {{/app}}
+                  </li>
+                  {{/other}}
+                </ul>
+              </div>
+            </section>
+
+            <section class="resume-section p-2 p-lg-5 d-flex flex-column" id="personal-traits">
+              <div class="my-auto">
+                <h2 class="mb-0">Personal Traits</h2>
+                <h3 class="personalities mb-3"></h3>
+                <p class="text-justify" id="personal_traits_template" type="x-tmpl-mustache" style="display: none;">
+                  {{#personal_traits}}
+                  <b>{{name}}</b> {{description}}.
+                  {{/personal_traits}}
+                </p>
+              </div>
+            </section>
+
+            <section class="resume-section p-2 p-lg-5 d-flex flex-column" id="organization">
+              <div class="my-auto">
+                <h2 class="mb-3">Organization &amp; Voluntary</h2>
+              
+                <div id="organization_template" class="row" type="x-tmpl-mustache" style="display: none;">
+                  {{#organization}}
+                  <div class="resume-item col-6 d-flex flex-column flex-md-row mb-3">
+                    <div class="resume-content mr-auto">
+                      <h3 class="mb-0">{{role}}</h3>
+                      <div class="subheading mb-3">{{name}}</div>
+                      <p class="text-justify mb-1">{{description}}</p>
+                    </div>
+                    <div class="resume-date text-right mb-3">
+                      <span class="text-primary">{{start_year}} - {{end_year}}</span>
+                    </div>
+                  </div>
+                  {{/organization}}
+                </div>
+              
+              </div>
+            </section>
+            
+          </div>
+
         </td>
       </tr>
     </tbody>
@@ -85,6 +196,13 @@
 
   </table>
 
-</body>
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.bundle.min.js"></script>
+  <script src="js/custom.js"></script>
 
+  <!-- Plugin JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>
+</body>
 </html>

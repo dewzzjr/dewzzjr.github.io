@@ -18,6 +18,15 @@
 		"twitter": "http://twitter.com/dewzzjr",
 		"whatsapp": "+62 856-2747-444"
 	},
+	"contacts_alt": [
+		{"name":"envelope","address":"dewzzpro@gmail.com"},
+		{"name":"whatsapp","address": "+62 856-2747-444"},
+		{"name":"instagram","address": "@dewanggapraja"},
+		{"name":"twitter","address": "@dewzzjr"},
+		{"name":"facebook","address": "https://www.facebook.com/dewzz"},
+		{"name":"github","address": "https://github.com/dewzzjr"},
+		{"name":"linkedin","address": "https://www.linkedin.com/in/dewzzjr/"}
+	],
 	"experience": [
 		{
 			"name": "Freelance Junior Programmer",
@@ -128,13 +137,21 @@
  			"description": "Student Associations of Information Systems, ITS. Responsible for organizing technology related creation from Information Systems students"
  		}
 	],
+	"personal_traits": [
+		{"name":"Loyal", "description": "because I always value my society where I belong to"},
+		{"name":"Intense sense of duty","description":" because I always try my best to be finish my duty where I trusted into"}, 
+		{"name":"Hard working", "description": "because I can be dedicated to my work and avoid finishing my work close to the deadline"}, 
+		{"name":"Open minded","description":"because I always open to latest ideas and other person opinions supported by logic"}, 
+		{"name":"Keep calm when Conflict", "description":"because I used to be not get distracted with unfamiliar problems that the first time I had facing"}, 
+		{"name":"Social Sensitive","description":" because I used to take part social responsibility events and some organizations"}
+	],
 	"skills": { 
 		"main": [
 			{
 				"name": "HTML",
 				"icon": "html5",
 				"category": "web-design",
-				"value": 0.98
+				"value": 1
 			}, {
 				"name": "CSS",
 				"icon": "css3",
@@ -144,17 +161,17 @@
 				"name": "JavaScript",
 				"icon": "javascript",
 				"category": "web-design",
-				"value": 0.95
+				"value": 0.90
 			}, {
 				"name": "JQuery",
 				"icon": "jquery",
 				"category": "web-design",
-				"value": 0.89
+				"value": 0.90
 			}, {
 				"name": "Twitter Bootstrap",
 				"icon": "bootstrap",
 				"category": "web-design",
-				"value": 0.95
+				"value": 0.80
 			}, {
 				"name": "Python 3",
 				"icon": "python",
@@ -189,10 +206,15 @@
 				"name": "Dot NET",
 				"icon": "dot-net",
 				"category": "programming",
-				"value": 0.90
+				"value": 0.80
 			}, {
 				"name": "MySQL",
 				"icon": "mysql",
+				"category": "database",
+				"value": 0.80
+			}, {
+				"name": "Oracle",
+				"icon": "oracle",
 				"category": "database",
 				"value": 0.80
 			}, {
@@ -204,17 +226,17 @@
 				"name": "Heroku",
 				"icon": "heroku",
 				"category": "platform",
-				"value": 0.80
+				"value": 0.60
 			},{
 				"name": "Linux",
 				"icon": "linux",
 				"category": "operating-system",
-				"value": 0.80
+				"value": 0.60
 			}, {
 				"name": "Git",
 				"icon": "git",
 				"category": "supporting",
-				"value": 0.85
+				"value": 0.90
 			}, 
 			
 			
@@ -227,18 +249,13 @@
 				"icon": "Windows",
 				"category": "operating-system",
 				"value": 0.90
-			}, {
-				"name": "NPM",
-				"icon": "npm",
-				"category": "supporting",
-				"value": 0.70
 			}
 		],
 		"other": [ 
 			{
 				"name": "Office Tools",
 				"app": ["Microsoft Excel", "Microsoft Word", "Power Point"],
-				"value": 0.95
+				"value": 0.90
 			}, {
 				"name": "Graphic Design",
 				"app": ["Corel Draw", "Photoshop"],
@@ -246,11 +263,11 @@
 			}, {
 				"name": "Enterprise Resource Planning",
 				"app": ["SAP", "Odoo"],
-				"value": 0.65
+				"value": 0.60
 			}, {
 				"name": "Networking Software",
 				"app": ["CISCO Packet Tracer", "Wireshark", "Accunetix", "OWASP"],
-				"value": 0.60
+				"value": 0.50
 			}, {
 				"name": "Forecasting and Business Process",
 				"app": ["Vensim PLE", "Bonita", "Accunetix", "Bizagi Modeler"],

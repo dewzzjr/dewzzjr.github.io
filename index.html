@@ -70,7 +70,7 @@
             <span class="last_name"></span>
           </h1>
           <div class="subheading mb-5">
-              <span class="address"></span>
+            <span class="address"></span>
             <a href="" target="_blank" class="email"></a>
           </div>
           <p>I was student of <span class="almamater"></span>. Graduate on <span class="graduated_on"></span>. Born at <span class="birthplace"></span>, <strong class="birthday"></strong>. I am <span id="age"></span> years old.</p>
@@ -139,7 +139,7 @@
             <div  class="resume-item d-flex flex-column flex-md-row mb-5"  >
               <div class="resume-content mr-auto">
                 <h3 class="mb-0">{{name}}</h3>
-                <div class="subheading mb-3">{{organization}}}</div>
+                <div class="subheading mb-3">{{organization}}</div>
                 {{#description}}
                 <p>{{.}}</p>
                 {{/description}}
@@ -206,8 +206,12 @@
 
       <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="personal-traits">
         <div class="my-auto">
-          <h2 class="mb-5">Personal Traits</h2>
-          <p><b>Loyal</b> because I always value my society where I belong to. <b>Intense sense of duty</b> because I always try my best to be finish my duty where I trusted into. <b>Hard working</b> because I can be dedicated to my work and avoid finishing my work close to the deadline. <b>Open minded</b> because I always open to latest ideas and other person opinions supported by logic. <b>Stay calm on Conflict</b> because I used to be not get distracted with unfamiliar problems that the first time I had facing. <b>Social Sensitive</b> because I used to take part social responsibility events and some organizations</p>
+          <h2 class="mb-0">Personal Traits</h2>
+          <h3 class="personalities mb-5"></h3>
+          <p id="personal_traits_template" type="x-tmpl-mustache" style="display: none;">
+            {{#personal_traits}}
+            <b>{{name}}</b> {{description}}.
+            {{/personal_traits}}
         </div>
       </section>
 
