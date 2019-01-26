@@ -10,6 +10,7 @@ var Main = function () {
 			contentType: "application/json",
 			dataType: "json",
 			success: function (data) {
+				$('#introduction').show();
 				if (isPrint()) {
 					data.experience = data.experience.slice(0, 2);
 					data.education = data.education.slice(0, 2);
@@ -42,7 +43,6 @@ var Main = function () {
 				});
 				data.skills.other = new_other;
 				
-				$('#introduction').show();
 				for(name in data) {
 					if (!isPrint() && name == 'contacts_alt') {
 						continue;
