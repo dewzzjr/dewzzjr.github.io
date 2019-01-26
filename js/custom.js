@@ -42,6 +42,7 @@ var Main = function () {
 				});
 				data.skills.other = new_other;
 				
+				$('#introduction').show();
 				for(name in data) {
 					if (!isPrint() && name == 'contacts_alt') {
 						continue;

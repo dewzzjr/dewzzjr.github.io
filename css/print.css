@@ -61,7 +61,7 @@ h3 {
   position: fixed;
   top: 0;
   width: 100%;
-  border-bottom: 1px solid gray;
+  /* border-bottom: 1px solid gray; */
   background: white;
   z-index: 3;
 }
