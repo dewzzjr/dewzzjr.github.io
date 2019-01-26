@@ -83,7 +83,7 @@
 
                   <div id="experience_template" type="x-tmpl-mustache" style="display: none;">
                     {{#experience}}
-                    <div  class="resume-item d-flex flex-column flex-md-row mb-3"  >
+                    <div  class="resume-item d-flex flex-column mb-3"  >
                       <div class="resume-content mr-auto">
                         <h3 class="mb-0">{{name}}</h3>
                         <div class="subheading mb-3">{{organization}}</div>
@@ -100,12 +100,12 @@
                 </div>
               </section>
 
-              <section class="resume-section col-sm p-2" id="education">
+              <section class="resume-section col p-2" id="education">
                 <div class="my-auto">
                   <h2 class="mb-3">Education</h2>
                   <div id="education_template" type="x-tmpl-mustache" style="display: none;">
                       {{#education}}
-                      <div class="resume-item d-flex flex-column flex-md-row mb-3">
+                      <div class="resume-item d-flex flex-column mb-3">
                         <div class="resume-content mr-auto">
                           <h3 class="mb-0">{{name}}</h3>
                           <div class="subheading mb-3">{{description}}</div>
@@ -125,7 +125,7 @@
           </div>
 
           <div class="page">
-            <section class="resume-section p-2 p-lg-5 d-flex flex-column" id="skills">
+            <section class="resume-section p-2 d-flex flex-column" id="skills">
               <div class="my-auto">
                 <h2 class="mb-3">Skills</h2>
 
@@ -150,7 +150,7 @@
               </div>
             </section>
 
-            <section class="resume-section p-2 p-lg-5 d-flex flex-column" id="personal-traits">
+            <section class="resume-section p-2 d-flex flex-column" id="personal-traits">
               <div class="my-auto">
                 <h2 class="mb-0">Personal Traits</h2>
                 <h3 class="personalities mb-3"></h3>
@@ -162,13 +162,13 @@
               </div>
             </section>
 
-            <section class="resume-section p-2 p-lg-5 d-flex flex-column" id="organization">
+            <section class="resume-section p-2 d-flex flex-column" id="organization">
               <div class="my-auto">
                 <h2 class="mb-3">Organization &amp; Voluntary</h2>
               
                 <div id="organization_template" class="row" type="x-tmpl-mustache" style="display: none;">
                   {{#organization}}
-                  <div class="resume-item col-6 d-flex flex-column flex-md-row mb-3">
+                  <div class="resume-item col-6 d-flex flex-column mb-3">
                     <div class="resume-content mr-auto">
                       <h3 class="mb-0">{{role}}</h3>
                       <div class="subheading mb-3">{{name}}</div>
