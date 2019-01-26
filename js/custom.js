@@ -11,8 +11,10 @@ var Main = function () {
 			dataType: "json",
 			beforeSend: function () {
 				$('#introduction').show();
+				console.log("show");
 			},
 			success: function (data) {
+				console.log("success");
 				if (isPrint()) {
 					data.experience = data.experience.slice(0, 2);
 					data.education = data.education.slice(0, 2);
