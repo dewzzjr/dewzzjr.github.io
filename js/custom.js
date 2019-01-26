@@ -9,8 +9,10 @@ var Main = function () {
 			url: "/bio.json",
 			contentType: "application/json",
 			dataType: "json",
-			success: function (data) {
+			beforeSend: function () {
 				$('#introduction').show();
+			},
+			success: function (data) {
 				if (isPrint()) {
 					data.experience = data.experience.slice(0, 2);
 					data.education = data.education.slice(0, 2);
