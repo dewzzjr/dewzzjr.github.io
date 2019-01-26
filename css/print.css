@@ -48,6 +48,7 @@ h3 {
 }
 
 .page-footer {
+  display: none;
   padding-top: 2mm;
   position: fixed;
   bottom: 0;
@@ -67,6 +68,7 @@ h3 {
 }
 
 .page {
+  display: none;
   page-break-after: always !important;
 }
 
@@ -100,4 +102,6 @@ h3 {
    body {margin: 0;}
    a {text-decoration: none !important;}
    .print {display: none !important;}
+   .page {display: block}
+   .page-footer {display: block}
 }
