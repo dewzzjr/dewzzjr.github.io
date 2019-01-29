@@ -2,7 +2,7 @@
 	"first_name": "Dewangga",
 	"last_name": "Prasetya Praja",
 	"last_name_s": "P. Praja",
-	"description": "I have experience on Web Development Projects as Full-stack Programmer or Back-end Programmer. Proficient at Python, Java, and PHP Programming Language. My interests are Data Analyst and Data Scientist especially Natural Language Processing.",
+	"description": "I have experience on Web Development Projects as Full-stack Programmer or Back-end Programmer. I am proficient at Python, Java, and PHP Programming Language. My interests are in Data Analyst and Data Scientist especially in Natural Language Processing.",
 	"address": "Jalan Gebang Kidul Gg. Puskesmas 28D, Kelurahan Gebang Putih, Kecamatan Sukolilo, Kota SBY, Jawa Timur, Indonesia",
 	"birthplace": "Semarang",
 	"birthday": "1995-11-15",
@@ -34,8 +34,8 @@
 			"start_date": "2018-07-01",
 			"end_date": "2019-04-01",
 			"description": [
-				"Saya bekerja sebagai pekerja lepas untuk membantu proyek develop perubahan fitur aplikasi Real Estate Management and Other Service (REMOTE) PELINDO III selama 8 bulan. Aplikasi tersebut kami kerjakan menggunakan bahasa C# dan kerangka kerja ASP.NET. Proses Development dikerjakan selama 4 bulan dan Support selama 4 bulan.",
-				"Selain itu saya juga membantu dalam pengerjaan sistem informasi berbasis web untuk PDAM Magelang selama kurang lebih satu bulan. Aplikasi dikerjakan menggunakan kerangka kerja Laravel dan bahasa pemrograman PHP."
+				"I used to be a freelance worker supporting a project to develop the application features alteration of Real Estate Management and Other Service (REMOTE) PELINDO III for 8 months. The application was done using C# language and work design of ASP.NET. We worked the Development Process and Support for 4 months.",
+				"Furthermore, I also used to support the information system working based on web for PDAM Magelang for more or less one month. The application was done by using Laravel framework and PHP programming language."
 			]
 		}, {
 			"name": "Internship in Information Systems Operation Support Department",
@@ -43,8 +43,8 @@
 			"start_date": "2017-06-01",
 			"end_date": "2017-08-01",
 			"description": [
-				"Saya melakukan kerja magang selama tiga bulan di PT. Telkom Indonesia Divisi Regional Jateng dan DIY yang berada pada alamat Jl. Pahlawan 10, Semarang. Saya ditempatkan pada departemen IS Operation Support. Jobdesk utama yang saya dapatkan saat bekerja di departemen ini adalah membuat dashboard untuk monitoring dan perhitungan tingkat performa kepuasan marketing pada produk Indihome.",
-				"Selain itu, proyek yang sempat saya kerjakan dengan partner antara lain membuat simulasi jaringan menggunakan Cisco kemudian mempraktikkan pada perangkat Cisco yang tersedia. Serta pembuatan aplikasi android pendukung marketing Indihome berbasis teknologi Augmented Reality menggunakan Unity 3D."
+				"I did an internship for 3 months in PT. Telkom Indonesia Central Java Regional Division and DIY which located on Jl. Pahlawan 10, Semarang. I was placed on IS Operation Support department. My main jobdesk in this department was making a dashboard for monitoring and calculating the level of marketing satisfaction performance in Indihome product.",
+				"Moreover, my partner and I were worked on several projects such as making a network simulation using Cisco and practiced it to the available Cisco tools, and making an android application to support the marketing of Indihome based on the Augmented Reality technology using Unity 3D."
 			]
 		}, {
 			"name": "Programming Language Course Assistant in Information Systems Department",
@@ -52,7 +52,7 @@
 			"start_date": "2017-09-01",
 			"end_date": "2017-12-01",
 			"description": [
-				"Saya menjadi asisten matakuliah Bahasa Pemrograman selama dua periode pada semester gasal. Matakuliah ini mengajarkan tentang dasar-dasar pemrograman secara umum untuk mahasiswa tingkat satu. Jobdesk yang dilakukan sebagai asisten matakuliah adalah memberikan praktikum, serta menilai kuis dan ujian mahasiswa."
+				"I served as an assistant for Programming Language course for two terms in the even semester. This course is about the general programming basics for the first year students. The course assistant roles are giving lab work, assessing quizzes and examinations of the students."
 			]
 		}, {
 			"name": "Web Based Programming Course Assistant in Information Systems Department",
@@ -60,7 +60,7 @@
 			"start_date": "2017-09-10",
 			"end_date": "2017-12-01",
 			"description": [
-				"Saya menjadi asisten matakuliah Pemrograman Berbasis Web selama satu periode pada semester genap. Matakuliah ini mengajarkan tentang konsep dasar web dan pengembangan aplikasi berbasis web dengan bahasa pemrograman PHP untuk mahasiswa tingkat dua. Pada matakuliah ini asisten mengajarkan sedikit tentang penggunaan kerangka kerja Codeigniter 3. Jobdesk yang dilakukan sebagai asisten matakuliah adalah menyusun modul, memberikan praktikum, serta menilai tugas kuliah."
+				"I served as an assistant of Web Based Programming course for one term in the even semester. This course is about the basic concept of web and the development of web based application with PHP programming language for the second year students. In this course, the assistant lectures abit about the use of Codeigniter 3 framework. The course assistant roles are arranging module, giving lab work, and assessing the assignments."
 			]
 		}, {
 			"name": "Algorithm and Data Structure Course Assistant in Information Systems Department",
@@ -68,7 +68,7 @@
 			"start_date": "2017-03-01",
 			"end_date": "2018-06-01",
 			"description": [
-				"Saya menjadi asisten matakuliah Algoritma Struktur Data selama dua periode pada semester genap. Matakuliah ini mengajarkan tentang logika dalam melakukan manipulasi data pada bahasa pemrograman Java untuk mahasiswa tingkat satu. Jobdesk yang dilakukan sebagai asisten matakuliah adalah memberikan praktikum, serta menilai kuis dan ujian mahasiswa."
+				"I served as an assistant of Data Structures & Algorithms course for two terms in the even semester. The course is about the logic in data manipulation in Java programming language for the first year students. The course assistant roles are giving lab work and assessing quizzes and examinations of the students."
 			]
 		}
 	],
@@ -116,7 +116,7 @@
 			"role": "Surabaya Region Coordinator",
 			"start_year": 2017,
 			"end_year": 2018,
-			"description": "Sobat Bumi Indonesia merupakan wadah kepedulian terhadap lingkungan dalam menunjang pembangunan bangsa Indonesia serta berperan aktif memelihara kelestarian lingkungan hidup untuk generasi sekarang dan masa depan. Saya bertugas mengoordinasikan kegiatan dan anggota untuk Sobat Bumi Regional Surabaya."
+			"description": "Sobat Bumi Indonesia is a caring forum for the environment in supporting the development of Indonesia and actively participating in preserving the environment for the present and future generations. My duty is coordinating the activities and the members of Sobat Bumi in Surabaya Region."
 		}, {
 			"name": "Himpunan Mahasiswa Sistem Informasi",
 			"role": "Secretary of Research and Technology Department",
@@ -134,16 +134,16 @@
  			"role": "Staff of Technology Application Department",
  			"start_year": 2015,
  			"end_year": 2016,
- 			"description": "Student Associations of Information Systems, ITS. Responsible for organizing technology related creation from Information Systems students"
+ 			"description": "Student Associations of Information Systems, ITS. Responsible in organizing technology related creation from Information Systems students"
  		}
 	],
 	"personal_traits": [
 		{"name":"Loyal", "description": "because I always value my society where I belong to"},
-		{"name":"Intense sense of duty","description":" because I always try my best to be finish my duty where I trusted into"}, 
+		{"name":"Intense sense of duty","description":" because I always try my best to finish my duty which I trusted into"}, 
 		{"name":"Hard working", "description": "because I can be dedicated to my work and avoid finishing my work close to the deadline"}, 
-		{"name":"Open minded","description":"because I always open to latest ideas and other person opinions supported by logic"}, 
-		{"name":"Keep calm when Conflict", "description":"because I used to be not get distracted with unfamiliar problems that the first time I had facing"}, 
-		{"name":"Social Sensitive","description":" because I used to take part social responsibility events and some organizations"}
+		{"name":"Open minded","description":"because I always open to latest ideas and other person opinions as long as it is supported by logic"}, 
+		{"name":"Keep calm when Conflict", "description":"because I used to not get distracted by unfamiliar problems that I face for the first time"}, 
+		{"name":"Social Sensitive","description":" because I take part in social responsibility events and some organizations"}
 	],
 	"skills": { 
 		"main": [
