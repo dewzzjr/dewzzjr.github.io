@@ -107,6 +107,7 @@ var Main = function () {
 	}
 	
 	var formatDate = function(date_s, type = "default") {
+		if (typeof date_s == 'undefined') return "Now";
 		
 		var date = new Date(date_s);
 		var monthNames = [
