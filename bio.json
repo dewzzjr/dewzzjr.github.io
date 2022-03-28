@@ -3,7 +3,7 @@
 	"last_name": "Prasetya Praja",
 	"last_name_s": "P. Praja",
 	"description": "I have experience on Web Development Projects as Full-stack Programmer or Back-end Programmer. I am specialize on Go, Python, Java, and PHP Programming Language. My interests are in Data Analyst and Data Scientist with Natural Language Processing.",
-	"address": "Jl. Karet Belakang V No.13, RT.5/RW.4, Kuningan, Karet, Kecamatan Setiabudi, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12920",
+	"address": "Jl. Kemuning 1 No.61, Pamulang Bar., Kec. Pamulang, Kota Tangerang Selatan, Banten 15417, Indonesia",
 	"birthplace": "Semarang",
 	"birthday": "1995-11-15",
 	"almamater": "Institute Technology of Sepuluh Nopember",
@@ -29,11 +29,20 @@
 	],
 	"experience": [
 		{
+			"name": "Sofware Engineer - Go Backend",
+			"organization": "Accelbyte Inc",
+			"start_date": "2021-06-01",
+			"description": [
+				"I have responsibility as backend engineer that working closely with international game gaveloper company. My team is handling the service about account management for the games that our vendor has been developed.",
+				"We use Go and Java programming language as our main backend language, but I focus on the Golang services."
+			]
+		}, {
 			"name": "Sofware Engineer - Backend",
 			"organization": "PT. Tokopedia",
 			"start_date": "2019-04-01",
+			"end_date": "2021-06-01",
 			"description": [
-				"I have responsibility as backend engineer in Tokopedia Seller API. Seller API is open platform that integrate third party enabler or seller to tokopedia systems.",
+				"I have experience as a back-end engineer that responsible to maintain services for API integration with more than 300 partners of Tokopedia.",
 				"We use Go programming language as our main backend stack."
 			]
 		}, {
@@ -209,25 +218,25 @@
 				"name": "CodeIgniter 3",
 				"icon": "codeigniter",
 				"category": "web-framework",
-				"value": 0.85
+				"value": 0.70
 			}, {
 				"name": "Laravel",
 				"icon": "laravel",
 				"category": "web-framework",
-				"value": 0.90
+				"value": 0.70
 			}, {
 				"name": "Dot NET",
 				"icon": "dot-net",
 				"category": "programming",
-				"value": 0.80
+				"value": 0.70
 			}, {
 				"name": "MySQL",
 				"icon": "mysql",
 				"category": "database",
 				"value": 0.80
 			}, {
-				"name": "Oracle",
-				"icon": "oracle",
+				"name": "PostgreSQL",
+				"icon": "postgresql",
 				"category": "database",
 				"value": 0.80
 			}, {
@@ -238,30 +247,48 @@
 			}, {
 				"name": "Heroku",
 				"icon": "heroku",
-				"category": "platform",
+				"category": "software-development",
 				"value": 0.60
 			},{
 				"name": "Linux",
 				"icon": "linux",
 				"category": "operating-system",
-				"value": 0.60
+				"value": 0.90
 			}, {
 				"name": "Git",
 				"icon": "git",
-				"category": "supporting",
+				"category": "software-development",
 				"value": 0.90
-			}, 
-			
-			
-			{
+			}, {
 				"name": "Flask",
+				"icon": "flask",
 				"category": "web-framework",
 				"value": 1
 			}, {
 				"name": "Windows",
-				"icon": "Windows",
+				"icon": "windows8",
 				"category": "operating-system",
-				"value": 0.90
+				"value": 0.60
+			}, {
+				"name": "Docker",
+				"icon": "docker",
+				"category": "software-development",
+				"value": 0.60
+			}, {
+				"name": "Jenkins",
+				"icon": "jenkins",
+				"category": "software-development",
+				"value": 0.60
+			}, {
+				"name": "Jira",
+				"icon": "jira",
+				"category": "software-development",
+				"value": 0.80
+			}, {
+				"name": "Kubernetes",
+				"icon": "kubernetes",
+				"category": "software-development",
+				"value": 0.50
 			}
 		],
 		"other": [ 
