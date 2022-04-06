@@ -36,7 +36,7 @@
   </div>
 
   <div class="page-footer">
-    <div id="contacts_alt_template" type="x-tmpl-mustache" style="display: none;">
+    <div id="contacts_alt_template" type="x-tmpl-mustache" style="display: block;">
       <div class="row m-0 flex-wrap justify-content-between">
       {{#contacts_alt}}
       <div class="col text-center">
@@ -67,70 +67,49 @@
     <tbody>
       <tr>
         <td>
-          <!--*** CONTENT GOES HERE ***-->
           <div class="page container">
-            <p id="introduction" style="display: none;" class="text-justify mb-3">
+
+            <p id="introduction" style="display: block;" class="text-justify mb-3">
               <span class="first_name"></span> <span class="last_name"></span>, <span id="age"></span> years old, from <span class="birthplace"></span>. 
               My birthday is <strong class="birthday"></strong>. 
               I was graduated from <span class="almamater"></span> with my Bachelor's Degree on <span class="graduated_on"></span>. 
               <span class="description"></span>
             </p>
             
-            <div class="row">
-              <section class="resume-section col p-2 vr" id="experience">
-                <div class="my-auto">
-                  <h2 class="mb-3">Experience</h2>
+            <section class="resume-section p-2" id="experience">
+              <div class="my-auto">
+                <h2 class="mb-3">Experience</h2>
 
-                  <div id="experience_template" type="x-tmpl-mustache" style="display: none;">
-                    {{#experience}}
-                    <div  class="resume-item d-flex flex-column mb-3"  >
-                      <div class="resume-content mr-auto">
-                        <h3 class="mb-0">{{name}}</h3>
-                        <div class="subheading mb-3">{{organization}}</div>
-                        {{#description}}
-                        <p class="text-justify mb-1">{{.}}</p>
-                        {{/description}}
-                      </div>
-                      <div class="resume-date text-right mb-2">
-                        <span class="text-primary">{{f_start_date}} - {{f_end_date}}</span>
-                      </div>
+                <div id="experience_template" type="x-tmpl-mustache" class="d-flex flex-wrap" style="display: block;">
+                  {{#experience}}
+                  <!-- <div class="row d-flex "> -->
+                  <div  class="resume-item mb-3 col-6">
+                    <div class="resume-content mr-auto">
+                      <h3 class="mb-0">{{name}}</h3>
+                      <div class="subheading mb-3">{{organization}}</div>
+                      {{#description}}
+                      <p class="text-justify mb-1">{{.}}</p>
+                      {{/description}}
                     </div>
-                    {{/experience}}
+                    <div class="resume-date text-right mb-2">
+                      <span class="text-primary">{{f_start_date}} - {{f_end_date}}</span>
+                    </div>
                   </div>
+                  <!-- </div> -->
+                  {{/experience}}
                 </div>
-              </section>
+              </div>
+            </section>
 
-              <section class="resume-section col p-2" id="education">
-                <div class="my-auto">
-                  <h2 class="mb-3">Education</h2>
-                  <div id="education_template" type="x-tmpl-mustache" style="display: none;">
-                      {{#education}}
-                      <div class="resume-item d-flex flex-column mb-3">
-                        <div class="resume-content mr-auto">
-                          <h3 class="mb-0">{{name}}</h3>
-                          <div class="subheading mb-3">{{description}}</div>
-                          {{#notes}}
-                          <p class="text-justify mb-1">{{.}}</p>
-                          {{/notes}}
-                        </div>
-                        <div class="resume-date text-right mb-3">
-                          <span class="text-primary">{{start_year}} - {{end_year}}</span>
-                        </div>
-                      </div>
-                      {{/education}}
-                  </div>
-                </div>
-              </section>
-            </div>
           </div>
+          <div class="page container">
 
-          <div class="page">
-            <section class="resume-section p-2 d-flex flex-column" id="skills">
+            <section class="resume-section p-2" id="skills">
               <div class="my-auto">
                 <h2 class="mb-3">Skills</h2>
 
                 <div class="subheading mb-3">Programming Languages &amp; Tools</div>
-                <ul id="skills_main_template" class="list-inline list-icons flex-wrap flex-column" type="x-tmpl-mustache" style="display: none;">
+                <ul id="skills_main_template" class="list-inline list-icons flex-wrap flex-column" type="x-tmpl-mustache" style="display: block;">
                   {{#main}}
                   <li class="list-inline-item pl-3" data-toggle="popover" data-trigger="hover" data-container="body" data-placement="top" data-content="{{name}}: {{percent}}">
                     <i class="devicon-{{icon}}-plain colored"></i> {{name}}: {{type}} Level
@@ -139,7 +118,7 @@
                 </ul>
 
                 <div class="subheading mb-3">Other Supporting Skill</div>
-                <ul id="skills_other_template" class="fa-ul mb-0" type="x-tmpl-mustache" style="display: none;">
+                <ul id="skills_other_template" class="fa-ul mb-0" type="x-tmpl-mustache" style="display: block;">
                   {{#other}}
                   <li>
                     <i class="fa-li fa fa-check"  data-toggle="popover" data-trigger="hover" data-container="body" data-placement="top" data-content="{{name}}: {{percent}}"></i>
@@ -150,11 +129,33 @@
               </div>
             </section>
 
-            <section class="resume-section p-2 d-flex flex-column" id="personal-traits">
+            <section class="resume-section p-2" id="education">
+              <div class="my-auto">
+                <h2 class="mb-3">Education</h2>
+                <div id="education_template" type="x-tmpl-mustache" class="d-flex flex-wrap" style="display: block;">
+                    {{#education}}
+                    <div class="resume-item mb-3 col-6">
+                      <div class="resume-content mr-auto">
+                        <h3 class="mb-0">{{name}}</h3>
+                        <div class="subheading mb-3">{{description}}</div>
+                        {{#notes}}
+                        <p class="text-justify mb-1">{{.}}</p>
+                        {{/notes}}
+                      </div>
+                      <div class="resume-date text-right mb-3">
+                        <span class="text-primary">{{start_year}} - {{end_year}}</span>
+                      </div>
+                    </div>
+                    {{/education}}
+                </div>
+              </div>
+            </section>
+
+            <section class="resume-section p-2" id="personal-traits">
               <div class="my-auto">
                 <h2 class="mb-0">Personal Traits</h2>
                 <h3 class="personalities mb-3"></h3>
-                <p class="text-justify" id="personal_traits_template" type="x-tmpl-mustache" style="display: none;">
+                <p class="text-justify" id="personal_traits_template" type="x-tmpl-mustache" style="display: block;">
                   {{#personal_traits}}
                   <b>{{name}}</b> {{description}}.
                   {{/personal_traits}}
@@ -162,13 +163,16 @@
               </div>
             </section>
 
-            <section class="resume-section p-2 d-flex flex-column" id="organization">
+          </div>
+          <div class="page container">
+            
+            <section class="resume-section p-2 col" id="organization">
               <div class="my-auto">
                 <h2 class="mb-3">Organization &amp; Voluntary</h2>
               
-                <div id="organization_template" class="row" type="x-tmpl-mustache" style="display: none;">
+                <div id="organization_template" type="x-tmpl-mustache" class="d-flex flex-wrap" style="display: block;">
                   {{#organization}}
-                  <div class="resume-item col-6 d-flex flex-column mb-3">
+                  <div class="resume-item mb-3  col-6">
                     <div class="resume-content mr-auto">
                       <h3 class="mb-0">{{role}}</h3>
                       <div class="subheading mb-3">{{name}}</div>
@@ -183,7 +187,7 @@
               
               </div>
             </section>
-            
+
           </div>
 
         </td>

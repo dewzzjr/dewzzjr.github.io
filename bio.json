@@ -27,6 +27,10 @@
 		{"name":"github","address": "https://github.com/dewzzjr"},
 		{"name":"linkedin","address": "https://www.linkedin.com/in/dewzzjr/"}
 	],
+	"limit": {
+		"max_experience": 6,
+		"max_education": 2
+	},
 	"experience": [
 		{
 			"name": "Sofware Engineer - Go Backend",

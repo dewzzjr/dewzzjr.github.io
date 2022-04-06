@@ -1,7 +1,8 @@
 
 var Main = function () {
 	var isPrint = function () {
-		return window.location.href.indexOf("print") > -1
+		// return window.location.href.indexOf("print") > -1
+		return true
 	}
 	var getJson = function () {
 		$.ajax({
@@ -11,13 +12,15 @@ var Main = function () {
 			dataType: "json",
 			beforeSend: function () {
 				$('#introduction').show();
-				console.log("show");
 			},
 			success: function (data) {
-				console.log("success");
 				if (isPrint()) {
-					data.experience = data.experience.slice(0, 2);
-					data.education = data.education.slice(0, 2);
+					if (data.limit.max_experience) {
+						data.experience = data.experience.slice(0, data.limit.max_experience);
+					}
+					if (data.limit.max_education) {
+						data.education = data.education.slice(0, data.limit.max_education);
+					}
 				}
 				var exp = data.experience;
 				var new_exp = [];
@@ -60,9 +63,9 @@ var Main = function () {
 						$('.' + name).html(data[name]);
 					} else {
 						if (data[name] instanceof Array) {
-							// console.log(typeof(data[name]), name);
 							var template = $('#' + name + '_template').html();
-							Mustache.parse(template);   // optional, speeds up future uses
+							Mustache.parse(template)
+							;   // optional, speeds up future uses
 							var rendered = Mustache.render(template, data);
 							$('#' + name + '_template').html(rendered);
 							$('#' + name + '_template').show();
@@ -149,7 +152,6 @@ var Main = function () {
 			return Math.abs(ageDate.getUTCFullYear() - 1970);
 		}
 		var age = _calculateAge(new Date(date))
-		console.log(age)
 		$("#age").html(age)
 	}
 	
