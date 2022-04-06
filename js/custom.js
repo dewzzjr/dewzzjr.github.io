@@ -1,8 +1,8 @@
 
 var Main = function () {
 	var isPrint = function () {
-		// return window.location.href.indexOf("print") > -1
-		return true
+		return window.location.href.indexOf("print") > -1
+		// return true
 	}
 	var getJson = function () {
 		$.ajax({
@@ -50,58 +50,47 @@ var Main = function () {
 				});
 				data.skills.other = new_other;
 				
-				for(name in data) {
-					if (!isPrint() && name == 'contacts_alt') {
+				for(n in data) {
+					if (!isPrint() && n == 'contacts_alt') {
 						continue;
 					}
-					if (typeof(data[name]) != "object") {
-						if(name == "birthday") {
-							var date = data[name];
+					if (typeof(data[n]) != "object") {
+						if(n == "birthday") {
+							var date = data[n];
 							age(date);
-							data[name] = formatDate(date);
+							data[n] = formatDate(date);
 						}
-						$('.' + name).html(data[name]);
+						$('.' + n).html(data[n]);
 					} else {
-						if (data[name] instanceof Array) {
-							var template = $('#' + name + '_template').html();
-							Mustache.parse(template)
-							;   // optional, speeds up future uses
+						if (data[n] instanceof Array) {
+							var template = $('#' + n + '_template').html();
+							Mustache.parse(template);   // optional, speeds up future uses
 							var rendered = Mustache.render(template, data);
-							$('#' + name + '_template').html(rendered);
-							$('#' + name + '_template').show();
+							$('#' + n + '_template').html(rendered);
+							$('#' + n + '_template').show();
 						}
 					}
-					if (name == 'skills') {
-						for(name1 in data.skills) {
-							var template = $('#skills_'+name1+'_template').html();
+					if (n == 'skills') {
+						for(s in data.skills) {
+							var template = $('#skills_'+s+'_template').html();
 							Mustache.parse(template);   // optional, speeds up future uses
 							var rendered = Mustache.render(template, data.skills);
-							$('#skills_'+name1+'_template').html(rendered);
-							$('#skills_'+name1+'_template').show();
-							$('[data-toggle="popover"]').popover();
-						}
-					}
-					
-					if (name == 'skills') {
-						for(name1 in data.skills) {
-							var template = $('#skills_'+name1+'_template').html();
-							Mustache.parse(template);   // optional, speeds up future uses
-							var rendered = Mustache.render(template, data.skills);
-							$('#skills_'+name1+'_template').html(rendered);
-							$('#skills_'+name1+'_template').show();
+							$('#skills_'+s+'_template').html(rendered);
+							$('#skills_'+s+'_template').show();
 							$('[data-toggle="popover"]').popover();
 						}
 					}
 				}
 				if (!isPrint()) {
-					for(name in data.contacts) {
-						if (name == "email") {
-							$('.email').html(data.contacts[name]);
-							$('.email').attr("href", "mailto:" + data.contacts[name]);
-						} else if (name == "whatsapp") {
-							$('.whatsapp').html(data.contacts[name]);
+					for(n in data.contacts) {
+						if (n == "email") {
+							$('.email').html(data.contacts[n]);
+							$('.email').attr("href", "mailto:" + data.contacts[n]);
+						} else if (n == "whatsapp") {
+							$('.whatsapp').html(data.contacts[n]);
+							$('.whatsapp').parent().attr("href", "http://wa.me/" +data.contacts[n].replace(/\D/g,''));
 						} else {
-							$('.' + name).attr("href", data.contacts[name]);
+							$('.' + n).attr("href", data.contacts[n]);
 						}
 					}
 				}
