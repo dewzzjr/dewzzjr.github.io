@@ -37,8 +37,9 @@
 			"organization": "Accelbyte Inc",
 			"start_date": "2021-06-01",
 			"description": [
-				"I have responsibility as backend engineer that working closely with international game gaveloper company. My team is handling the service about account management for the games that our vendor has been developed.",
-				"We use Go and Java programming language as our main backend language, but I focus on the Golang services."
+				"I have responsibility as backend engineer that working closely with international game gaveloper company. My team is handling the SSO and orchestrator services for login portal from our vendor.",
+				"We use Go and Java programming language as our main backend language, but I focus on the Golang services.",
+				"One of the big project we were working at is Child's Online Privacy Protection Rule."
 			]
 		}, {
 			"name": "Sofware Engineer - Backend",
@@ -314,7 +315,7 @@
 				"value": 0.50
 			}, {
 				"name": "Forecasting and Business Process",
-				"app": ["Vensim PLE", "Bonita", "Accunetix", "Bizagi Modeler"],
+				"app": ["Vensim PLE", "Bonita", "Bizagi Modeler"],
 				"value": 0.50
 			}
 		]
