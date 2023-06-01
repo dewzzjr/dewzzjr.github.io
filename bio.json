@@ -2,8 +2,8 @@
 	"first_name": "Dewangga",
 	"last_name": "Prasetya Praja",
 	"last_name_s": "P. Praja",
-	"description": "I have experience on Web Development Projects as Full-stack Programmer or Back-end Programmer. I am specialize on Go, Python, Java, and PHP Programming Language. My interests are in Data Analyst and Data Scientist with Natural Language Processing.",
-	"address": "Jl. Kemuning 1 No.61, Pamulang Bar., Kec. Pamulang, Kota Tangerang Selatan, Banten 15417, Indonesia",
+	"description": "I am fully focused as Golang Backend Software Engineer. However, I have some experience on Web Development Projects as Fullstack Developer. I am specialize on Golang, but I have some experience in other programming language like Python, Java, and PHP Programming Language.",
+	"address": "Jl. Pinus VIII blok AH4 No.26, Pamulang Barat., Kec. Pamulang, Kota Tangerang Selatan, Banten 15417, Indonesia",
 	"birthplace": "Semarang",
 	"birthday": "1995-11-15",
 	"almamater": "Institute Technology of Sepuluh Nopember",
@@ -19,29 +19,63 @@
 		"whatsapp": "+62 856-2747-444"
 	},
 	"contacts_alt": [
-		{"name":"envelope","address":"dewzzpro@gmail.com"},
-		{"name":"whatsapp","address": "+62 856-2747-444"},
-		{"name":"instagram","address": "@dewanggapraja"},
-		{"name":"twitter","address": "@dewzzjr"},
-		{"name":"facebook","address": "https://www.facebook.com/dewzz"},
-		{"name":"github","address": "https://github.com/dewzzjr"},
-		{"name":"linkedin","address": "https://www.linkedin.com/in/dewzzjr/"}
+		{
+			"name": "envelope",
+			"address": "dewzzpro@gmail.com"
+		},
+		{
+			"name": "whatsapp",
+			"address": "+62 856-2747-444"
+		},
+		{
+			"name": "instagram",
+			"address": "@dewanggapraja"
+		},
+		{
+			"name": "twitter",
+			"address": "@dewzzjr"
+		},
+		{
+			"name": "facebook",
+			"address": "https://www.facebook.com/dewzz"
+		},
+		{
+			"name": "github",
+			"address": "https://github.com/dewzzjr"
+		},
+		{
+			"name": "linkedin",
+			"address": "https://www.linkedin.com/in/dewzzjr/"
+		}
 	],
 	"limit": {
-		"max_experience": 6,
+		"max_experience": 8,
 		"max_education": 2
 	},
 	"experience": [
 		{
-			"name": "Sofware Engineer - Go Backend",
+			"name": "Senior Sofware Engineer",
+			"organization": "Shortlyst AI",
+			"start_date": "2022-09-01",
+			"description": [
+				"I have responsibility to maintain and develop features to help recuiter to search and recruit candidates",
+				"We create our application using Golang based microservice",
+				"We utilize MongoDB, PostgreSQL, Redis, Elasticsearch in our services",
+				"To support our development we also use AWS and kubernetes"
+			]
+		},
+		{
+			"name": "Sofware Engineer - Golang Backend",
 			"organization": "Accelbyte Inc",
 			"start_date": "2021-06-01",
+			"end_date": "2022-09-01",
 			"description": [
 				"I have responsibility as backend engineer that working closely with international game gaveloper company. My team is handling the SSO and orchestrator services for login portal from our vendor.",
 				"We use Go and Java programming language as our main backend language, but I focus on the Golang services.",
 				"One of the big project we were working at is Child's Online Privacy Protection Rule."
 			]
-		}, {
+		},
+		{
 			"name": "Sofware Engineer - Backend",
 			"organization": "PT. Tokopedia",
 			"start_date": "2019-04-01",
@@ -50,8 +84,9 @@
 				"I have experience as a back-end engineer that responsible to maintain services for API integration with more than 300 partners of Tokopedia.",
 				"We use Go programming language as our main backend stack."
 			]
-		}, {
-			"name": "Freelance Junior Programmer",
+		},
+		{
+			"name": "Associate Software Programmer - Freelance",
 			"organization": "PT. Bina Informasi Optima Solusindo",
 			"start_date": "2018-07-01",
 			"end_date": "2019-04-01",
@@ -59,7 +94,8 @@
 				"I used to be a freelance worker supporting a project to develop the application features alteration of Real Estate Management and Other Service (REMOTE) PELINDO III for 8 months. The application was done using C# language and work design of ASP.NET. We worked the Development Process and Support for 4 months.",
 				"Furthermore, I also used to support the information system working based on web for PDAM Magelang for more or less one month. The application was done by using Laravel framework and PHP programming language."
 			]
-		}, {
+		},
+		{
 			"name": "Internship in Information Systems Operation Support Department",
 			"organization": "PT. Telkom Indonesia",
 			"start_date": "2017-06-01",
@@ -68,7 +104,8 @@
 				"I did an internship for 3 months in PT. Telkom Indonesia Central Java Regional Division and DIY which located on Jl. Pahlawan 10, Semarang. I was placed on IS Operation Support department. My main jobdesk in this department was making a dashboard for monitoring and calculating the level of marketing satisfaction performance in Indihome product.",
 				"Moreover, my partner and I were worked on several projects such as making a network simulation using Cisco and practiced it to the available Cisco tools, and making an android application to support the marketing of Indihome based on the Augmented Reality technology using Unity 3D."
 			]
-		}, {
+		},
+		{
 			"name": "Programming Language Course Assistant in Information Systems Department",
 			"organization": "Institute of Technology Sepuluh Nopember",
 			"start_date": "2017-09-01",
@@ -76,7 +113,8 @@
 			"description": [
 				"I served as an assistant for Programming Language course for two terms in the even semester. This course is about the general programming basics for the first year students. The course assistant roles are giving lab work, assessing quizzes and examinations of the students."
 			]
-		}, {
+		},
+		{
 			"name": "Web Based Programming Course Assistant in Information Systems Department",
 			"organization": "Institute of Technology Sepuluh Nopember",
 			"start_date": "2017-09-10",
@@ -84,7 +122,8 @@
 			"description": [
 				"I served as an assistant of Web Based Programming course for one term in the even semester. This course is about the basic concept of web and the development of web based application with PHP programming language for the second year students. In this course, the assistant lectures abit about the use of Codeigniter 3 framework. The course assistant roles are arranging module, giving lab work, and assessing the assignments."
 			]
-		}, {
+		},
+		{
 			"name": "Algorithm and Data Structure Course Assistant in Information Systems Department",
 			"organization": "Institute of Technology Sepuluh Nopember",
 			"start_date": "2017-03-01",
@@ -106,15 +145,17 @@
 				"Thesis: Application for Extracting and Visualizing Event Information in Realtime From Social Media Using Conditional Random Field with Flask Python Framework",
 				"GPA: 3.57"
 			]
-		}, {
+		},
+		{
 			"name": "SMA Negeri 1 Salatiga",
 			"description": "Senior High School - Science Program",
 			"start_year": 2011,
-			"end_year": 2014, 
+			"end_year": 2014,
 			"notes": [
 				"Participate in Smanssa Robotic Club and Solidaritas Kerohanian Islam"
 			]
-		}, {
+		},
+		{
 			"name": "SMP Negeri 1 Ungaran",
 			"description": "Junior High School",
 			"start_year": 2008,
@@ -122,7 +163,8 @@
 			"notes": [
 				"Participate in Student Council, Science Olympiad and Kerohanian Islam"
 			]
-		}, {
+		},
+		{
 			"name": "SD Negeri 1 Ungaran",
 			"description": "Elementary School",
 			"start_year": 2002,
@@ -139,183 +181,263 @@
 			"start_year": 2017,
 			"end_year": 2018,
 			"description": "Sobat Bumi Indonesia is a caring forum for the environment in supporting the development of Indonesia and actively participating in preserving the environment for the present and future generations. My duty is coordinating the activities and the members of Sobat Bumi in Surabaya Region."
-		}, {
+		},
+		{
 			"name": "Himpunan Mahasiswa Sistem Informasi",
 			"role": "Secretary of Research and Technology Department",
 			"start_year": 2016,
 			"end_year": 2017,
 			"description": "Student Associations of Information Systems, ITS. Responsible for staff management and department administration."
-		}, {
+		},
+		{
 			"name": "Badan Eksekutif Mahasiswa ITS",
 			"role": "Staff of Social Responsibility Ministry",
 			"start_year": 2015,
 			"end_year": 2016,
 			"description": "Student Executive ITS. Responsible as Chief Executive ITS Green Campaign 2016 Environmental campaign for young generation at junior high school in Surabaya"
- 		}, {
- 			"name": "Himpunan Mahasiswa Sistem Informasi",
- 			"role": "Staff of Technology Application Department",
- 			"start_year": 2015,
- 			"end_year": 2016,
- 			"description": "Student Associations of Information Systems, ITS. Responsible in organizing technology related creation from Information Systems students"
- 		}
+		},
+		{
+			"name": "Himpunan Mahasiswa Sistem Informasi",
+			"role": "Staff of Technology Application Department",
+			"start_year": 2015,
+			"end_year": 2016,
+			"description": "Student Associations of Information Systems, ITS. Responsible in organizing technology related creation from Information Systems students"
+		}
 	],
 	"personal_traits": [
-		{"name":"Loyal", "description": "because I always value my society where I belong to"},
-		{"name":"Intense sense of duty","description":" because I always try my best to finish my duty which I trusted into"}, 
-		{"name":"Hard working", "description": "because I can be dedicated to my work and avoid finishing my work close to the deadline"}, 
-		{"name":"Open minded","description":"because I always open to latest ideas and other person opinions as long as it is supported by logic"}, 
-		{"name":"Keep calm when Conflict", "description":"because I used to not get distracted by unfamiliar problems that I face for the first time"}, 
-		{"name":"Social Sensitive","description":" because I take part in social responsibility events and some organizations"}
+		{
+			"name": "Loyal",
+			"description": "because I always value my society where I belong to"
+		},
+		{
+			"name": "Intense sense of duty",
+			"description": " because I always try my best to finish my duty which I trusted into"
+		},
+		{
+			"name": "Hard working",
+			"description": "because I can be dedicated to my work and avoid finishing my work close to the deadline"
+		},
+		{
+			"name": "Open minded",
+			"description": "because I always open to latest ideas and other person opinions as long as it is supported by logic"
+		},
+		{
+			"name": "Keep calm when Conflict",
+			"description": "because I used to not get distracted by unfamiliar problems that I face for the first time"
+		},
+		{
+			"name": "Social Sensitive",
+			"description": " because I take part in social responsibility events and some organizations"
+		}
 	],
-	"skills": { 
+	"skills": {
 		"main": [
 			{
 				"name": "HTML",
 				"icon": "html5",
 				"category": "web-design",
 				"value": 1
-			}, {
+			},
+			{
 				"name": "CSS",
 				"icon": "css3",
 				"category": "web-design",
 				"value": 0.80
-			}, {
+			},
+			{
 				"name": "JavaScript",
 				"icon": "javascript",
 				"category": "web-design",
 				"value": 0.90
-			}, {
+			},
+			{
 				"name": "JQuery",
 				"icon": "jquery",
 				"category": "web-design",
 				"value": 0.90
-			}, {
+			},
+			{
 				"name": "Twitter Bootstrap",
 				"icon": "bootstrap",
 				"category": "web-design",
 				"value": 0.80
-			}, {
+			},
+			{
 				"name": "GoLang",
 				"icon": "go",
 				"category": "programming",
 				"value": 1
-			}, {
+			},
+			{
 				"name": "Python 3",
 				"icon": "python",
 				"category": "programming",
 				"value": 1
-			}, {
+			},
+			{
 				"name": "Java",
 				"icon": "java",
 				"category": "programming",
 				"value": 0.90
-			}, {
+			},
+			{
 				"name": "PHP",
 				"icon": "php",
 				"category": "programming",
 				"value": 1
-			}, {
+			},
+			{
 				"name": "Android",
 				"icon": "android",
 				"category": "programming",
 				"value": 0.60
-			}, {
+			},
+			{
 				"name": "CodeIgniter 3",
 				"icon": "codeigniter",
 				"category": "web-framework",
 				"value": 0.70
-			}, {
+			},
+			{
 				"name": "Laravel",
 				"icon": "laravel",
 				"category": "web-framework",
 				"value": 0.70
-			}, {
+			},
+			{
 				"name": "Dot NET",
 				"icon": "dot-net",
 				"category": "programming",
 				"value": 0.70
-			}, {
+			},
+			{
 				"name": "MySQL",
 				"icon": "mysql",
 				"category": "database",
 				"value": 0.80
-			}, {
+			},
+			{
 				"name": "PostgreSQL",
 				"icon": "postgresql",
 				"category": "database",
-				"value": 0.80
-			}, {
+				"value": 0.90
+			},
+			{
+				"name": "Redis",
+				"icon": "redis",
+				"category": "database",
+				"value": 1
+			},
+			{
 				"name": "MongoDB",
 				"icon": "mongodb",
 				"category": "database",
 				"value": 1
-			}, {
+			},
+			{
 				"name": "Heroku",
 				"icon": "heroku",
 				"category": "software-development",
 				"value": 0.60
-			},{
+			},
+			{
 				"name": "Linux",
 				"icon": "linux",
 				"category": "operating-system",
 				"value": 0.90
-			}, {
+			},
+			{
 				"name": "Git",
 				"icon": "git",
 				"category": "software-development",
 				"value": 0.90
-			}, {
+			},
+			{
 				"name": "Flask",
 				"icon": "flask",
 				"category": "web-framework",
 				"value": 1
-			}, {
+			},
+			{
 				"name": "Windows",
 				"icon": "windows8",
 				"category": "operating-system",
 				"value": 0.60
-			}, {
+			},
+			{
 				"name": "Docker",
 				"icon": "docker",
 				"category": "software-development",
 				"value": 0.60
-			}, {
+			},
+			{
 				"name": "Jenkins",
 				"icon": "jenkins",
 				"category": "software-development",
 				"value": 0.60
-			}, {
+			},
+			{
 				"name": "Jira",
 				"icon": "jira",
 				"category": "software-development",
 				"value": 0.80
-			}, {
+			},
+			{
 				"name": "Kubernetes",
 				"icon": "kubernetes",
 				"category": "software-development",
 				"value": 0.50
+			},
+			{
+				"name": "AWS",
+				"icon": "amazonwebservices",
+				"category": "software-development",
+				"value": 0.60
 			}
 		],
-		"other": [ 
+		"other": [
 			{
 				"name": "Office Tools",
-				"app": ["Microsoft Excel", "Microsoft Word", "Power Point"],
+				"app": [
+					"Excel",
+					"Word",
+					"Power Point"
+				],
 				"value": 0.90
-			}, {
+			},
+			{
 				"name": "Graphic Design",
-				"app": ["Corel Draw", "Photoshop"],
+				"app": [
+					"Corel Draw",
+					"Photoshop"
+				],
 				"value": 0.80
-			}, {
+			},
+			{
 				"name": "Enterprise Resource Planning",
-				"app": ["SAP", "Odoo"],
+				"app": [
+					"SAP",
+					"Odoo"
+				],
 				"value": 0.60
-			}, {
+			},
+			{
 				"name": "Networking Software",
-				"app": ["CISCO Packet Tracer", "Wireshark", "Accunetix", "OWASP"],
+				"app": [
+					"CISCO Packet Tracer",
+					"Wireshark",
+					"Accunetix",
+					"OWASP"
+				],
 				"value": 0.50
-			}, {
+			},
+			{
 				"name": "Forecasting and Business Process",
-				"app": ["Vensim PLE", "Bonita", "Bizagi Modeler"],
+				"app": [
+					"Vensim PLE",
+					"Bonita",
+					"Bizagi Modeler"
+				],
 				"value": 0.50
 			}
 		]
