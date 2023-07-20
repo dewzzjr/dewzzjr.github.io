@@ -29,7 +29,7 @@
 		},
 		{
 			"name": "instagram",
-			"address": "@dewanggapraja"
+			"address": "@dewzzjr"
 		},
 		{
 			"name": "twitter",
@@ -49,8 +49,9 @@
 		}
 	],
 	"limit": {
-		"max_experience": 8,
-		"max_education": 2
+		"max_experiences": 6,
+		"max_educations": 2,
+		"max_organizations": 2
 	},
 	"experience": [
 		{
