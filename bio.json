@@ -55,29 +55,29 @@
 	},
 	"experience": [
 		{
-			"name": "Senior Sofware Engineer",
+			"name": "Senior Backend Software Engineer",
 			"organization": "Shortlyst AI",
 			"start_date": "2022-09-01",
 			"description": [
-				"I have responsibility to maintain and develop features to help recuiter to search and recruit candidates",
+				"I have responsibility to maintain and develop features to help recruiter to search and recruit candidates",
 				"We create our application using Golang based microservice",
 				"We utilize MongoDB, PostgreSQL, Redis, Elasticsearch in our services",
 				"To support our development we also use AWS and kubernetes"
 			]
 		},
 		{
-			"name": "Sofware Engineer - Golang Backend",
+			"name": "Software Engineer - Golang Backend",
 			"organization": "Accelbyte Inc",
 			"start_date": "2021-06-01",
 			"end_date": "2022-09-01",
 			"description": [
-				"I have responsibility as backend engineer that working closely with international game gaveloper company. My team is handling the SSO and orchestrator services for login portal from our vendor.",
+				"I have responsibility as backend engineer that working closely with international game developer company. My team is handling the SSO and orchestrator services for login portal from our vendor.",
 				"We use Go and Java programming language as our main backend language, but I focus on the Golang services.",
 				"One of the big project we were working at is Child's Online Privacy Protection Rule."
 			]
 		},
 		{
-			"name": "Sofware Engineer - Backend",
+			"name": "Software Engineer - Backend",
 			"organization": "PT. Tokopedia",
 			"start_date": "2019-04-01",
 			"end_date": "2021-06-01",
