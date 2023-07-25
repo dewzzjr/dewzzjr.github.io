@@ -49,7 +49,7 @@
 		}
 	],
 	"limit": {
-		"max_experiences": 6,
+		"max_experiences": 4,
 		"max_educations": 2,
 		"max_organizations": 2
 	},
