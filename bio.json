@@ -21,31 +21,38 @@
 	"contacts_alt": [
 		{
 			"name": "envelope",
-			"address": "dewzzpro@gmail.com"
+			"address": "dewzzpro@gmail.com",
+			"href": "mailto:dewzzpro@gmail.com"
 		},
 		{
 			"name": "whatsapp",
-			"address": "+62 856-2747-444"
+			"address": "+62 856-2747-444",
+			"href": "https://wa.me/628562747444"
 		},
 		{
 			"name": "instagram",
-			"address": "@dewzzjr"
+			"address": "@dewzzjr",
+			"href": "https://www.instagram.com/dewzzjr"
 		},
 		{
 			"name": "twitter",
-			"address": "@dewzzjr"
+			"address": "@dewzzjr",
+			"href": "http://www.twitter.com/dewzzjr"
 		},
 		{
 			"name": "facebook",
-			"address": "https://www.facebook.com/dewzz"
+			"address": "fb.com/dewzz",
+			"href": "https://www.facebook.com/dewzz"
 		},
 		{
 			"name": "github",
-			"address": "https://github.com/dewzzjr"
+			"address": "github.com/dewzzjr",
+			"href": "https://github.com/dewzzjr"
 		},
 		{
 			"name": "linkedin",
-			"address": "https://www.linkedin.com/in/dewzzjr/"
+			"address": "linkedin.com/in/dewzzjr",
+			"href": "https://www.linkedin.com/in/dewzzjr/"
 		}
 	],
 	"limit": {
