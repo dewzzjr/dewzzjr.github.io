@@ -6,7 +6,6 @@ h5,
 h6 {
   font-family: 'Saira Extra Condensed', serif !important;
   font-weight: 700;
-  text-transform: uppercase;
   color: white;
 }
 
@@ -39,16 +38,18 @@ h3 {
 
 /* Styles go here */
 
-.page-header, .page-header-space {
+.page-header,
+.page-header-space {
   height: 10rem;
 }
 
-.page-footer, .page-footer-space {
+.page-footer,
+.page-footer-space {
   height: 8rem;
 }
 
 .page-footer {
-  display: none;
+  /* display: none; */
   padding-top: 2mm;
   position: fixed;
   bottom: 0;
@@ -68,8 +69,8 @@ h3 {
 }
 
 .page {
-  display: none;
-  page-break-after: always !important;
+  /* display: none; */
+  page-break-after: auto;
 }
 
 .resume-section {
@@ -97,11 +98,31 @@ h3 {
 }
 
 @media print {
-   thead {display: table-header-group;} 
-   tfoot {display: table-footer-group;}
-   body {margin: 0;}
-   a {text-decoration: none !important;}
-   .print {display: none !important;}
-   .page {display: block}
-   .page-footer {display: block}
+  thead {
+    display: table-header-group;
+  }
+
+  tfoot {
+    display: table-footer-group;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  a {
+    text-decoration: none !important;
+  }
+
+  .print {
+    display: none !important;
+  }
+
+  .page {
+    display: block
+  }
+
+  .page-footer {
+    display: block
+  }
 }

@@ -15,47 +15,50 @@ var Main = function () {
 			},
 			success: function (data) {
 				if (isPrint()) {
-					if (data.limit.max_experience) {
-						data.experience = data.experience.slice(0, data.limit.max_experience);
+					if (data.limit.max_experiences) {
+						data.experience = data.experience.slice(0, data.limit.max_experiences);
 					}
-					if (data.limit.max_education) {
-						data.education = data.education.slice(0, data.limit.max_education);
+					if (data.limit.max_educations) {
+						data.education = data.education.slice(0, data.limit.max_educations);
+					}
+					if (data.limit.max_organizations) {
+						data.organization = data.organization.slice(0, data.limit.max_organizations);
 					}
 				}
 				var exp = data.experience;
 				var new_exp = [];
-				exp.forEach(function(e){
+				exp.forEach(function (e) {
 					e.f_start_date = formatDate(e.start_date, "mm yyyy");
 					e.f_end_date = formatDate(e.end_date, "mm yyyy");
 					new_exp.push(e);
 				});
 				data.experience = new_exp;
 
-				
+
 				var percent = data.skills.main;
 				var new_percent = [];
-				percent.forEach(function(e){
+				percent.forEach(function (e) {
 					e.percent = (e.value * 100) + '%';
 					e.type = (e.value > 0.8 ? "Advance" : e.value > 0.6 ? "Intermediate" : "Beginner");
 					new_percent.push(e);
 				});
 				data.skills.main = new_percent;
-				
+
 				var other = data.skills.other;
 				var new_other = [];
-				other.forEach(function(e){
+				other.forEach(function (e) {
 					e.percent = (e.value * 100) + '%';
 					e.type = (e.value > 0.8 ? "Advance" : e.value > 0.6 ? "Intermediate" : "Beginner");
 					new_other.push(e);
 				});
 				data.skills.other = new_other;
-				
-				for(n in data) {
+
+				for (n in data) {
 					if (!isPrint() && n == 'contacts_alt') {
 						continue;
 					}
-					if (typeof(data[n]) != "object") {
-						if(n == "birthday") {
+					if (typeof (data[n]) != "object") {
+						if (n == "birthday") {
 							var date = data[n];
 							age(date);
 							data[n] = formatDate(date);
@@ -71,24 +74,24 @@ var Main = function () {
 						}
 					}
 					if (n == 'skills') {
-						for(s in data.skills) {
-							var template = $('#skills_'+s+'_template').html();
+						for (s in data.skills) {
+							var template = $('#skills_' + s + '_template').html();
 							Mustache.parse(template);   // optional, speeds up future uses
 							var rendered = Mustache.render(template, data.skills);
-							$('#skills_'+s+'_template').html(rendered);
-							$('#skills_'+s+'_template').show();
+							$('#skills_' + s + '_template').html(rendered);
+							$('#skills_' + s + '_template').show();
 							$('[data-toggle="popover"]').popover();
 						}
 					}
 				}
 				if (!isPrint()) {
-					for(n in data.contacts) {
+					for (n in data.contacts) {
 						if (n == "email") {
 							$('.email').html(data.contacts[n]);
 							$('.email').attr("href", "mailto:" + data.contacts[n]);
 						} else if (n == "whatsapp") {
 							$('.whatsapp').html(data.contacts[n]);
-							$('.whatsapp').parent().attr("href", "http://wa.me/" +data.contacts[n].replace(/\D/g,''));
+							$('.whatsapp').parent().attr("href", "http://wa.me/" + data.contacts[n].replace(/\D/g, ''));
 						} else {
 							$('.' + n).attr("href", data.contacts[n]);
 						}
@@ -97,18 +100,18 @@ var Main = function () {
 			}
 		});
 	}
-	
-	var formatDate = function(date_s, type = "default") {
+
+	var formatDate = function (date_s, type = "default") {
 		if (typeof date_s == 'undefined') return "Now";
-		
+
 		var date = new Date(date_s);
 		var monthNames = [
-		  "January", "February", "March",
-		  "April", "May", "June", "July",
-		  "August", "September", "October",
-		  "November", "December"
+			"January", "February", "March",
+			"April", "May", "June", "July",
+			"August", "September", "October",
+			"November", "December"
 		];
-	  
+
 		var day = date.getDate();
 		var monthIndex = date.getMonth();
 		var year = date.getFullYear();
@@ -143,7 +146,7 @@ var Main = function () {
 		var age = _calculateAge(new Date(date))
 		$("#age").html(age)
 	}
-	
+
 	return {
 		init: function () {
 			getJson();
