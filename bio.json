@@ -66,7 +66,7 @@
 			"organization": "Shortlyst AI",
 			"start_date": "2022-09-01",
 			"description": [
-				"I have responsibility to maintain and develop features to help recruiter to search and recruit candidates. I design technical software architechture for features by translating PRD into RFC Document. We create our application using Golang based microservice in AWS using docker and kubernetes. We utilize MongoDB, PostgreSQL, Redis, and Elasticsearch in our services"
+				"I have responsibility to maintain and develop features to help recruiter to search and recruit candidates. I design technical software architecture for features by translating PRD into RFC Document. We create our application using Golang based microservice in AWS using docker and kubernetes. We utilize MongoDB, PostgreSQL, Redis, and Elasticsearch in our services."
 			]
 		},
 		{
@@ -206,28 +206,24 @@
 	],
 	"personal_traits": [
 		{
-			"name": "Loyal",
-			"description": "because I always value my society where I belong to"
-		},
-		{
-			"name": "Intense sense of duty",
-			"description": " because I always try my best to finish my duty which I trusted into"
-		},
-		{
-			"name": "Hard working",
-			"description": "because I can be dedicated to my work and avoid finishing my work close to the deadline"
+			"name": "High sense of responsibility",
+			"description": "because I always try my best to finish my duty which I trusted into and dedicated to services that my team belong to"
 		},
 		{
 			"name": "Open minded",
-			"description": "because I always open to latest ideas and other person opinions as long as it is supported by logic"
+			"description": "because I always open to learn something new and relative open with different opinion as long as it is supported by a good argument"
 		},
 		{
-			"name": "Keep calm when Conflict",
-			"description": "because I used to not get distracted by unfamiliar problems that I face for the first time"
+			"name": "Sharing is caring",
+			"description": "because I used to be teaching as assistant lecturer and experience in mentoring my teammates on working environment"
+		},
+		{
+			"name": "Team player",
+			"description": "because I tend to take initiative and be active participant in a team"
 		},
 		{
 			"name": "Social Sensitive",
-			"description": " because I take part in social responsibility events and some organizations"
+			"description": "because I take part in social responsibility events and some organizations in the past"
 		}
 	],
 	"skills": {
