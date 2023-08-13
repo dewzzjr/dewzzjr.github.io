@@ -62,45 +62,38 @@
 	},
 	"experience": [
 		{
-			"name": "Senior Backend Software Engineer",
+			"name": "Senior Software Engineer - Backend",
 			"organization": "Shortlyst AI",
 			"start_date": "2022-09-01",
 			"description": [
-				"I have responsibility to maintain and develop features to help recruiter to search and recruit candidates",
-				"We create our application using Golang based microservice",
-				"We utilize MongoDB, PostgreSQL, Redis, Elasticsearch in our services",
-				"To support our development we also use AWS and kubernetes"
+				"I have responsibility to maintain and develop features to help recruiter to search and recruit candidates. I design technical software architechture for features by translating PRD into RFC Document. We create our application using Golang based microservice in AWS using docker and kubernetes. We utilize MongoDB, PostgreSQL, Redis, and Elasticsearch in our services"
 			]
 		},
 		{
-			"name": "Software Engineer - Golang Backend",
-			"organization": "Accelbyte Inc",
+			"name": "Software Development Engineer - Golang",
+			"organization": "Accelbyte",
 			"start_date": "2021-06-01",
 			"end_date": "2022-09-01",
 			"description": [
-				"I have responsibility as backend engineer that working closely with international game developer company. My team is handling the SSO and orchestrator services for login portal from our vendor.",
-				"We use Go and Java programming language as our main backend language, but I focus on the Golang services.",
-				"One of the big project we were working at is Child's Online Privacy Protection Rule."
+				"I have responsibility as backend engineer that working closely with international game developer company. My team is handling the SSO and orchestrator services for login portal from our vendor. We use Go and Java programming language as our main backend language, but I focus on the Golang services. One of the big project we were working at is Child's Online Privacy Protection Rule."
 			]
 		},
 		{
 			"name": "Software Engineer - Backend",
-			"organization": "PT. Tokopedia",
+			"organization": "Tokopedia",
 			"start_date": "2019-04-01",
 			"end_date": "2021-06-01",
 			"description": [
-				"I have experience as a back-end engineer that responsible to maintain services for API integration with more than 300 partners of Tokopedia.",
-				"We use Go programming language as our main backend stack."
+				"I have experience as a back-end engineer that responsible to maintain services for API integration with more than 300 partners of Tokopedia. We initiate Open API for developer that want to integrate their service to Tokopedia though API, developer can self service to generatetheir credentials and manage authorization for their apps. We use Go programming language as our main backend stack. Our backend service use gRPC for communication between services and use graphQL for fetching data that will be use in mobile and web platforms."
 			]
 		},
 		{
-			"name": "Associate Software Programmer - Freelance",
-			"organization": "PT. Bina Informasi Optima Solusindo",
+			"name": "Software Developer - Associate",
+			"organization": "Bina Informasi Optima Solusindo",
 			"start_date": "2018-07-01",
 			"end_date": "2019-04-01",
 			"description": [
-				"I used to be a freelance worker supporting a project to develop the application features alteration of Real Estate Management and Other Service (REMOTE) PELINDO III for 8 months. The application was done using C# language and work design of ASP.NET. We worked the Development Process and Support for 4 months.",
-				"Furthermore, I also used to support the information system working based on web for PDAM Magelang for more or less one month. The application was done by using Laravel framework and PHP programming language."
+				"I used to be a freelance worker supporting a project to develop the application features alteration of Real Estate Management and Other Service (REMOTE) PELINDO III for 8 months. The application was done using C# language and work design of ASP.NET. We worked the Development Process and Support for 4 months. Furthermore, I also used to support the information system working based on web for PDAM Magelang for more or less one month. The application was done by using Laravel framework and PHP programming language."
 			]
 		},
 		{
@@ -109,8 +102,7 @@
 			"start_date": "2017-06-01",
 			"end_date": "2017-08-01",
 			"description": [
-				"I did an internship for 3 months in PT. Telkom Indonesia Central Java Regional Division and DIY which located on Jl. Pahlawan 10, Semarang. I was placed on IS Operation Support department. My main jobdesk in this department was making a dashboard for monitoring and calculating the level of marketing satisfaction performance in Indihome product.",
-				"Moreover, my partner and I were worked on several projects such as making a network simulation using Cisco and practiced it to the available Cisco tools, and making an android application to support the marketing of Indihome based on the Augmented Reality technology using Unity 3D."
+				"I did an internship for 3 months in PT. Telkom Indonesia Central Java Regional Division and DIY which located on Jl. Pahlawan 10, Semarang. I was placed on IS Operation Support department. My main jobdesk in this department was making a dashboard for monitoring and calculating the level of marketing satisfaction performance in Indihome product. Moreover, my partner and I were worked on several projects such as making a network simulation using Cisco and practiced it to the available Cisco tools, and making an android application to support the marketing of Indihome based on the Augmented Reality technology using Unity 3D."
 			]
 		},
 		{
