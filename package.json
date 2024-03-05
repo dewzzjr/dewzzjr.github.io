@@ -35,7 +35,7 @@
   },
   "devDependencies": {
     "@popperjs/core": "^2.11.8",
-    "browser-sync": "^2.29.3",
+    "browser-sync": "^3.0.2",
     "gulp": "^4.0.2",
     "gulp-clean-css": "3.9.4",
     "gulp-header": "2.0.5",
