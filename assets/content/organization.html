@@ -1,0 +1,48 @@
+{{- define "organization" }}
+          <section class="container center m-auto pt-7 min-h-screen flex flex-col" id="organization">
+            <h1 class="py-2 pl-5 ml-14 md:ml-16 my-3 font-bold tracking-tight font-mono text-white text-3xl bg-blue-500 rounded-lg shadow-md shadow-blue-900">
+              Organization & Voluntary
+            </h1>
+            <ul class="timeline timeline-vertical timeline-snap-icon max-md:timeline-compact grow flex justify-center">
+              {{- $odd := false }}
+              {{- $classTitle := "" }}
+              {{- $classDesc := "" }}
+              {{- range $organization := .Organization}}
+              <li>
+                {{- $odd = not $odd }}
+                {{- if $odd }}
+                {{- $classTitle = "timeline-start text-end max-md:text-start"}}
+                {{- $classDesc = "timeline-box timeline-end max-md:text-start"}}
+                {{- else }}
+                {{- $classTitle = "md:timeline-end text-start timeline-start"}}
+                {{- $classDesc = "timeline-box md:timeline-start timeline-end"}}
+                {{- end }}
+                {{- template "timeline-checkmark" }}
+                <div class="{{ $classTitle }}">
+                  <h2 class="font-bold tracking-tighter text-lg">
+                    {{ $organization.Name }}
+                  </h2>
+                  <time class="italic font-mono">
+                    {{ $organization.Time.Start  }}
+                    -
+                    {{- if $organization.Time.End }}
+                    {{ $organization.Time.End  }}
+                    {{- else }}
+                    Now
+                    {{- end }}
+                  </time>
+                </div>
+                <div class="{{ $classDesc }}">
+                  <h3 class="font-bold tracking-tight">
+                    {{ $organization.Title }}
+                  </h3>
+                  <p class="text-sm">
+                    {{ $organization.Description }}
+                  </p>
+                </div>
+                <hr />
+              </li>
+              {{- end }}
+            </ul>
+          </section>
+{{- end }}

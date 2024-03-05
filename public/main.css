@@ -2059,11 +2059,6 @@ html:has(.drawer-toggle:checked) {
   height: 3rem;
 }
 
-.size-8 {
-  width: 2rem;
-  height: 2rem;
-}
-
 .size-5 {
   width: 1.25rem;
   height: 1.25rem;
@@ -2095,10 +2090,6 @@ html:has(.drawer-toggle:checked) {
 
 .max-w-md {
   max-width: 28rem;
-}
-
-.max-w-sm {
-  max-width: 24rem;
 }
 
 .max-w-xs {
@@ -2171,10 +2162,6 @@ html:has(.drawer-toggle:checked) {
   fill: currentColor;
 }
 
-.p-4 {
-  padding: 1rem;
-}
-
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -2208,10 +2195,6 @@ html:has(.drawer-toggle:checked) {
 
 .text-center {
   text-align: center;
-}
-
-.text-right {
-  text-align: right;
 }
 
 .text-start {
@@ -2285,11 +2268,6 @@ html:has(.drawer-toggle:checked) {
 
 .tracking-tighter {
   letter-spacing: -0.05em;
-}
-
-.text-base-content {
-  --tw-text-opacity: 1;
-  color: var(--fallback-bc,oklch(var(--bc)/var(--tw-text-opacity)));
 }
 
 .text-blue-500 {
@@ -2660,19 +2638,6 @@ html:has(.drawer-toggle:checked) {
   .md\:size-8 {
     width: 2rem;
     height: 2rem;
-  }
-
-  .md\:size-6 {
-    width: 1.5rem;
-    height: 1.5rem;
-  }
-
-  .md\:grid-cols-8 {
-    grid-template-columns: repeat(8, minmax(0, 1fr));
-  }
-
-  .md\:grid-cols-10 {
-    grid-template-columns: repeat(10, minmax(0, 1fr));
   }
 
   .md\:text-6xl {

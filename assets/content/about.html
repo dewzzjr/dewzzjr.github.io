@@ -1,0 +1,27 @@
+{{- define "about" }}
+          <section class="pt-7 min-h-screen hero" id="about">
+            <div class="hero-content text-center">
+              <img src="public/profile.png" class="hidden md:block max-w-xs rounded-full shadow-2xl" />
+              <div class="max-w-md flex items-center justify-center flex-col">
+                <img src="public/profile.png" class="md:hidden sm:max-w-sm max-w-xs rounded-full shadow-2xl" />
+                <h1 class="my-3 font-extrabold tracking-tight font-mono drop-shadow-xl shadow-blue-800 text-blue-500 text-4xl md:text-6xl">
+                  {{ .Name }}
+                </h1>
+                <p class="max-md:text-xs font-serif">
+                  {{ .Description }}
+                </p>
+                <a href="mailto:{{ .Email }}" class="font-mono tracking-tight md:text-lg py-4">
+                  <i class="fa-solid fa-envelope size-5"></i>
+                  {{ .Email }}
+                </a>
+                <div class="flex gap-3 justify-center">
+                  {{- range $social := .About }}
+                  <a href="{{ $social.Ref }}">
+                    <i class="fa-brands fa-{{ $social.Key }} size-5 md:size-8"></i>
+                  </a>
+                  {{- end }}
+                </div>
+              </div>
+            </div>
+          </section>
+{{- end }}

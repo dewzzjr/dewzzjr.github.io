@@ -1,0 +1,173 @@
+name: Dewangga Prasetya Praja
+email: dewzzpro@gmail.com
+description: |
+  Specialized as <span class="font-semibold">Golang Backend Engineer</span> with intermediate knowledge as <span class="font-semibold">DevOps</span>.
+  High understanding on <span class="font-semibold">microservices design and infrastructure</span>.
+  Interested in developing <span class="font-semibold">fullstack application</span> utilize newest technologies and <span class="font-semibold">data science</span>.
+about:
+  - key: linkedin
+    ref: https://www.linkedin.com/in/dewzzjr
+  - key: github
+    ref: https://github.com/dewzzjr
+  - key: whatsapp
+    ref: http://wa.me/628562747444
+  - key: instagram
+    ref: https://www.instagram.com/dewzzjr
+  - key: facebook
+    ref: https://www.facebook.com/dewzz
+experience:
+  - name: Accelbyte
+    title: Software Engineer - DevOps
+    time:
+      start: 2023-09
+    description: |
+      Responsible to handle continuous integration and continuous
+      delivery/deployment for multiple environment for each customer.
+      Maintain automation for dozens of unique services.
+  - name: Shortlyst AI
+    title: Senior Software Engineer - Backend
+    time:
+      end: 2023-09
+      start: 2022-09
+    description: |
+      Responsible to maintain and develop features to help recruiter to search and recruit candidates.
+      Design technical software architecture for features by translating PRD into RFC Document.
+      Build application using Golang based microservice in AWS using docker and kubernetes.
+      Utilize MongoDB, PostgreSQL, Redis, and Elasticsearch in our services.
+  - name: Accelbyte
+    title: Software Engineer - Backend
+    time:
+      end: 2022-09
+      start: 2021-06
+    description: |
+      Responsible as backend engineer that working closely with international game developer company.
+      Handle SSO and orchestrator services for login portal from our vendor.
+      Use Go and Java programming language as our main backend language, but personally focus on the Golang services.
+  - name: Tokopedia
+    title: Software Engineer - Seller API
+    time:
+      end: 2021-06
+      start: 2019-04
+    description: |
+      Experience as a back-end engineer that responsible to maintain services for API integration with more than 300 partners of Tokopedia [<a href="https://developer.tokopedia.com/">https://developer.tokopedia.com</a>].
+      First time using Go Programming Language and love this language since then.
+  - name: Bina Informasi Optima Solusindo
+    title: Associate Software Developer
+    time:
+      end: 2019-03
+      start: 2018-06
+    description: |
+      Freelance worker supporting a project to develop web application, Real Estate Management and Other Service (REMOTE), for PELINDO III for 8 months by utilize ASP.NET framework by C#.
+      Support project to develop web-based information system based for PDAM Magelang by using Laravel framework and PHP programming language for around one month.
+organization:
+  - name: Sobat Bumi Indonesia
+    title: Surabaya Region Coordinator
+    time:
+      end: "2018"
+      start: "2017"
+    description: |
+      Sobat Bumi Indonesia is a environmental community of Indonesia that actively participating in preserving the environment for the present and future generations.
+      Coordinating activities and the members of Sobat Bumi in Surabaya Region.
+  - name: Himpunan Mahasiswa Sistem Informasi
+    title: Secretary of Research and Technology Department
+    time:
+      end: "2017"
+      start: "2016"
+    description: |
+      Student Associations of Information Systems Department, ITS.
+      Responsible for staff management and department administration.
+  - name: Badan Eksekutif Mahasiswa ITS
+    title: Staff of Social Responsibility Ministry
+    time:
+      end: "2016"
+      start: "2015"
+    description: |
+      Student Executive of Institution Level. Responsible as Chief
+      Executive ITS Green Campaign 2016 Environmental campaign for young generation at junior high school in Surabaya.
+  - name: Himpunan Mahasiswa Sistem Informasi
+    title: Staff of Technology Application Department
+    time:
+      end: "2016"
+      start: "2015"
+    description: |
+      Student Associations of Information Systems Department, ITS.
+      Responsible in organizing technology related creation from Information Systems students.
+education:
+  - name: Institute Technology of Sepuluh Nopember
+    title: Faculty of Information Technology & Communication - Information Systems Department
+    time:
+      end: "2018"
+      start: "2014"
+    description: |
+      Bachelor of Computer.
+      Major: Data Acquisition & Informations Dissemination.
+      Thesis: Application for Extracting and Visualizing Event Information in Realtime From Social Media Using Conditional Random Field with Flask Python Framework.
+      GPA: 3.55
+  - name: SMA Negeri 1 Salatiga
+    title: Senior High School - Science Program
+    time:
+      end: "2014"
+      start: "2011"
+    description: |
+      Participate in Smanssa Robotic Club and Solidaritas Kerohanian Islam
+  - name: SMP Negeri 1 Ungaran
+    title: Junior High School
+    time:
+      end: "2008"
+      start: "2002"
+    description: |
+      Participate in Student Council, Science Olympiad and Kerohanian Islam
+  - name: SD Negeri 1 Ungaran
+    title: Elementary School
+    time:
+      end: "2014"
+      start: "2011"
+    description: |
+      Participate in Boys Scouts and Mathematic Olympiad
+skills:
+  - key: GOLANG
+    ref: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original-wordmark.svg
+  - key: PYTHON
+    ref: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg
+  - key: POSTGRES
+    ref: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original-wordmark.svg
+  - key: ELASTICSEARCH
+    ref: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/elasticsearch/elasticsearch-original.svg
+  - key: MONGODB
+    ref: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original-wordmark.svg
+  - key: REDIS
+    ref: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original-wordmark.svg
+  - key: MYSQL
+    ref: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/icons/mysql/mysql-original-wordmark.svg
+  - key: DOCKER
+    ref: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original-wordmark.svg
+  - key: KUBERNETES
+    ref: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-original-wordmark.svg
+  - key: GIT
+    ref: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original-wordmark.svg
+  - key: AWS
+    ref: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg
+  - key: JENKINS
+    ref: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jenkins/jenkins-original.svg
+  - key: HEROKU
+    ref: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/heroku/heroku-plain-wordmark.svg
+  - key: LINUX
+    ref: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg
+  - key: JAVASCRIPT
+    ref: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg
+  - key: JAVA
+    ref: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original-wordmark.svg
+  - key: DOTNET
+    ref: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dot-net/dot-net-original-wordmark.svg
+  - key: TAILWINDCSS
+    ref: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg
+  - key: PHP
+    ref: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg
+  - key: FLASK
+    ref: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original-wordmark.svg
+  - key: LARAVEL
+    ref: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original-wordmark.svg
+  - key: CODEIGNITER
+    ref: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/codeigniter/codeigniter-plain-wordmark.svg
+  - key: LARAVEL
+    ref: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg

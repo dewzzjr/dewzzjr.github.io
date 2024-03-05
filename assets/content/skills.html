@@ -1,0 +1,17 @@
+{{- define "skills" }}
+          <section class="container center m-auto pt-7 min-h-screen flex flex-col" id="skills">
+            <h1 class="py-2 pl-5 ml-14 md:ml-16 my-3 font-bold tracking-tight font-mono text-white text-3xl bg-blue-500 rounded-lg shadow-md shadow-blue-900">
+              Skills
+            </h1>
+            <div class="grow flex flex-col justify-center">
+              <h2 class="pl-12 py-4 font-bold tracking-tighter text-lg">Programming Languages & Tools</h2>
+              <div class="container grid grid-cols-3 sm:grid-cols-5 xl:grid-cols-10 justify-items-center items-center gap-4">
+                {{- range $skill := .Skills }}
+                <div class="tooltip hover:tooltip-open" data-tip="{{ $skill.Key }}">
+                  <img class="size-12 md:size-16 xl:size-20" src="{{ $skill.Ref }}" />
+                </div>
+                {{- end }}
+              </div>
+            </div>
+          </section>
+{{- end }}
