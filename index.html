@@ -1,264 +1,650 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Personal Website for Curriculum Vitae" />
+    <meta name="author" content="Dewangga Prasetya Praja" />
+    <title>Curriculum Vitae - Dewangga Prasetya Praja</title>
+    <link rel="icon" type="image/x-icon" href="https://pkg.go.dev/static/shared/logo/go-white.svg">
+    <link href="public/main.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@2.16.0/devicon.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://kit.fontawesome.com/6f48c57228.js" crossorigin="anonymous"></script>
+  </head>
 
-<head>
+  <body>
+    <nav class="drawer">
+      <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+      <label for="my-drawer" class="fixed top-11 left-8 btn btn-circle bg-blue-500 hover:bg-blue-700 text-white drawer-button z-50">
+        <input type="checkbox" class="drawer-toggle" />
+        <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z"/></svg>
+      </label>
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Personal Website for Curriculum Vitae">
-  <meta name="author" content="Dewangga Prasetya Praja">
-  <title>Curriculum Vitae - Dewangga Prasetya Praja</title>
+      <div class="drawer-content bg-blue-100">
+        <content class="absolute top-20 w-full center scroll-pt-20">
+          <section class="pt-7 min-h-screen hero" id="about">
+            <div class="hero-content text-center">
+              <img src="public/profile.png" class="hidden md:block max-w-xs rounded-full shadow-2xl" />
+              <div class="max-w-md flex items-center justify-center flex-col">
+                <img src="public/profile.png" class="md:hidden sm:max-w-sm max-w-xs rounded-full shadow-2xl" />
+                <h1
+                  class="my-3 font-extrabold tracking-tight font-mono drop-shadow-xl shadow-blue-800 text-blue-500 text-4xl md:text-6xl"
+                >
+                  Dewangga Prasetya Praja
+                </h1>
+                <p class="max-md:text-xs font-serif">
+                  Specialized as <span class="font-semibold">Golang Backend Engineer</span> with intermediate knowledge as <span class="font-semibold">DevOps</span>.
+                  High understanding on <span class="font-semibold">microservices design and infrastructure</span>.
+                  Interested in developing <span class="font-semibold">fullstack application</span> utilize newest technologies and <span class="font-semibold">data science</span>.
+                </p>
+                <a href="mailto:dewzzpro@gmail.com" class="font-mono tracking-tight md:text-lg py-4">
+                  <i class="fa-solid fa-envelope size-5"></i>
+                  dewzzpro@gmail.com
+                </a>
+                <div class="flex gap-3 justify-center">
+                  <a href="https://www.linkedin.com/in/dewzzjr">
+                    <i class="fa-brands fa-linkedin size-5 md:size-8"></i>
+                  </a>
+                  <a href="https://github.com/dewzzjr">
+                    <i class="fa-brands fa-github size-5 md:size-8"></i>
+                  </a>
+                  <a href="http://wa.me/628562747444">
+                    <i class="fa-brands fa-whatsapp size-5 md:size-8"></i>
+                  </a>
+                  <a href="https://www.instagram.com/dewzzjr">
+                    <i class="fa-brands fa-instagram size- md:size-8"></i>
+                  </a>
+                  <a href="https://www.facebook.com/dewzz">
+                    <i class="fa-brands fa-facebook size-5 md:size-8"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="container center m-auto pt-7 min-h-screen flex flex-col" id="experience">
+            <h1
+              class="py-2 pl-5 ml-14 md:ml-16 my-3 font-bold tracking-tight font-mono text-white text-3xl bg-blue-500 rounded-lg shadow-md shadow-blue-900"
+            >
+              Experience
+            </h1>
+            <ul
+              class="timeline timeline-vertical timeline-snap-icon max-md:timeline-compact grow flex justify-center"
+            >
+              <li>
+                <div class="timeline-middle text-blue-500">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="h-5 w-5"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <div class="timeline-start text-end max-md:text-start">
+                  <h2 class="font-bold tracking-tighter text-xl">Accelbyte</h2>
+                  <time class="italic font-mono">September 2023 - Now</time>
+                </div>
+                <div class="timeline-box timeline-end max-md:text-start">
+                  <h3 class="font-bold tracking-tight text-lg text-nowrap">
+                    Software Engineer - DevOps
+                  </h3>
+                  <p class="text-sm">
+                    Responsible to handle continuous integration and continuous
+                    delivery/deployment for multiple environment for each customer.
+                    Maintain automation for dozens of unique services.
+                  </p>
+                </div>
+                <hr />
+              </li>
+              <li>
+                <div class="timeline-middle text-blue-500">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="h-5 w-5"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <div class="md:timeline-end text-start timeline-start">
+                  <h2 class="font-bold tracking-tighter text-xl">Shortlyst AI</h2>
+                  <time class="italic font-mono"
+                    >September 2022 - September 2023</time
+                  >
+                </div>
+                <div class="timeline-box md:timeline-start timeline-end">
+                  <h3 class="font-bold tracking-tight text-lg text-nowrap">
+                    Senior Software Engineer - Backend
+                  </h3>
+                  <p class="text-sm">
+                    Responsible to maintain and develop features to help recruiter to search and recruit candidates.
+                    Design technical software architecture for features by translating PRD into RFC Document.
+                    Build application using Golang based microservice in AWS using docker and kubernetes.
+                    Utilize MongoDB, PostgreSQL, Redis, and Elasticsearch in our services.
+                  </p>
+                </div>
+                <hr />
+              </li>
+              <li>
+                <div class="timeline-middle text-blue-500">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="h-5 w-5"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <div class="timeline-start text-end max-md:text-start">
+                  <h2 class="font-bold tracking-tighter text-xl">Accelbyte</h2>
+                  <time class="italic font-mono">June 2021 - September 2022</time>
+                </div>
+                <div class="timeline-box timeline-end">
+                  <h3 class="font-bold tracking-tight text-lg text-nowrap">
+                    Software Engineer - Backend
+                  </h3>
+                  <p class="text-sm">
+                    Responsible as backend engineer that working closely with international game developer company.
+                    Handle SSO and orchestrator services for login portal from our vendor. 
+                    Use Go and Java programming language as our main backend language, but personally focus on the Golang services.
+                  </p>
+                </div>
+                <hr />
+              </li>
+              <li>
+                <div class="timeline-middle text-blue-500">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="h-5 w-5"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <div class="md:timeline-end text-start timeline-start">
+                  <h2 class="font-bold tracking-tighter text-xl">Tokopedia</h2>
+                  <time class="italic font-mono">April 2019 - June 2021</time>
+                </div>
+                <div class="timeline-box md:timeline-start timeline-end">
+                  <h3 class="font-bold tracking-tight text-lg text-nowrap">
+                    Software Engineer - Seller API
+                  </h3>
+                  <p class="text-sm">
+                    Experience as a back-end engineer that responsible to maintain
+                    services for API integration with more than 300 partners of
+                    Tokopedia
+                    [<a href="https://developer.tokopedia.com/">https://developer.tokopedia.com</a>].
+                    First time using Go Programming Language and love this language since then.
+                  </p>
+                </div>
+                <hr />
+              </li>
+              <li>
+                <div class="timeline-middle text-blue-500">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="h-5 w-5"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <div class="timeline-start text-end max-md:text-start">
+                  <h2 class="font-bold tracking-tighter text-xl">
+                    Bina Informasi Optima Solusindo
+                  </h2>
+                  <time class="italic font-mono">July 2018 - March 2019</time>
+                </div>
+                <div class="timeline-box timeline-end">
+                  <h3 class="font-bold tracking-tight text-lg text-nowrap">
+                    Associate Software Developer
+                  </h3>
+                  <p class="text-sm">
+                    Freelance worker supporting a project to develop web
+                    application, Real Estate Management and Other Service (REMOTE),
+                    for PELINDO III for 8 months by using C# language and work
+                    design of ASP.NET. Support project to develop web-based
+                    information system based for PDAM Magelang by using Laravel
+                    framework and PHP programming language for around one month.
+                  </p>
+                </div>
+                <hr />
+              </li>
+            </ul>
 
-  <!-- Bootstrap core CSS -->
-  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+          </section>
+          <section class="container center m-auto pt-7 min-h-screen flex flex-col" id="education">
+            <h1
+              class="py-2 pl-5 ml-14 md:ml-16 my-3 font-bold tracking-tight font-mono text-white text-3xl bg-blue-500 rounded-lg shadow-md shadow-blue-900"
+            >
+              Education
+            </h1>
+            <ul
+              class="timeline timeline-vertical timeline-snap-icon max-md:timeline-compact grow flex justify-center"
+            >
+              <li>
+                <div class="timeline-middle text-blue-500">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="h-5 w-5"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <div class="timeline-start text-end max-md:text-start">
+                  <h2 class="font-bold tracking-tighter text-lg">
+                    Institute Technology of Sepuluh Nopember
+                  </h2>
+                  <time class="italic font-mono">2014 - 2018</time>
+                </div>
+                <div class="timeline-box timeline-end max-md:text-start">
+                  <h3 class="font-bold tracking-tight">
+                    Faculty of Information Technology & Communication - Information
+                    Systems Department
+                  </h3>
+                  <p class="text-sm">
+                    Bachelor of Computer. Major: Data Acquisition & Informations
+                    Dissemination. Thesis: Application for Extracting and
+                    Visualizing Event Information in Realtime From Social Media
+                    Using Conditional Random Field with Flask Python Framework. GPA:
+                    3.55
+                  </p>
+                </div>
+                <hr />
+              </li>
+              <li>
+                <div class="timeline-middle text-blue-500">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="h-5 w-5"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <div class="md:timeline-end text-start timeline-start">
+                  <h2 class="font-bold tracking-tighter text-lg">
+                    SMA Negeri 1 Salatiga
+                  </h2>
+                  <time class="italic font-mono">2011 - 2014</time>
+                </div>
+                <div class="timeline-box md:timeline-start timeline-end">
+                  <h3 class="font-bold tracking-tight">
+                    Senior High School - Science Program
+                  </h3>
+                  <p class="text-sm">
+                    Participate in Smanssa Robotic Club and Solidaritas Kerohanian
+                    Islam
+                  </p>
+                </div>
+                <hr />
+              </li>
+              <li>
+                <div class="timeline-middle text-blue-500">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="h-5 w-5"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <div class="timeline-start text-end max-md:text-start">
+                  <h2 class="font-bold tracking-tighter text-lg">
+                    SMP Negeri 1 Ungaran
+                  </h2>
+                  <time class="italic font-mono">2008 - 2011</time>
+                </div>
+                <div class="timeline-box timeline-end max-md:text-start">
+                  <h3 class="font-bold tracking-tight">Junior High School</h3>
+                  <p class="text-sm">
+                    Participate in Student Council, Science Olympiad and Kerohanian
+                    Islam
+                  </p>
+                </div>
+                <hr />
+              </li>
+              <li>
+                <div class="timeline-middle text-blue-500">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="h-5 w-5"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <div class="md:timeline-end text-start timeline-start">
+                  <h2 class="font-bold tracking-tighter text-lg">
+                    SD Negeri 1 Ungaran
+                  </h2>
+                  <time class="italic font-mono">2002 - 2008</time>
+                </div>
+                <div class="timeline-box md:timeline-start timeline-end">
+                  <h3 class="font-bold tracking-tight">Elementary School</h3>
+                  <p class="text-sm">
+                    Participate in Boys Scouts and Mathematic Olympiad
+                  </p>
+                </div>
+                <hr />
+              </li>
+            </ul>
+          </section>
+          <section class="container center m-auto pt-7 min-h-screen flex flex-col" id="skills">
+            <h1
+              class="py-2 pl-5 ml-14 md:ml-16 my-3 font-bold tracking-tight font-mono text-white text-3xl bg-blue-500 rounded-lg shadow-md shadow-blue-900"
+            >
+              Skills
+            </h1>
+            <div class="grow flex flex-col justify-center">
+              <h2 class="pl-12 py-4 font-bold tracking-tighter text-lg">Programming Languages & Tools</h2>
+              <div class="container grid grid-cols-3 sm:grid-cols-5 xl:grid-cols-10 justify-items-center items-center gap-4">
+                <div class="tooltip hover:tooltip-open" data-tip="GOLANG">
+                  <img class="size-12 md:size-16 xl:size-20" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original-wordmark.svg" />
+                </div>
 
-  <!-- Custom fonts for this template -->
-  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900"
-    rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i"
-    rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css"
-    rel="stylesheet">
+                <div class="tooltip hover:tooltip-open" data-tip="PYTHON">
+                  <img class="size-12 md:size-16 xl:size-20" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" />
+                </div>
 
-  <!-- Custom styles for this template -->
-  <link href="css/resume.css" rel="stylesheet">
+                <div class="tooltip hover:tooltip-open" data-tip="POSTGRES">
+                  <img class="size-12 md:size-16 xl:size-20" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original-wordmark.svg" />
+                </div>
 
-</head>
+                <div class="tooltip hover:tooltip-open" data-tip="ELASTICSEARCH">
+                  <img class="size-12 md:size-16 xl:size-20" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/elasticsearch/elasticsearch-original.svg" />
+                </div>
 
-<body id="page-top">
+                <div class="tooltip hover:tooltip-open" data-tip="MONGODB">
+                  <img class="size-12 md:size-16 xl:size-20" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original-wordmark.svg" />
+                </div>
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-    <a class="navbar-brand js-scroll-trigger" href="#page-top">
-      <span class="d-block d-lg-none"><span class="first_name"></span> <span class="last_name_s"></span></span>
-      <span class="d-none d-lg-block">
-        <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="Profile Picture">
-      </span>
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#about">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#education">Education</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#personal-traits">Personal Traits</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#organization">Organization & Voluntary</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+                <div class="tooltip hover:tooltip-open" data-tip="REDIS">
+                  <img class="size-12 md:size-16 xl:size-20" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original-wordmark.svg" />
+                </div>
 
-  <div class="container-fluid p-0">
+                <div class="tooltip hover:tooltip-open" data-tip="MYSQL">
+                  <img class="size-12 md:size-16 xl:size-20" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg" />
+                </div>
 
-    <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
-      <div class="my-auto">
-        <h1 class="mb-0">
-          <span class="text-primary first_name"></span>
-          <span class="last_name"></span>
-        </h1>
-        <div class="subheading mb-5">
-          <span class="address"></span>
-          <a href="" target="_blank" class="email"></a>
-        </div>
-        <p id="introduction" style="display: none;">
-          <span class="first_name"></span> <span class="last_name"></span>, <span id="age"></span> years old, from <span
-            class="birthplace"></span>.
-          My birthday is <strong class="birthday"></strong>.
-          I was graduated from <span class="almamater"></span> with my Bachelor's Degree on <span
-            class="graduated_on"></span>.
-        </p>
-        <p class="mb-5 description"></p>
-        <ul class="list-inline list-social-icons mb-0">
-          <li class="list-inline-item">
-            <a href="" class="facebook" target="_blank">
-              <span class="fa-stack fa-lg">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-              </span>
-            </a>
-          </li>
-          <li class="list-inline-item">
-            <a href="" class="instagram" target="_blank">
-              <span class="fa-stack fa-lg">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
-              </span>
-            </a>
-          </li>
-          <li class="list-inline-item">
-            <a href="" class="twitter" target="_blank">
-              <span class="fa-stack fa-lg">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-              </span>
-            </a>
-          </li>
-          <li class="list-inline-item">
-            <a href="" class="linkedin" target="_blank">
-              <span class="fa-stack fa-lg">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-              </span>
-            </a>
-          </li>
-          <li class="list-inline-item">
-            <a href="" class="github" target="_blank">
-              <span class="fa-stack fa-lg">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-              </span>
-            </a>
-          </li>
-          <li class="list-inline-item">
-            <a href="#">
-              <span class="fa-stack fa-lg">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-whatsapp fa-stack-1x fa-inverse"></i>
-              </span>
-              <span class="text-muted whatsapp"></span>
-            </a>
+                <div class="tooltip hover:tooltip-open" data-tip="DOCKER">
+                  <img class="size-12 md:size-16 xl:size-20" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original-wordmark.svg" />
+                </div>
 
-          </li>
+                <div class="tooltip hover:tooltip-open" data-tip="KUBERNETES">
+                  <img class="size-12 md:size-16 xl:size-20" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-original-wordmark.svg" />
+                </div>
+
+                <div class="tooltip hover:tooltip-open" data-tip="GIT">
+                  <img class="size-12 md:size-16 xl:size-20" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original-wordmark.svg" />
+                </div>
+
+                <div class="tooltip hover:tooltip-open" data-tip="AWS">
+                  <img class="size-12 md:size-16 xl:size-20" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" />
+                </div>
+
+                <div class="tooltip hover:tooltip-open" data-tip="JENKINS">
+                  <img class="size-12 md:size-16 xl:size-20" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jenkins/jenkins-original.svg" />
+                </div>
+
+                <div class="tooltip hover:tooltip-open" data-tip="HEROKU">
+                  <img class="size-12 md:size-16 xl:size-20" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/heroku/heroku-plain-wordmark.svg" />
+                </div>
+
+                <div class="tooltip hover:tooltip-open" data-tip="LINUX">
+                  <img class="size-12 md:size-16 xl:size-20" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" />
+                </div>
+
+                <div class="tooltip hover:tooltip-open" data-tip="JAVASCRIPT">
+                  <img class="size-12 md:size-16 xl:size-20" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
+                </div>
+
+                <div class="tooltip hover:tooltip-open" data-tip="JAVA">
+                  <img class="size-12 md:size-16 xl:size-20" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original-wordmark.svg" />
+                </div>
+
+                <div class="tooltip hover:tooltip-open" data-tip="DOTNET">
+                  <img class="size-12 md:size-16 xl:size-20" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dot-net/dot-net-original-wordmark.svg" />
+                </div>
+
+                <div class="tooltip hover:tooltip-open" data-tip="BOOTSTRAP">
+                  <img class="size-12 md:size-16 xl:size-20" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original-wordmark.svg" />
+                </div>
+
+                <div class="tooltip hover:tooltip-open" data-tip="JQUERY">
+                  <img class="size-12 md:size-16 xl:size-20" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jquery/jquery-original-wordmark.svg" />
+                </div>
+
+                <div class="tooltip hover:tooltip-open" data-tip="TAILWINDCSS">
+                  <img class="size-12 md:size-16 xl:size-20" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" />
+                </div>
+
+                <div class="tooltip hover:tooltip-open" data-tip="PHP">
+                  <img class="size-12 md:size-16 xl:size-20" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" />
+                </div>
+
+                <div class="tooltip hover:tooltip-open" data-tip="FLASK">
+                  <img class="size-12 md:size-16 xl:size-20" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original-wordmark.svg" />
+                </div>
+
+                <div class="tooltip hover:tooltip-open" data-tip="LARAVEL">
+                  <img class="size-12 md:size-16 xl:size-20" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original-wordmark.svg" />
+                </div>
+
+                <div class="tooltip hover:tooltip-open" data-tip="CODEIGNITER">
+                  <img class="size-12 md:size-16 xl:size-20" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/codeigniter/codeigniter-plain-wordmark.svg" />
+                </div>
+
+                <div class="tooltip hover:tooltip-open" data-tip="HTML">
+                  <img class="size-12 md:size-16 xl:size-20" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg" />
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="container center m-auto pt-7 min-h-screen flex flex-col" id="organization">
+            <h1
+              class="py-2 pl-5 ml-14 md:ml-16 my-3 font-bold tracking-tight font-mono text-white text-3xl bg-blue-500 rounded-lg shadow-md shadow-blue-900"
+            >
+              Organization & Voluntary
+            </h1>
+            <ul
+              class="timeline timeline-vertical timeline-snap-icon max-md:timeline-compact grow flex justify-center"
+            >
+              <li>
+                <div class="timeline-middle text-blue-500">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="h-5 w-5"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <div class="timeline-start text-end max-md:text-start">
+                  <h2 class="font-bold tracking-tighter text-lg">
+                    Sobat Bumi Indonesia
+                  </h2>
+                  <time class="italic font-mono">2017 - 2018</time>
+                </div>
+                <div class="timeline-box timeline-end max-md:text-start">
+                  <h3 class="font-bold tracking-tight">
+                    Surabaya Region Coordinator
+                  </h3>
+                  <p class="text-sm">
+                    Sobat Bumi Indonesia is a environmental community of Indonesia that actively participating in preserving the environment for the present and future generations.
+                    Coordinating activities and the members of Sobat Bumi in Surabaya Region.
+                  </p>
+                </div>
+                <hr />
+              </li>
+              <li>
+                <div class="timeline-middle text-blue-500">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="h-5 w-5"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <div class="md:timeline-end text-start timeline-start">
+                  <h2 class="font-bold tracking-tighter text-lg">
+                    Himpunan Mahasiswa Sistem Informasi
+                  </h2>
+                  <time class="italic font-mono">2016 - 2017</time>
+                </div>
+                <div class="timeline-box md:timeline-start timeline-end">
+                  <h3 class="font-bold tracking-tight">
+                    Secretary of Research and Technology Department
+                  </h3>
+                  <p class="text-sm">
+                    Student Associations of Information Systems Department, ITS.
+                    Responsible for staff management and department administration.
+                  </p>
+                </div>
+                <hr />
+              </li>
+
+              <li>
+                <div class="timeline-middle text-blue-500">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="h-5 w-5"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <div class="timeline-start text-end max-md:text-start">
+                  <h2 class="font-bold tracking-tighter text-lg">
+                    Badan Eksekutif Mahasiswa ITS
+                  </h2>
+                  <time class="italic font-mono">2015 - 2016</time>
+                </div>
+                <div class="timeline-box timeline-end max-md:text-start">
+                  <h3 class="font-bold tracking-tight">
+                    Staff of Social Responsibility Ministry
+                  </h3>
+                  <p class="text-sm">
+                    Student Executive of Institution Level. Responsible as Chief
+                    Executive ITS Green Campaign 2016 Environmental campaign for young generation at junior high school in Surabaya.
+                  </p>
+                </div>
+                <hr />
+              </li>
+              <li>
+                <div class="timeline-middle text-blue-500">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="h-5 w-5"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <div class="md:timeline-end text-start timeline-start">
+                  <h2 class="font-bold tracking-tighter text-lg">
+                    Himpunan Mahasiswa Sistem Informasi
+                  </h2>
+                  <time class="italic font-mono">2015 - 2016</time>
+                </div>
+                <div class="timeline-box md:timeline-start timeline-end">
+                  <h3 class="font-bold tracking-tight">
+                    Staff of Technology Application Department
+                  </h3>
+                  <p class="text-sm">
+                    Student Associations of Information Systems Department, ITS.
+                    Responsible in organizing technology related creation from Information Systems students.
+                  </p>
+                </div>
+                <hr />
+              </li>
+            </ul>
+          </section>
+        </content>
+      </div>
+      <nav class="drawer-side">
+        <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
+        <ul class="menu pt-28 px-4 w-80 min-h-full bg-blue-500 text-base-content font-sans font-bold uppercase">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#organization">Organization & Voluntary</a></li>
         </ul>
-      </div>
-    </section>
+      </nav>
+    </nav>
 
-    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience">
-      <div class="my-auto">
-        <h2 class="mb-5">Experience</h2>
-
-        <div id="experience_template" type="x-tmpl-mustache" style="display: none;">
-          {{#experience}}
-          <div class="resume-item d-flex flex-column justify-content-between mb-5">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">{{name}}</h3>
-              <h4 class="subheading mb-3">{{organization}}</h4>
-              {{#description}}
-              <p>{{.}}</p>
-              {{/description}}
-            </div>
-            <div class="resume-date text-end">
-              <span class="text-primary">{{f_start_date}} - {{f_end_date}}</span>
-            </div>
-          </div>
-          {{/experience}}
-        </div>
-
-      </div>
-
-    </section>
-
-    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
-      <div class="my-auto">
-        <h2 class="mb-5">Education</h2>
-
-        <div id="education_template" type="x-tmpl-mustache" style="display: none;">
-          {{#education}}
-          <div class="resume-item d-flex flex-column justify-content-between mb-5">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">{{name}}</h3>
-              <h4 class="subheading mb-3">{{description}}</h4>
-              <div class="resume-date text-end text-primary">{{start_year}} - {{end_year}}</div>
-              {{#notes}}
-              <p>{{.}}</p>
-              {{/notes}}
-            </div>
-          </div>
-          {{/education}}
-        </div>
-
-      </div>
-    </section>
-
-    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
-      <div class="my-auto">
-        <h2 class="mb-5">Skills</h2>
-
-        <div class="subheading mb-3">Programming Languages &amp; Tools</div>
-        <ul id="skills_main_template" class="list-inline list-icons" type="x-tmpl-mustache" style="display: none;">
-          {{#main}}
-          <li class="list-inline-item" data-toggle="popover" data-trigger="hover" data-container="body"
-            data-placement="top" data-content="{{name}}: {{percent}}">
-            <i class="devicon-{{icon}}-plain colored"></i>
-          </li>
-          {{/main}}
-        </ul>
-
-        <div class="subheading mb-3">Other Supporting Skill</div>
-        <ul id="skills_other_template" class="fa-ul mb-0" type="x-tmpl-mustache" style="display: none;">
-          {{#other}}
-          <li>
-            <i class="fa-li fa fa-check" data-toggle="popover" data-trigger="hover" data-container="body"
-              data-placement="top" data-content="{{name}}: {{percent}}"></i>
-            {{type}} {{name}}: {{#app}}{{.}}, {{/app}}
-          </li>
-          {{/other}}
-        </ul>
-      </div>
-    </section>
-
-    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="personal-traits">
-      <div class="my-auto">
-        <h2 class="mb-0">Personal Traits</h2>
-        <h3 class="personalities mb-5"></h3>
-        <p id="personal_traits_template" type="x-tmpl-mustache" style="display: none;">
-          {{#personal_traits}}
-          <b>{{name}}</b> {{description}}.
-          {{/personal_traits}}
-      </div>
-    </section>
-
-    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="organization">
-      <div class="my-auto">
-        <h2 class="mb-5">Organization &amp; Voluntary</h2>
-
-        <div id="organization_template" type="x-tmpl-mustache" style="display: none;">
-          {{#organization}}
-          <div class="resume-item d-flex flex-column justify-content-between mb-5">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">{{role}}</h3>
-              <h4 class="subheading mb-3">{{name}}</h4>
-              <div class="resume-date text-end text-primary">{{start_year}} - {{end_year}}</div>
-              <p>{{description}}</p>
-            </div>
-          </div>
-          {{/organization}}
-        </div>
-
-      </div>
-    </section>
-
-  </div>
-
-  <!-- Bootstrap core JavaScript -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Plugin JavaScript -->
-  <script src="https://kit.fontawesome.com/6f48c57228.js" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>
-
-  <!-- Custom scripts for this template -->
-  <script src="js/resume.js"></script>
-  <script src="js/custom.js"></script>
-
-</body>
-
+  </body>
 </html>

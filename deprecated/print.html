@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="css/print.css" />
+  <title>more info: dewzzjr.github.io</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i"
+    rel="stylesheet">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="page-header d-flex justify-content-between align-items-center">
+    <a class="navbar-brand">
+      <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="Profile Picture">
+    </a>
+    <div>
+      <h1>
+        <span class="text-primary first_name"></span>
+        <span class="last_name"></span>
+      </h1>
+      <small class="address"></small>
+    </div>
+    <div>
+      <button type="button" onClick="window.print()" class="btn btn-info print float-right">
+        PRINT ME!
+      </button>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div id="contacts_alt_template" type="x-tmpl-mustache" style="display: block;">
+      <div class="row m-0 flex-wrap justify-content-evenly">
+        {{#contacts_alt}}
+        <div class="col text-center">
+          <a href="{{href}}" class="{{name}} pl-2 text-nowrap" target="_blank">
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-{{name}} fa-stack-1x fa-inverse white"></i>
+            </span>
+            <span class="text-muted text-nowrap my-auto {{name}}">{{address}}</span>
+          </a>
+        </div>
+        {{/contacts_alt}}
+      </div>
+    </div>
+  </div>
+
+  <table>
+
+    <thead>
+      <tr>
+        <td>
+          <!--place holder for the fixed-position header-->
+          <div class="page-header-space"></div>
+        </td>
+      </tr>
+    </thead>
+
+    <tfoot>
+      <tr>
+        <td>
+          <!--place holder for the fixed-position footer-->
+          <div class="page-footer-space"></div>
+        </td>
+      </tr>
+    </tfoot>
+
+    <tbody>
+      <tr>
+        <td>
+          <div class="page container">
+
+            <p id="introduction" style="display: block;" class="text-justify mb-3">
+              <span class="first_name"></span> <span class="last_name"></span>, <span id="age"></span> years old, from
+              <span class="birthplace"></span>.
+              My birthday is <strong class="birthday"></strong>.
+              I was graduated from <span class="almamater"></span> with my Bachelor's Degree on <span
+                class="graduated_on"></span>.
+              <span class="description"></span>
+            </p>
+
+            <section class="resume-section p-2" id="experience">
+              <div class="my-auto">
+                <h2 class="mb-3">Experience</h2>
+
+                <div id="experience_template" type="x-tmpl-mustache" class="d-flex flex-wrap" style="display: block;">
+                  {{#experience}}
+                  <!-- <div class="row d-flex "> -->
+                  <div class="resume-item mb-3 col-md-12">
+                    <div class="resume-content mr-auto">
+                      <div class="d-flex justify-content-between">
+                        <div class="ms-auto">
+                          <h3 class="mb-0">{{name}}</h3>
+                          <h4 class="subheading mb-3">{{organization}}</h4>
+                        </div>
+                        <div class="resume-date mb-3 ms-auto mt-auto text-primary">
+                          {{f_start_date}} - {{f_end_date}}
+                        </div>
+                      </div>
+                      {{#description}}
+                      <p class="text-justify mb-1">{{.}}</p>
+                      {{/description}}
+                    </div>
+                  </div>
+                  <!-- </div> -->
+                  {{/experience}}
+                </div>
+              </div>
+            </section>
+
+            <section class="resume-section p-2" id="skills">
+              <div class="my-auto">
+                <h2 class="mb-3">Skills</h2>
+
+                <h3 class="subheading mb-3">Programming Languages &amp; Tools</h3>
+                <ul id="skills_main_template"
+                  class="list-inline list-icons flex-wrap d-inline-flex justify-content-around" type="x-tmpl-mustache"
+                  style="display: block;">
+                  {{#main}}
+                  <li class="list-inline-item mr-auto pl-3" data-toggle="popover" data-trigger="hover"
+                    data-container="body" data-placement="top" data-content="{{name}}: {{percent}}">
+                    <i class="devicon-{{icon}}-plain colored"></i> {{name}}: {{type}} Level
+                  </li>
+                  {{/main}}
+                </ul>
+
+                <h3 class="subheading mb-3">Other Supporting Skill</h3>
+                <ul id="skills_other_template" class="fa-ul mb-0" type="x-tmpl-mustache" style="display: block;">
+                  {{#other}}
+                  <li>
+                    <i class="fa-li fa fa-check" data-toggle="popover" data-trigger="hover" data-container="body"
+                      data-placement="top" data-content="{{name}}: {{percent}}"></i>
+                    {{type}} {{name}}: {{#app}}{{.}}, {{/app}}
+                  </li>
+                  {{/other}}
+                </ul>
+              </div>
+            </section>
+
+          </div>
+          <div class="page container">
+
+            <section class="resume-section p-2" id="education">
+              <div class="my-auto">
+                <h2 class="mb-3">Education</h2>
+                <div id="education_template" type="x-tmpl-mustache" class="d-flex flex-wrap" style="display: block;">
+                  {{#education}}
+                  <div class="resume-item mb-3 col-md-12">
+                    <div class="resume-content mr-auto">
+                      <div class="d-flex justify-content-between">
+                        <div class="ms-auto">
+                          <h3 class="mb-0">{{name}}</h3>
+                          <h4 class="subheading mb-3">{{description}}</h4>
+                        </div>
+                        <div class="resume-date mb-3 ms-auto mt-auto text-primary">
+                          {{start_year}} - {{end_year}}
+                        </div>
+                      </div>
+                      <ul class="list-unstyled">
+                        {{#notes}}
+                        <li class="text-justify mb-1">{{.}}</li>
+                        {{/notes}}
+                      </ul>
+                    </div>
+                  </div>
+                  {{/education}}
+                </div>
+              </div>
+            </section>
+
+            <section class="resume-section p-2" id="personal-traits">
+              <div class="my-auto">
+                <h2 class="mb-0">Personal Traits</h2>
+                <h3 class="personalities mb-3"></h3>
+                <p class="text-justify" id="personal_traits_template" type="x-tmpl-mustache" style="display: block;">
+                  {{#personal_traits}}
+                  <b>{{name}}</b> {{description}}.
+                  {{/personal_traits}}
+                </p>
+              </div>
+            </section>
+
+            <section class="resume-section p-2 col" id="organization">
+              <div class="my-auto">
+                <h2 class="mb-3">Organization &amp; Voluntary</h2>
+                <div id="organization_template" type="x-tmpl-mustache" class="d-flex flex-wrap" style="display: block;">
+                  {{#organization}}
+                  <div class="resume-item mb-3 col-md-12">
+                    <div class="resume-content mr-auto">
+                      <div class="d-flex justify-content-between">
+                        <div class="ms-auto">
+                          <h3 class="mb-0">{{role}}</h3>
+                          <h4 class="subheading mb-3">{{name}}</h4>
+                        </div>
+                        <div class="resume-date mb-3 ms-auto mt-auto text-primary">
+                          {{start_year}} - {{end_year}}
+                        </div>
+                      </div>
+                      <p class="text-justify mb-1">{{description}}</p>
+                    </div>
+                  </div>
+                  {{/organization}}
+                </div>
+              </div>
+            </section>
+
+          </div>
+
+        </td>
+      </tr>
+    </tbody>
+
+  </table>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="https://kit.fontawesome.com/6f48c57228.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>
+  <script src="js/custom.js"></script>
+</body>
+
+</html>
