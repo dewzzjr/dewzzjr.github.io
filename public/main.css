@@ -2021,10 +2021,6 @@ html:has(.drawer-toggle:checked) {
   top: 2.75rem;
 }
 
-.top-20 {
-  top: 5rem;
-}
-
 .z-50 {
   z-index: 50;
 }
