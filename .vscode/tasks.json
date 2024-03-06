@@ -10,6 +10,12 @@
       "label": "StopServer",
       "type": "process",
       "command": "${input:stopServer}"
+    },
+    {
+      "label": "Tailwind",
+      "type": "shell",
+      "command": "npx",
+      "args": ["tailwindcss","-i","${workspaceFolder}/main.css","-o","${workspaceFolder}/public/main.css"]
     }
   ],
   "inputs": [

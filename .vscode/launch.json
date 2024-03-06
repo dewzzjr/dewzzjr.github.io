@@ -19,9 +19,9 @@
       "args": [
         "--path","${workspaceFolder}/assets",
         "--input","${workspaceFolder}/curiculum-vitae.yaml",
-        "--output","${workspaceFolder}/index.html",
-        "&&", "npx", "tailwindcss", "-i", "./main.css", "-o", "./public/main.css",
-      ]
+        "--output","${workspaceFolder}/index.html"
+      ],
+      "postDebugTask": "Tailwind"
     }
   ]
 }
