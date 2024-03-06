@@ -12,7 +12,10 @@ import (
 )
 
 func Create(c context.Context, path, input, output string) error {
-	t, err := template.ParseGlob(strings.TrimSuffix(path, "/") + "/*.html")
+	t := template.New("").Funcs(template.FuncMap{
+		"parseDuration": model.Time,
+	})
+	t, err := t.ParseGlob(strings.TrimSuffix(path, "/") + "/*.html")
 	if err != nil {
 		return err
 	}
@@ -25,7 +28,7 @@ func Create(c context.Context, path, input, output string) error {
 	if err != nil {
 		return err
 	}
-	fmt.Println("input:", input, t.Name(), len(t.Templates()))
+	fmt.Println("input:", input, len(t.Templates()))
 	var structure model.Structure
 	err = yaml.Unmarshal(i, &structure)
 	if err != nil {
@@ -37,7 +40,7 @@ func Create(c context.Context, path, input, output string) error {
 	if err != nil {
 		return err
 	}
-	fmt.Println("output:", output)
+	fmt.Println("output:", f.Name())
 	err = t.ExecuteTemplate(f, "index.html", structure)
 	if err != nil {
 		return err

@@ -18,11 +18,11 @@
                 {{- $classDesc = "timeline-box md:timeline-start timeline-end"}}
                 {{- end }}
                 {{- template "timeline-checkmark" }}
-                <div class="{{ $classTitle }}">
+                <div class="{{ $classTitle }} tooltip md:tooltip-bottom hover:tooltip-open" data-tip="{{ parseDuration $experience.Time }}">
                   <h2 class="font-bold tracking-tighter text-xl">
                     {{ $experience.Name }}
                   </h2>
-                  <time class="italic font-mono">
+                  <time class="italic font-mono tracking-tight">
                     {{ $experience.Time.Start.Format "January 2006"  }}
                     -
                     {{- if $experience.Time.End.Valid }}

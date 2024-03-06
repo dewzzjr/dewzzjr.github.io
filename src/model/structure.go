@@ -3,6 +3,8 @@ package model
 import (
 	"html/template"
 	"time"
+
+	"dewzzjr.github.io/src/pkg/duration"
 )
 
 type Structure struct {
@@ -29,8 +31,19 @@ type Section[T any] struct {
 }
 
 type Duration[T any] struct {
-	End   T `yaml:"end,omitempty"`
-	Start T `yaml:"start"`
+	End      T `yaml:"end,omitempty"`
+	Start    T `yaml:"start"`
+	Duration func(end, start time.Time) string
+}
+
+func Time(t Duration[YearMonth]) string {
+	if t.End.Valid {
+		d := duration.Diff(t.Start.Time, t.End.Time)
+		return d.Format(duration.MONTH)
+	}
+
+	d := duration.Diff(t.Start.Time, time.Now())
+	return d.Format(duration.MONTH)
 }
 
 type YearMonth struct {

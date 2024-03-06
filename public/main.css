@@ -2589,6 +2589,23 @@ html:has(.drawer-toggle:checked) {
     align-self: flex-start;
     justify-self: center;
   }
+
+  .md\:tooltip-bottom:before {
+    transform: translateX(-50%);
+    top: var(--tooltip-offset);
+    left: 50%;
+    right: auto;
+    bottom: auto;
+  }
+
+  .md\:tooltip-bottom:after {
+    transform: translateX(-50%);
+    border-color: transparent transparent var(--tooltip-color) transparent;
+    top: var(--tooltip-tail-offset);
+    left: 50%;
+    right: auto;
+    bottom: auto;
+  }
 }
 
 .hover\:bg-blue-700:hover {

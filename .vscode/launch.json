@@ -2,7 +2,7 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Launch",
+      "name": "Launch Static Web",
       "port": 9222,
       "request": "launch",
       "type": "chrome",
@@ -10,6 +10,18 @@
       "webRoot": "${workspaceFolder}",
       "preLaunchTask": "StartServer",
       "postDebugTask": "StopServer"
+    },
+    {
+      "type":"go",
+      "name": "Build Generator",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/cmd/generator",
+      "args": [
+        "--path","${workspaceFolder}/assets",
+        "--input","${workspaceFolder}/curiculum-vitae.yaml",
+        "--output","${workspaceFolder}/index.html",
+        "&&", "npx", "tailwindcss", "-i", "./main.css", "-o", "./public/main.css",
+      ]
     }
   ]
 }
