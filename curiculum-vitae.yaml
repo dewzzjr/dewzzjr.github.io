@@ -138,7 +138,7 @@ skills:
   - key: REDIS
     ref: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original-wordmark.svg
   - key: MYSQL
-    ref: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/icons/mysql/mysql-original-wordmark.svg
+    ref: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg
   - key: DOCKER
     ref: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original-wordmark.svg
   - key: KUBERNETES

@@ -2607,6 +2607,13 @@ html:has(.drawer-toggle:checked) {
   }
 }
 
+@media not all and (min-width: 640px) {
+  .max-sm\:px-3 {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+}
+
 @media (min-width: 640px) {
   .sm\:max-w-sm {
     max-width: 24rem;
