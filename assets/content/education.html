@@ -9,7 +9,7 @@
               {{- $classDesc := "" }}
               {{- range $education := .Education }}
               <li>
-                {{ $odd = not $odd }}
+                {{- $odd = not $odd }}
                 {{- if $odd }}
                 {{- $classTitle = "timeline-start text-end max-md:text-start"}}
                 {{- $classDesc = "timeline-box timeline-end max-md:text-start"}}

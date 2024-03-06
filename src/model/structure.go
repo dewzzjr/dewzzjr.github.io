@@ -22,10 +22,10 @@ type KeyRef struct {
 }
 
 type Section[T any] struct {
-	Name        string      `yaml:"name"`
-	Title       string      `yaml:"title"`
-	Description string      `yaml:"description"`
-	Time        Duration[T] `yaml:"time"`
+	Name        string        `yaml:"name"`
+	Title       string        `yaml:"title"`
+	Description template.HTML `yaml:"description"`
+	Time        Duration[T]   `yaml:"time"`
 }
 
 type Duration[T any] struct {
