@@ -1,5 +1,5 @@
 {{- define "nav" }}
-      <nav class="drawer-side">
+      <nav class="drawer-side print:hidden">
         <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
         <ul class="menu pt-28 px-4 w-80 min-h-full bg-blue-500 text-white font-sans font-bold uppercase">
           <li><a href="#about">About</a></li>
@@ -14,7 +14,7 @@
 {{- define "drawer" }}
     <nav class="drawer">
       <input id="my-drawer" type="checkbox" class="drawer-toggle" />
-      <label for="my-drawer" class="fixed top-11 left-8 btn btn-circle bg-blue-500 hover:bg-blue-700 text-white drawer-button z-50">
+      <label for="my-drawer" class="fixed top-11 left-8 btn btn-circle bg-blue-500 hover:bg-blue-700 text-white drawer-button z-50 print:hidden">
         <input type="checkbox" class="drawer-toggle" />
         <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z"/></svg>
       </label>

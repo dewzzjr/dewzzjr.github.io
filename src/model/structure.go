@@ -19,8 +19,9 @@ type Structure struct {
 }
 
 type KeyRef struct {
-	Key string `yaml:"key"`
-	Ref string `yaml:"ref"`
+	Key  string `yaml:"key"`
+	Ref  string `yaml:"ref"`
+	Name string `yaml:"name"`
 }
 
 type Section[T any] struct {

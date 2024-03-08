@@ -15,7 +15,19 @@
       "label": "Tailwind",
       "type": "shell",
       "command": "npx",
-      "args": ["tailwindcss","-i","${workspaceFolder}/main.css","-o","${workspaceFolder}/public/main.css"]
+      "args": [
+        "tailwindcss",
+        "-i",
+        "${workspaceFolder}/main.css",
+        "-o",
+        "${workspaceFolder}/public/main.css"
+      ]
+    },
+    {
+      "type": "Live Preview",
+      "workspacePath": "${workspaceFolder}",
+      "problemMatcher": [],
+      "label": "Live Preview: Run Server"
     }
   ],
   "inputs": [

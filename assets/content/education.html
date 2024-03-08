@@ -1,5 +1,5 @@
 {{- define "education" }}
-          <section class="container center m-auto pt-7 max-sm:px-3 min-h-screen flex flex-col" id="education">
+          <section class="container center m-auto pt-7 px-3 sm:px-1 min-h-screen flex flex-col" id="education">
             <h1 class="py-2 pl-5 ml-14 md:ml-16 my-3 font-bold tracking-tight font-mono text-white text-3xl bg-blue-500 rounded-lg shadow-md shadow-blue-900">
               Education
             </h1>
@@ -11,8 +11,8 @@
               <li>
                 {{- $odd = not $odd }}
                 {{- if $odd }}
-                {{- $classTitle = "timeline-start text-end max-md:text-start"}}
-                {{- $classDesc = "timeline-box timeline-end max-md:text-start"}}
+                {{- $classTitle = "timeline-start md:text-end text-start"}}
+                {{- $classDesc = "timeline-box timeline-end text-start"}}
                 {{- else }}
                 {{- $classTitle = "md:timeline-end text-start timeline-start"}}
                 {{- $classDesc = "timeline-box md:timeline-start timeline-end"}}

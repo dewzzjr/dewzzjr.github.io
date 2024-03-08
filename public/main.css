@@ -2158,6 +2158,11 @@ html:has(.drawer-toggle:checked) {
   fill: currentColor;
 }
 
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -2166,6 +2171,11 @@ html:has(.drawer-toggle:checked) {
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+}
+
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 
 .py-4 {
@@ -2195,10 +2205,6 @@ html:has(.drawer-toggle:checked) {
 
 .text-start {
   text-align: start;
-}
-
-.text-end {
-  text-align: end;
 }
 
 .font-mono {
@@ -2238,6 +2244,11 @@ html:has(.drawer-toggle:checked) {
   line-height: 1.75rem;
 }
 
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -2264,6 +2275,10 @@ html:has(.drawer-toggle:checked) {
 
 .tracking-tighter {
   letter-spacing: -0.05em;
+}
+
+.tracking-wide {
+  letter-spacing: 0.025em;
 }
 
 .text-blue-500 {
@@ -2609,24 +2624,6 @@ html:has(.drawer-toggle:checked) {
   background-color: rgb(29 78 216 / var(--tw-bg-opacity));
 }
 
-@media not all and (min-width: 768px) {
-  .max-md\:text-start {
-    text-align: start;
-  }
-
-  .max-md\:text-xs {
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-}
-
-@media not all and (min-width: 640px) {
-  .max-sm\:px-3 {
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
-  }
-}
-
 @media (min-width: 640px) {
   .sm\:max-w-sm {
     max-width: 24rem;
@@ -2634,6 +2631,11 @@ html:has(.drawer-toggle:checked) {
 
   .sm\:grid-cols-5 {
     grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .sm\:px-1 {
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
   }
 }
 
@@ -2660,14 +2662,18 @@ html:has(.drawer-toggle:checked) {
     height: 2rem;
   }
 
+  .md\:text-end {
+    text-align: end;
+  }
+
   .md\:text-6xl {
     font-size: 3.75rem;
     line-height: 1;
   }
 
-  .md\:text-lg {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
+  .md\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -2679,5 +2685,19 @@ html:has(.drawer-toggle:checked) {
 
   .xl\:grid-cols-10 {
     grid-template-columns: repeat(10, minmax(0, 1fr));
+  }
+}
+
+@media print {
+  .print\:inline {
+    display: inline;
+  }
+
+  .print\:hidden {
+    display: none;
+  }
+
+  .print\:flex-col {
+    flex-direction: column;
   }
 }

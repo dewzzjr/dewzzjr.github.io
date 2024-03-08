@@ -13,7 +13,7 @@
   <body>
     <nav class="drawer">
       <input id="my-drawer" type="checkbox" class="drawer-toggle" />
-      <label for="my-drawer" class="fixed top-11 left-8 btn btn-circle bg-blue-500 hover:bg-blue-700 text-white drawer-button z-50">
+      <label for="my-drawer" class="fixed top-11 left-8 btn btn-circle bg-blue-500 hover:bg-blue-700 text-white drawer-button z-50 print:hidden">
         <input type="checkbox" class="drawer-toggle" />
         <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z"/></svg>
       </label>
@@ -24,40 +24,45 @@
               <img src="public/profile.png" class="hidden md:block max-w-xs rounded-full shadow-2xl" />
               <div class="max-w-md flex items-center justify-center flex-col">
                 <img src="public/profile.png" class="md:hidden sm:max-w-sm max-w-xs rounded-full shadow-2xl" />
-                <h1 class="my-3 font-extrabold tracking-tight font-mono drop-shadow-xl shadow-blue-800 text-blue-500 text-4xl md:text-6xl">
+                <h1 class="my-3 font-extrabold tracking-tighter font-mono drop-shadow-xl shadow-blue-800 text-blue-500 text-4xl md:text-6xl">
                   Dewangga Prasetya Praja
                 </h1>
-                <p class="max-md:text-xs font-serif">
+                <p class="text-xs md:text-base font-serif tracking-wide">
                   Specialized as <span class="font-semibold">Golang Backend Engineer</span> with intermediate knowledge as <span class="font-semibold">DevOps</span>.
 High understanding on <span class="font-semibold">microservices design and infrastructure</span>.
 Interested in developing <span class="font-semibold">fullstack application</span> utilize newest technologies and <span class="font-semibold">data science</span>.
 
                 </p>
-                <a href="mailto:dewzzpro@gmail.com" class="font-mono tracking-tight md:text-lg py-4">
+                <a href="mailto:dewzzpro@gmail.com" class="font-mono tracking-tight py-3">
                   <i class="fa-solid fa-envelope size-5"></i>
                   dewzzpro@gmail.com
                 </a>
-                <div class="flex gap-3 justify-center">
+                <div class="flex gap-3 justify-center print:flex-col font-mono tracking-tight">
+                  <a href="http://wa.me/628562747444">
+                    <i class="fa-brands fa-whatsapp size-5 md:size-8"></i>
+                    <span class="hidden print:inline">&#43;62 856 2747 444</span>
+                  </a>
                   <a href="https://www.linkedin.com/in/dewzzjr">
                     <i class="fa-brands fa-linkedin size-5 md:size-8"></i>
+                    <span class="hidden print:inline">dewzzjr</span>
                   </a>
                   <a href="https://github.com/dewzzjr">
                     <i class="fa-brands fa-github size-5 md:size-8"></i>
-                  </a>
-                  <a href="http://wa.me/628562747444">
-                    <i class="fa-brands fa-whatsapp size-5 md:size-8"></i>
+                    <span class="hidden print:inline">dewzzjr</span>
                   </a>
                   <a href="https://www.instagram.com/dewzzjr">
                     <i class="fa-brands fa-instagram size-5 md:size-8"></i>
+                    <span class="hidden print:inline">dewzzjr</span>
                   </a>
                   <a href="https://www.facebook.com/dewzz">
                     <i class="fa-brands fa-facebook size-5 md:size-8"></i>
+                    <span class="hidden print:inline">dewzz</span>
                   </a>
                 </div>
               </div>
             </div>
           </section>
-          <section class="container center m-auto pt-7 max-sm:px-3 min-h-screen flex flex-col" id="experience">
+          <section class="container center m-auto pt-7 px-3 sm:px-1 min-h-screen flex flex-col" id="experience">
             <h1 class="py-2 pl-5 ml-14 md:ml-16 my-3 font-bold tracking-tight font-mono text-white text-3xl bg-blue-500 rounded-lg shadow-md shadow-blue-900">
               Experience
             </h1>
@@ -68,7 +73,7 @@ Interested in developing <span class="font-semibold">fullstack application</span
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"/>
                   </svg>
                 </div>
-                <div class="timeline-start text-end max-md:text-start tooltip md:tooltip-bottom hover:tooltip-open" data-tip="6 months">
+                <div class="timeline-start md:text-end text-start tooltip md:tooltip-bottom hover:tooltip-open" data-tip="6 months">
                   <h2 class="font-bold tracking-tighter text-xl">
                     Accelbyte
                   </h2>
@@ -78,7 +83,7 @@ Interested in developing <span class="font-semibold">fullstack application</span
                     Now
                   </time>
                 </div>
-                <div class="timeline-box timeline-end max-md:text-start">
+                <div class="timeline-box timeline-end text-start">
                   <h3 class="font-bold tracking-tight text-lg text-nowrap">
                     Software Engineer - DevOps
                   </h3>
@@ -127,7 +132,7 @@ Utilize MongoDB, PostgreSQL, Redis, and Elasticsearch in our services.
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"/>
                   </svg>
                 </div>
-                <div class="timeline-start text-end max-md:text-start tooltip md:tooltip-bottom hover:tooltip-open" data-tip="1 year 3 months">
+                <div class="timeline-start md:text-end text-start tooltip md:tooltip-bottom hover:tooltip-open" data-tip="1 year 3 months">
                   <h2 class="font-bold tracking-tighter text-xl">
                     Accelbyte
                   </h2>
@@ -137,7 +142,7 @@ Utilize MongoDB, PostgreSQL, Redis, and Elasticsearch in our services.
                     September 2022
                   </time>
                 </div>
-                <div class="timeline-box timeline-end max-md:text-start">
+                <div class="timeline-box timeline-end text-start">
                   <h3 class="font-bold tracking-tight text-lg text-nowrap">
                     Software Engineer - Backend
                   </h3>
@@ -184,7 +189,7 @@ First time using Go Programming Language and love this language since then.
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"/>
                   </svg>
                 </div>
-                <div class="timeline-start text-end max-md:text-start tooltip md:tooltip-bottom hover:tooltip-open" data-tip="9 months">
+                <div class="timeline-start md:text-end text-start tooltip md:tooltip-bottom hover:tooltip-open" data-tip="9 months">
                   <h2 class="font-bold tracking-tighter text-xl">
                     Bina Informasi Optima Solusindo
                   </h2>
@@ -194,7 +199,7 @@ First time using Go Programming Language and love this language since then.
                     March 2019
                   </time>
                 </div>
-                <div class="timeline-box timeline-end max-md:text-start">
+                <div class="timeline-box timeline-end text-start">
                   <h3 class="font-bold tracking-tight text-lg text-nowrap">
                     Associate Software Developer
                   </h3>
@@ -208,7 +213,7 @@ Support project to develop web-based information system based for PDAM Magelang 
               </li>
             </ul>
           </section>
-          <section class="container center m-auto pt-7 max-sm:px-3 min-h-screen flex flex-col" id="skills">
+          <section class="container center m-auto pt-7 px-3 sm:px-1 min-h-screen flex flex-col" id="skills">
             <h1 class="py-2 pl-5 ml-14 md:ml-16 my-3 font-bold tracking-tight font-mono text-white text-3xl bg-blue-500 rounded-lg shadow-md shadow-blue-900">
               Skills
             </h1>
@@ -287,7 +292,7 @@ Support project to develop web-based information system based for PDAM Magelang 
               </div>
             </div>
           </section>
-          <section class="container center m-auto pt-7 max-sm:px-3 min-h-screen flex flex-col" id="education">
+          <section class="container center m-auto pt-7 px-3 sm:px-1 min-h-screen flex flex-col" id="education">
             <h1 class="py-2 pl-5 ml-14 md:ml-16 my-3 font-bold tracking-tight font-mono text-white text-3xl bg-blue-500 rounded-lg shadow-md shadow-blue-900">
               Education
             </h1>
@@ -298,7 +303,7 @@ Support project to develop web-based information system based for PDAM Magelang 
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"/>
                   </svg>
                 </div>
-                <div class="timeline-start text-end max-md:text-start">
+                <div class="timeline-start md:text-end text-start">
                   <h2 class="font-bold tracking-tighter text-lg">
                     Institute Technology of Sepuluh Nopember
                   </h2>
@@ -308,7 +313,7 @@ Support project to develop web-based information system based for PDAM Magelang 
                     2018
                   </time>
                 </div>
-                <div class="timeline-box timeline-end max-md:text-start">
+                <div class="timeline-box timeline-end text-start">
                   <h3 class="font-bold tracking-tight">
                     Faculty of Information Technology &amp; Communication - Information Systems Department
                   </h3>
@@ -355,7 +360,7 @@ GPA: 3.55
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"/>
                   </svg>
                 </div>
-                <div class="timeline-start text-end max-md:text-start">
+                <div class="timeline-start md:text-end text-start">
                   <h2 class="font-bold tracking-tighter text-lg">
                     SMP Negeri 1 Ungaran
                   </h2>
@@ -365,7 +370,7 @@ GPA: 3.55
                     2008
                   </time>
                 </div>
-                <div class="timeline-box timeline-end max-md:text-start">
+                <div class="timeline-box timeline-end text-start">
                   <h3 class="font-bold tracking-tight">
                     Junior High School
                   </h3>
@@ -405,7 +410,7 @@ GPA: 3.55
               </li>
             </ul>
           </section>
-          <section class="container center m-auto pt-7 max-sm:px-3 min-h-screen flex flex-col" id="organization">
+          <section class="container center m-auto pt-7 px-3 sm:px-1 min-h-screen flex flex-col" id="organization">
             <h1 class="py-2 pl-5 ml-14 md:ml-16 my-3 font-bold tracking-tight font-mono text-white text-3xl bg-blue-500 rounded-lg shadow-md shadow-blue-900">
               Organization & Voluntary
             </h1>
@@ -416,7 +421,7 @@ GPA: 3.55
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"/>
                   </svg>
                 </div>
-                <div class="timeline-start text-end max-md:text-start">
+                <div class="timeline-start md:text-end text-start">
                   <h2 class="font-bold tracking-tighter text-lg">
                     Sobat Bumi Indonesia
                   </h2>
@@ -426,7 +431,7 @@ GPA: 3.55
                     2018
                   </time>
                 </div>
-                <div class="timeline-box timeline-end max-md:text-start">
+                <div class="timeline-box timeline-end text-start">
                   <h3 class="font-bold tracking-tight">
                     Surabaya Region Coordinator
                   </h3>
@@ -472,7 +477,7 @@ Responsible for staff management and department administration.
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"/>
                   </svg>
                 </div>
-                <div class="timeline-start text-end max-md:text-start">
+                <div class="timeline-start md:text-end text-start">
                   <h2 class="font-bold tracking-tighter text-lg">
                     Badan Eksekutif Mahasiswa ITS
                   </h2>
@@ -482,7 +487,7 @@ Responsible for staff management and department administration.
                     2016
                   </time>
                 </div>
-                <div class="timeline-box timeline-end max-md:text-start">
+                <div class="timeline-box timeline-end text-start">
                   <h3 class="font-bold tracking-tight">
                     Staff of Social Responsibility Ministry
                   </h3>
@@ -526,7 +531,7 @@ Responsible in organizing technology related creation from Information Systems s
           </section>
         </div>
       </div>
-      <nav class="drawer-side">
+      <nav class="drawer-side print:hidden">
         <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
         <ul class="menu pt-28 px-4 w-80 min-h-full bg-blue-500 text-white font-sans font-bold uppercase">
           <li><a href="#about">About</a></li>

@@ -5,16 +5,21 @@ description: |
   High understanding on <span class="font-semibold">microservices design and infrastructure</span>.
   Interested in developing <span class="font-semibold">fullstack application</span> utilize newest technologies and <span class="font-semibold">data science</span>.
 about:
-  - key: linkedin
-    ref: https://www.linkedin.com/in/dewzzjr
-  - key: github
-    ref: https://github.com/dewzzjr
   - key: whatsapp
     ref: http://wa.me/628562747444
+    name: +62 856 2747 444
+  - key: linkedin
+    ref: https://www.linkedin.com/in/dewzzjr
+    name: dewzzjr
+  - key: github
+    ref: https://github.com/dewzzjr
+    name: dewzzjr
   - key: instagram
     ref: https://www.instagram.com/dewzzjr
+    name: dewzzjr
   - key: facebook
     ref: https://www.facebook.com/dewzz
+    name: dewzz
 experience:
   - name: Accelbyte
     title: Software Engineer - DevOps
