@@ -16,6 +16,7 @@ type Structure struct {
 	Experience   []Section[YearMonth] `yaml:"experience"`
 	Organization []Section[string]    `yaml:"organization"`
 	Education    []Section[string]    `yaml:"education"`
+	Print        map[string]Options   `yaml:"print"`
 }
 
 type KeyRef struct {
@@ -35,6 +36,24 @@ type Duration[T any] struct {
 	End      T `yaml:"end,omitempty"`
 	Start    T `yaml:"start"`
 	Duration func(end, start time.Time) string
+}
+
+type Options struct {
+	Max *int `yaml:"max,omitempty"`
+}
+
+func Print(m map[string]Options, section string, index int) (class string) {
+	option, ok := m[section]
+	if !ok {
+		return
+	}
+	if option.Max == nil {
+		return
+	}
+	if index < *option.Max {
+		return
+	}
+	return "print:hidden"
 }
 
 func Time(t Duration[YearMonth]) string {

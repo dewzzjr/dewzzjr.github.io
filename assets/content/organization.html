@@ -7,8 +7,8 @@
               {{- $odd := false }}
               {{- $classTitle := "" }}
               {{- $classDesc := "" }}
-              {{- range $organization := .Organization}}
-              <li>
+              {{- range $i, $organization := .Organization}}
+              <li class='{{ hiddenPrint $.Print "organization" $i }}'>
                 {{- $odd = not $odd }}
                 {{- if $odd }}
                 {{- $classTitle = "timeline-start md:text-end text-start"}}

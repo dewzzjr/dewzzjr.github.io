@@ -130,49 +130,54 @@ education:
     description: |
       Participate in Boys Scouts and Mathematic Olympiad
 skills:
-  - key: GOLANG
+  - key: Golang
     ref: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original-wordmark.svg
-  - key: PYTHON
+  - key: Python
     ref: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg
-  - key: POSTGRES
+  - key: PostgreSQL
     ref: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original-wordmark.svg
-  - key: ELASTICSEARCH
+  - key: ElasticSearch
     ref: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/elasticsearch/elasticsearch-original.svg
-  - key: MONGODB
+  - key: MongoDB
     ref: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original-wordmark.svg
-  - key: REDIS
+  - key: Redis
     ref: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original-wordmark.svg
-  - key: MYSQL
+  - key: MySQL
     ref: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg
-  - key: DOCKER
+  - key: Docker
     ref: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original-wordmark.svg
-  - key: KUBERNETES
+  - key: Kubernetes
     ref: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-original-wordmark.svg
-  - key: GIT
+  - key: git
     ref: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original-wordmark.svg
   - key: AWS
     ref: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg
-  - key: JENKINS
+  - key: Jenkins
     ref: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jenkins/jenkins-original.svg
-  - key: HEROKU
+  - key: Heroku
     ref: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/heroku/heroku-plain-wordmark.svg
-  - key: LINUX
+  - key: Linux
     ref: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg
-  - key: JAVASCRIPT
+  - key: JavaScript
     ref: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg
-  - key: JAVA
+  - key: Java
     ref: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original-wordmark.svg
-  - key: DOTNET
+  - key: DotNET
     ref: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dot-net/dot-net-original-wordmark.svg
-  - key: TAILWINDCSS
+  - key: TailwindCSS
     ref: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg
   - key: PHP
     ref: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg
-  - key: FLASK
+  - key: Flask
     ref: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original-wordmark.svg
-  - key: LARAVEL
+  - key: Laravel
     ref: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original-wordmark.svg
-  - key: CODEIGNITER
+  - key: CodeIgniter
     ref: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/codeigniter/codeigniter-plain-wordmark.svg
-  - key: LARAVEL
+  - key: HTML
     ref: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg
+print:
+  organization:
+    max: 3
+  education:
+    max: 1

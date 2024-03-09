@@ -2732,11 +2732,42 @@ html:has(.drawer-toggle:checked) {
     margin-top: 1.25rem;
   }
 
+  .print\:inline {
+    display: inline;
+  }
+
+  .print\:flex {
+    display: flex;
+  }
+
   .print\:hidden {
     display: none;
   }
 
+  .print\:size-5 {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+
   .print\:min-h-0 {
     min-height: 0px;
+  }
+
+  .print\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .print\:justify-items-start {
+    justify-items: start;
+  }
+
+  .print\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .print\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 }

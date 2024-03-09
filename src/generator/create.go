@@ -14,6 +14,7 @@ import (
 func Create(c context.Context, path, input, output string) error {
 	t := template.New("").Funcs(template.FuncMap{
 		"parseDuration": model.Time,
+		"hiddenPrint":   model.Print,
 	})
 	t, err := t.ParseGlob(strings.TrimSuffix(path, "/") + "/*.html")
 	if err != nil {
@@ -35,7 +36,7 @@ func Create(c context.Context, path, input, output string) error {
 		fmt.Println(err)
 		return err
 	}
-	fmt.Println("yaml: success")
+	fmt.Println("yaml: success ", structure.Print)
 	f, err := os.Create(output)
 	if err != nil {
 		return err

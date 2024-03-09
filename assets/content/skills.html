@@ -5,10 +5,11 @@
             </h1>
             <div class="grow flex flex-col justify-center">
               <h2 class="pl-12 py-4 font-bold tracking-tighter text-lg">Programming Languages & Tools</h2>
-              <div class="container grid grid-cols-3 sm:grid-cols-5 xl:grid-cols-10 justify-items-center items-center gap-4">
+              <div class="container grid grid-cols-3 sm:grid-cols-5 xl:grid-cols-10 print:grid-cols-3 justify-items-center print:justify-items-start items-center print:items-left gap-4">
                 {{- range $skill := .Skills }}
-                <div class="tooltip hover:tooltip-open" data-tip="{{ $skill.Key }}">
-                  <img class="size-12 md:size-16 xl:size-20" src="{{ $skill.Ref }}" />
+                <div class="tooltip hover:tooltip-open print:flex gap-3" data-tip="{{ $skill.Key }}">
+                  <img class="size-12 md:size-16 xl:size-20 print:size-5" src="{{ $skill.Ref }}" />
+                  <span class="hidden print:inline">{{ $skill.Key }}</span>
                 </div>
                 {{- end }}
               </div>
