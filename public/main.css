@@ -2164,6 +2164,10 @@ html:has(.drawer-toggle:checked) {
   scroll-behavior: smooth;
 }
 
+.whitespace-pre-line {
+  white-space: pre-line;
+}
+
 .text-nowrap {
   text-wrap: nowrap;
 }
