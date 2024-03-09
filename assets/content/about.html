@@ -1,5 +1,5 @@
 {{- define "about" }}
-          <section class="pt-7 min-h-screen hero" id="about">
+          <section class="pt-7 min-h-screen hero print:hidden" id="about">
             <div class="hero-content text-center">
               <img src="public/profile.png" class="hidden md:block max-w-xs rounded-full shadow-2xl" />
               <div class="max-w-md flex items-center justify-center flex-col">
@@ -14,11 +14,35 @@
                   <i class="fa-solid fa-envelope size-5"></i>
                   {{ .Email }}
                 </a>
-                <div class="flex gap-3 justify-center print:flex-col font-mono tracking-tight">
+                <div class="flex gap-3 justify-center font-mono tracking-tight">
                   {{- range $social := .About }}
                   <a href="{{ $social.Ref }}">
-                    <i class="fa-brands fa-{{ $social.Key }} size-5 md:size-8"></i>
-                    <span class="hidden print:inline">{{ $social.Name }}</span>
+                    <i class="fa-brands fa-{{ $social.Key }} size-5"></i>
+                  </a>
+                  {{- end }}
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="container center m-auto pt-0 px-3 min-h-0 flex flex-col" id="print">
+            <div class="flex text-justify place-content-center">
+              <img src="public/profile.png" class="my-auto mx-7 size-32 rounded-full shadow-2xl center" />
+              <div class="mx-5 flex items-center justify-center flex-col grow">
+                <h1 class="my-3 font-extrabold tracking-tighter font-mono drop-shadow-xl shadow-blue-800 text-blue-500 text-4xl text-nowrap">
+                  {{ .Name }}
+                </h1>
+                <p class="text-xs md:text-base font-serif tracking-wide">
+                  {{ .Description }}
+                </p>
+                <div class="flex flex-wrap gap-3 justify-center font-mono tracking-tight py-3">
+                  <a href="mailto:{{ .Email }}">
+                    <i class="fa-solid fa-envelope size-5"></i>
+                    {{ .Email }}
+                  </a>
+                  {{- range $social := .About }}
+                  <a href="{{ $social.Ref }}">
+                    <i class="fa-brands fa-{{ $social.Key }} size-5"></i>
+                    {{ $social.Name }}
                   </a>
                   {{- end }}
                 </div>

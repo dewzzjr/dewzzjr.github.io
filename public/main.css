@@ -2029,9 +2029,24 @@ html:has(.drawer-toggle:checked) {
   margin: auto;
 }
 
+.mx-5 {
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+}
+
+.mx-7 {
+  margin-left: 1.75rem;
+  margin-right: 1.75rem;
+}
+
 .my-3 {
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
+}
+
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .ml-14 {
@@ -2055,6 +2070,11 @@ html:has(.drawer-toggle:checked) {
   height: 3rem;
 }
 
+.size-32 {
+  width: 8rem;
+  height: 8rem;
+}
+
 .size-5 {
   width: 1.25rem;
   height: 1.25rem;
@@ -2062,6 +2082,10 @@ html:has(.drawer-toggle:checked) {
 
 .h-5 {
   height: 1.25rem;
+}
+
+.min-h-0 {
+  min-height: 0px;
 }
 
 .min-h-full {
@@ -2106,6 +2130,14 @@ html:has(.drawer-toggle:checked) {
 
 .flex-col {
   flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.place-content-center {
+  place-content: center;
 }
 
 .items-center {
@@ -2191,6 +2223,10 @@ html:has(.drawer-toggle:checked) {
   padding-left: 1.25rem;
 }
 
+.pt-0 {
+  padding-top: 0px;
+}
+
 .pt-28 {
   padding-top: 7rem;
 }
@@ -2201,6 +2237,10 @@ html:has(.drawer-toggle:checked) {
 
 .text-center {
   text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
 }
 
 .text-start {
@@ -2657,11 +2697,6 @@ html:has(.drawer-toggle:checked) {
     height: 4rem;
   }
 
-  .md\:size-8 {
-    width: 2rem;
-    height: 2rem;
-  }
-
   .md\:text-end {
     text-align: end;
   }
@@ -2689,15 +2724,19 @@ html:has(.drawer-toggle:checked) {
 }
 
 @media print {
-  .print\:inline {
-    display: inline;
+  .print\:ml-0 {
+    margin-left: 0px;
+  }
+
+  .print\:mt-5 {
+    margin-top: 1.25rem;
   }
 
   .print\:hidden {
     display: none;
   }
 
-  .print\:flex-col {
-    flex-direction: column;
+  .print\:min-h-0 {
+    min-height: 0px;
   }
 }
