@@ -1,6 +1,6 @@
 name: Dewangga Prasetya Praja
 email: dewzzpro@gmail.com
-description: |
+description: |-
   Specialized as <span class="font-semibold">Golang Backend Engineer</span> with intermediate knowledge as <span class="font-semibold">DevOps</span>.
   High understanding on <span class="font-semibold">microservices design and infrastructure</span>.
   Interested in developing <span class="font-semibold">fullstack application</span> utilize newest technologies and <span class="font-semibold">data science</span>.
@@ -25,7 +25,7 @@ experience:
     title: Software Engineer - DevOps
     time:
       start: 2023-09
-    description: |
+    description: |-
       Responsible to handle continuous integration and continuous
       delivery/deployment for multiple environment for each customer.
       Maintain automation for dozens of unique services.
@@ -34,7 +34,7 @@ experience:
     time:
       end: 2023-09
       start: 2022-09
-    description: |
+    description: |-
       Responsible to maintain and develop features to help recruiter to search and recruit candidates.
       Design technical software architecture for features by translating PRD into RFC Document.
       Build application using Golang based microservice in AWS using docker and kubernetes.
@@ -44,7 +44,7 @@ experience:
     time:
       end: 2022-09
       start: 2021-06
-    description: |
+    description: |-
       Responsible as backend engineer that working closely with international game developer company.
       Handle SSO and orchestrator services for login portal from our vendor.
       Use Go and Java programming language as our main backend language, but personally focus on the Golang services.
@@ -53,7 +53,7 @@ experience:
     time:
       end: 2021-06
       start: 2019-04
-    description: |
+    description: |-
       Experience as a back-end engineer that responsible to maintain services for API integration with more than 300 partners of Tokopedia [<a href="https://developer.tokopedia.com/">https://developer.tokopedia.com</a>].
       First time using Go Programming Language and love this language since then.
   - name: Bina Informasi Optima Solusindo
@@ -61,7 +61,7 @@ experience:
     time:
       end: 2019-03
       start: 2018-06
-    description: |
+    description: |-
       Freelance worker supporting a project to develop web application, Real Estate Management and Other Service (REMOTE), for PELINDO III for 8 months by utilize ASP.NET framework by C#.
       Support project to develop web-based information system based for PDAM Magelang by using Laravel framework and PHP programming language for around one month.
 organization:
@@ -70,7 +70,7 @@ organization:
     time:
       end: "2018"
       start: "2017"
-    description: |
+    description: |-
       Sobat Bumi Indonesia is a environmental community of Indonesia that actively participating in preserving the environment for the present and future generations.
       Coordinating activities and the members of Sobat Bumi in Surabaya Region.
   - name: Himpunan Mahasiswa Sistem Informasi
@@ -78,7 +78,7 @@ organization:
     time:
       end: "2017"
       start: "2016"
-    description: |
+    description: |-
       Student Associations of Information Systems Department, ITS.
       Responsible for staff management and department administration.
   - name: Badan Eksekutif Mahasiswa ITS
@@ -86,7 +86,7 @@ organization:
     time:
       end: "2016"
       start: "2015"
-    description: |
+    description: |-
       Student Executive of Institution Level. Responsible as Chief
       Executive ITS Green Campaign 2016 Environmental campaign for young generation at junior high school in Surabaya.
   - name: Himpunan Mahasiswa Sistem Informasi
@@ -94,7 +94,7 @@ organization:
     time:
       end: "2016"
       start: "2015"
-    description: |
+    description: |-
       Student Associations of Information Systems Department, ITS.
       Responsible in organizing technology related creation from Information Systems students.
 education:
@@ -103,7 +103,7 @@ education:
     time:
       end: "2018"
       start: "2014"
-    description: |
+    description: |-
       Bachelor of Computer.
       Major: Data Acquisition & Informations Dissemination.
       Thesis: Application for Extracting and Visualizing Event Information in Realtime From Social Media Using Conditional Random Field with Flask Python Framework.
@@ -113,21 +113,21 @@ education:
     time:
       end: "2014"
       start: "2011"
-    description: |
+    description: |-
       Participate in Smanssa Robotic Club and Solidaritas Kerohanian Islam
   - name: SMP Negeri 1 Ungaran
     title: Junior High School
     time:
       end: "2008"
       start: "2002"
-    description: |
+    description: |-
       Participate in Student Council, Science Olympiad and Kerohanian Islam
   - name: SD Negeri 1 Ungaran
     title: Elementary School
     time:
       end: "2014"
       start: "2011"
-    description: |
+    description: |-
       Participate in Boys Scouts and Mathematic Olympiad
 skills:
   - key: Golang
