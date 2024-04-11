@@ -26,16 +26,17 @@ experience:
     time:
       start: 2023-09
     description: |-
-      Responsible to handle continuous integration and continuous
-      delivery/deployment for multiple environment for each customer.
-      Maintain automation for dozens of unique services.
+      Responsible to handle continuous integration and continuous delivery/deployment for 90+ customer environments using Infrastructure as Code.
+      Provisioning kubernetes kustomize manifests for around 100+ of unique services for each customer environments.
+      Develop and maintain auto updates images tag version from service repositories to kubernetes cluster.
   - name: Shortlyst AI
     title: Senior Software Engineer - Backend
     time:
       end: 2023-09
       start: 2022-09
     description: |-
-      Responsible to maintain and develop features to help recruiter to search and recruit candidates.
+      Maintain and develop features to help recruiter to search and recruit candidates.
+      Design and develop services to integrate with multiple third party API (Gmail, ZohoRecruit, Vincere, JobAdder, PC Recruiter).
       Design technical software architecture for features by translating PRD into RFC Document.
       Build application using Golang based microservice in AWS using docker and kubernetes.
       Utilize MongoDB, PostgreSQL, Redis, and Elasticsearch in our services.
@@ -54,7 +55,9 @@ experience:
       end: 2021-06
       start: 2019-04
     description: |-
-      Experience as a back-end engineer that responsible to maintain services for API integration with more than 300 partners of Tokopedia [<a href="https://developer.tokopedia.com/">https://developer.tokopedia.com</a>].
+      Maintain special functionality and custom rules for Tokopedia priority seller (Official Store).
+      Maintain services for API integration with more than 300 partners of Tokopedia.
+      Develop self service platform to register, provide documentation, and configure API integration for developers.
       First time using Go Programming Language and love this language since then.
   - name: Bina Informasi Optima Solusindo
     title: Associate Software Developer
@@ -62,7 +65,7 @@ experience:
       end: 2019-03
       start: 2018-06
     description: |-
-      Freelance worker supporting a project to develop web application, Real Estate Management and Other Service (REMOTE), for PELINDO III for 8 months by utilize ASP.NET framework by C#.
+      Support project to develop web application, Real Estate Management and Other Service (REMOTE), for PELINDO III utilizing ASP.NET framework by C# for 8 months.
       Support project to develop web-based information system based for PDAM Magelang by using Laravel framework and PHP programming language for around one month.
 organization:
   - name: Sobat Bumi Indonesia
