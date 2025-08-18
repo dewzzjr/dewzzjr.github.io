@@ -21,9 +21,18 @@ about:
     ref: https://www.facebook.com/dewzz
     name: dewzz
 experience:
+  - name: PT Fliptech Lentera Inspirasi Pertiwi
+    title: Software Engineer - Backend
+    time:
+      start: 2024-09
+    description: |-
+      Responsible to maintain and develop services to integrate onboarding process and transaction for saving bank account.
+      Responsible to maintain and develop feature for gold transactions.
+      Develop and integrate insurance product with core transactions.
   - name: Accelbyte
     title: Software Engineer - DevOps
     time:
+      end: 2024-09
       start: 2023-09
     description: |-
       Responsible to handle continuous integration and continuous delivery/deployment for 90+ customer environments using Infrastructure as Code.
