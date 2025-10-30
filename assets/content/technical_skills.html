@@ -1,0 +1,36 @@
+{{- define "technical_skills" }}
+          <section class="container center m-auto pt-7 print:mt-1 px-3 print:px-0 sm:px-1 min-h-screen print:min-h-0 flex flex-col" id="technical-skills">
+            <h1 class="py-2 pl-5 ml-14 md:ml-16 print:ml-0 print:pl-1 my-3 print:my-1 print:mb-1 font-bold tracking-tight font-mono text-white text-3xl print:text-base bg-blue-500 rounded-lg shadow-md shadow-blue-900 print:shadow-none print:rounded-sm print:py-0.5">
+              Technical Proficiency
+            </h1>
+            <div class="grow flex flex-col gap-6 print:gap-0.5 p-4 print:p-0">
+              {{- range $category := .TechnicalSkills }}
+              <div class="card bg-base-100 shadow-xl print:shadow-none print:border print:border-gray-200 print:mb-1">
+                <div class="card-body print:p-1">
+                  <h2 class="card-title text-2xl print:text-xs font-bold text-blue-600 border-b-2 print:border-b border-blue-200 pb-2 print:pb-0 print:mb-0">
+                    {{ $category.Category }}
+                  </h2>
+                  <div class="grid grid-cols-1 md:grid-cols-2 print:grid-cols-4 gap-4 print:gap-1 mt-4 print:mt-1">
+                    {{- range $item := $category.Items }}
+                    <div class="flex flex-col gap-1 p-3 print:p-0.5 hover:bg-base-200 rounded-lg transition-all print:break-inside-avoid">
+                      <div class="flex justify-between items-start print:items-center print:gap-1">
+                        <h3 class="font-bold text-lg print:text-[9px] print:leading-tight">{{ $item.Name }}</h3>
+                        <span class="badge badge-primary badge-sm print:hidden">{{ $item.Proficiency }}</span>
+                      </div>
+                      <div class="flex items-center gap-2 text-sm print:text-[8px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 print:h-2 print:w-2 text-blue-500 print:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span class="text-gray-600 font-mono print:text-gray-400">{{ $item.Experience }}</span>
+                      </div>
+                      <p class="text-xs print:text-[10px] text-gray-500 mt-1 leading-relaxed print:hidden">{{ $item.Details }}</p>
+                    </div>
+                    {{- end }}
+                  </div>
+                </div>
+              </div>
+              {{- end }}
+            </div>
+          </section>
+{{- end }}
+

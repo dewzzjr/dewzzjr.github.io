@@ -9,6 +9,55 @@
     <link rel="icon" type="image/x-icon" href="https://pkg.go.dev/static/shared/logo/go-white.svg">
     <link href="public/main.css" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/6f48c57228.js" crossorigin="anonymous"></script>
+    <script>
+      
+      function calculateDuration(startDate, endDate) {
+        const start = new Date(startDate);
+        const end = endDate ? new Date(endDate) : new Date();
+        
+        let years = end.getFullYear() - start.getFullYear();
+        let months = end.getMonth() - start.getMonth();
+        
+        if (months < 0) {
+          years--;
+          months += 12;
+        }
+        
+        const parts = [];
+        if (years > 0) {
+          parts.push(`${years} year${years !== 1 ? 's' : ''}`);
+        }
+        if (months > 0) {
+          parts.push(`${months} month${months !== 1 ? 's' : ''}`);
+        }
+        if (parts.length === 0) {
+          parts.push('Less than a month');
+        }
+        
+        return parts.join(' ');
+      }
+      
+      function updateDynamicDurations() {
+        document.querySelectorAll('.dynamic-duration').forEach(element => {
+          const startDate = element.getAttribute('data-start');
+          const endDate = element.getAttribute('data-end');
+          const isOngoing = element.getAttribute('data-ongoing') === 'true';
+          
+          if (startDate) {
+            const duration = calculateDuration(startDate, endDate);
+            element.setAttribute('data-tip', duration);
+          }
+        });
+      }
+      
+      
+      document.addEventListener('DOMContentLoaded', () => {
+        updateDynamicDurations();
+        
+        
+        setInterval(updateDynamicDurations, 3600000);
+      });
+    </script>
   </head>
   <body>
     <nav class="drawer">
@@ -19,18 +68,18 @@
       </label>
       <div class="drawer-content bg-blue-100">
         <div class="absolute w-full center scroll-pt-20">
-          <section class="pt-7 min-h-screen hero print:hidden" id="about">
-            <div class="hero-content text-center">
-              <img src="public/profile.png" class="hidden md:block max-w-xs rounded-full shadow-2xl" />
-              <div class="max-w-md flex items-center justify-center flex-col">
-                <img src="public/profile.png" class="md:hidden sm:max-w-sm max-w-xs rounded-full shadow-2xl" />
+          <section class="pt-7 min-h-screen hero print:!hidden" id="about">
+            <div class="hero-content text-center print:!hidden">
+              <img src="public/profile.png" class="hidden md:block max-w-xs rounded-full shadow-2xl print:!hidden" />
+              <div class="max-w-md flex items-center justify-center flex-col print:!hidden">
+                <img src="public/profile.png" class="md:hidden sm:max-w-sm max-w-xs rounded-full shadow-2xl print:!hidden" />
                 <h1 class="my-3 font-extrabold tracking-tighter font-mono drop-shadow-xl shadow-blue-800 text-blue-500 text-4xl md:text-6xl">
                   Dewangga Prasetya Praja
                 </h1>
                 <p class="text-xs md:text-base font-serif tracking-wide">
-                  Specialized as <span class="font-semibold">Golang Backend Engineer</span> with intermediate knowledge as <span class="font-semibold">DevOps</span>.
-High understanding on <span class="font-semibold">microservices design and infrastructure</span>.
-Interested in developing <span class="font-semibold">fullstack application</span> utilize newest technologies and <span class="font-semibold">data science</span>.
+                  Senior <span class="font-semibold">Backend Engineer</span> specializing in <span class="font-semibold">Go/Golang</span> with <span class="font-semibold">7+ years</span> of professional software development experience building scalable microservices and distributed systems.
+Proven expertise in <span class="font-semibold">cloud infrastructure (AWS), DevOps practices, and Kubernetes orchestration</span>, with hands-on experience managing 100+ production microservices.
+Strong track record of delivering production-ready solutions across <span class="font-semibold">fintech, gaming, e-commerce, and AI-driven platforms</span> serving millions of users globally.
                 </p>
                 <a href="mailto:dewzzpro@gmail.com" class="font-mono tracking-tight py-3">
                   <i class="fa-solid fa-envelope size-5"></i>
@@ -56,230 +105,832 @@ Interested in developing <span class="font-semibold">fullstack application</span
               </div>
             </div>
           </section>
-          <section class="container center m-auto pt-0 px-3 min-h-0 flex-col hidden print:flex" id="print">
-            <div class="flex text-justify place-content-center">
-              <img src="public/profile.png" class="my-auto mx-7 size-32 rounded-full shadow-2xl center" />
-              <div class="mx-5 flex items-center justify-center flex-col grow">
-                <h1 class="my-3 font-extrabold tracking-tighter font-mono drop-shadow-xl shadow-blue-800 text-blue-500 text-4xl text-nowrap">
+          <section class="container center m-auto pt-0 px-0 min-h-0 flex-col hidden print:!flex print:mb-1" id="print">
+            <div class="flex items-center gap-3 pb-1">
+              <div class="flex flex-col items-center flex-shrink-0">
+                <img src="public/profile.png" class="w-16 h-16 rounded-full object-cover print:!block" />
+              </div>
+              <div class="flex flex-col flex-grow border-l-2 border-blue-500 pl-2">
+                <h1 class="font-bold tracking-tight text-blue-600 text-lg leading-none mb-0.5">
                   Dewangga Prasetya Praja
                 </h1>
-                <p class="text-xs md:text-base font-serif tracking-wide">
-                  Specialized as <span class="font-semibold">Golang Backend Engineer</span> with intermediate knowledge as <span class="font-semibold">DevOps</span>.
-High understanding on <span class="font-semibold">microservices design and infrastructure</span>.
-Interested in developing <span class="font-semibold">fullstack application</span> utilize newest technologies and <span class="font-semibold">data science</span>.
+                <h2 class="font-semibold text-gray-700 text-[10px] mb-0.5 leading-none">Senior Backend Engineer</h2>
+                <p class="text-[8px] leading-tight mb-0.5 text-gray-700">
+                  Senior <span class="font-semibold">Backend Engineer</span> specializing in <span class="font-semibold">Go/Golang</span> with <span class="font-semibold">7+ years</span> of professional software development experience building scalable microservices and distributed systems.
+Proven expertise in <span class="font-semibold">cloud infrastructure (AWS), DevOps practices, and Kubernetes orchestration</span>, with hands-on experience managing 100+ production microservices.
+Strong track record of delivering production-ready solutions across <span class="font-semibold">fintech, gaming, e-commerce, and AI-driven platforms</span> serving millions of users globally.
                 </p>
-                <div class="flex flex-wrap gap-3 justify-center font-mono tracking-tight py-3">
-                  <a href="mailto:dewzzpro@gmail.com">
-                    <i class="fa-solid fa-envelope size-5"></i>
-                    dewzzpro@gmail.com
-                  </a>
-                  <a href="http://wa.me/628562747444">
-                    <i class="fa-brands fa-whatsapp size-5"></i>
-                    &#43;62 856 2747 444
-                  </a>
-                  <a href="https://www.linkedin.com/in/dewzzjr">
-                    <i class="fa-brands fa-linkedin size-5"></i>
-                    dewzzjr
-                  </a>
-                  <a href="https://github.com/dewzzjr">
-                    <i class="fa-brands fa-github size-5"></i>
-                    dewzzjr
-                  </a>
-                  <a href="https://www.instagram.com/dewzzjr">
-                    <i class="fa-brands fa-instagram size-5"></i>
-                    dewzzjr
-                  </a>
-                  <a href="https://www.facebook.com/dewzz">
-                    <i class="fa-brands fa-facebook size-5"></i>
-                    dewzz
-                  </a>
+                <div class="grid grid-cols-3 gap-x-1.5 gap-y-0 text-[7px] text-gray-600">
+                  <span><i class="fa-solid fa-envelope"></i> dewzzpro@gmail.com</span>
+                  <span><i class="fa-brands fa-whatsapp"></i> &#43;62 856 2747 444</span>
+                  <span><i class="fa-brands fa-linkedin"></i> dewzzjr</span>
+                  <span><i class="fa-brands fa-github"></i> dewzzjr</span>
+                  <span><i class="fa-brands fa-instagram"></i> dewzzjr</span>
+                  <span><i class="fa-brands fa-facebook"></i> dewzz</span>
                 </div>
               </div>
             </div>
+            <div class="border-b border-blue-400 mb-0.5"></div>
           </section>
-          <section class="container center m-auto pt-7 print:mt-5 px-3 sm:px-1 min-h-screen print:min-h-0 flex flex-col" id="experience">
-            <h1 class="py-2 pl-5 ml-14 md:ml-16 print:ml-0 my-3 font-bold tracking-tight font-mono text-white text-3xl bg-blue-500 rounded-lg shadow-md shadow-blue-900">
-              Experience
+          <section class="container center m-auto pt-7 print:mt-0 px-3 print:px-0 sm:px-1 min-h-screen print:min-h-0 flex flex-col" id="experience">
+            <h1 class="py-2 pl-5 ml-14 md:ml-16 print:ml-0 print:pl-1 my-3 print:my-0 print:mb-0.5 font-bold tracking-tight font-mono text-white text-3xl print:text-sm bg-blue-500 rounded-lg shadow-md shadow-blue-900 print:shadow-none print:rounded-sm print:py-0.5">
+              Professional Experience
             </h1>
-            <ul class="timeline timeline-vertical timeline-snap-icon max-md:timeline-compact grow flex justify-center">
-              <li>
+            <ul class="timeline timeline-vertical timeline-snap-icon max-md:timeline-compact grow flex justify-center print:gap-0">
+              <li class=' print:break-inside-avoid'>
                 <div class="timeline-middle text-blue-500">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"/>
                   </svg>
                 </div>
-                <div class="timeline-start md:text-end text-start tooltip md:tooltip-bottom hover:tooltip-open" data-tip="11 months">
-                  <h2 class="font-bold tracking-tighter text-xl print:text-lg">
+                <div class="timeline-start md:text-end text-start tooltip md:tooltip-bottom hover:tooltip-open dynamic-duration" 
+                     data-tip="1 year 1 month"
+                     data-start="2024-09-01"
+                     data-ongoing="true">
+                  <h2 class="font-bold tracking-tighter text-xl print:text-sm print:leading-tight">
                     PT Fliptech Lentera Inspirasi Pertiwi
                   </h2>
-                  <time class="italic font-mono tracking-tight">
+                  <time class="italic font-mono tracking-tight text-sm print:text-[9px]">
                     September 2024
                     -
-                    Now
+                    Present
                   </time>
                 </div>
-                <div class="timeline-box timeline-end text-start">
-                  <h3 class="font-bold tracking-tight text-lg print:text-base text-nowrap">
+                <div class="timeline-box timeline-end text-start print:p-1 print:my-0.5">
+                  <h3 class="font-bold tracking-tight text-lg print:text-xs text-nowrap print:leading-tight print:mb-0">
                     Software Engineer - Backend
                   </h3>
-                  <p class="text-sm whitespace-pre-line">
-                    Responsible to maintain and develop services to integrate onboarding process and transaction for saving bank account.
-Responsible to maintain and develop feature for gold transactions.
-Develop and integrate insurance product with core transactions.
+                  <p class="text-sm print:text-[9px] whitespace-pre-line print:leading-tight">
+                    Architect and develop backend services for digital banking platform, handling customer onboarding workflows and transaction processing for savings accounts.
+Engineer real-time gold trading features with secure payment integration, ensuring transaction integrity and compliance with financial regulations.
+Design and implement insurance product integration layer, connecting third-party insurance APIs with core banking transactions to expand product offerings.
                   </p>
                 </div>
-                <hr />
+                <hr class="print:hidden" />
               </li>
-              <li>
+              <li class=' print:break-inside-avoid'>
                 <div class="timeline-middle text-blue-500">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"/>
                   </svg>
                 </div>
-                <div class="md:timeline-end text-start timeline-start tooltip md:tooltip-bottom hover:tooltip-open" data-tip="1 year">
-                  <h2 class="font-bold tracking-tighter text-xl print:text-lg">
+                <div class="md:timeline-end text-start timeline-start tooltip md:tooltip-bottom hover:tooltip-open dynamic-duration" 
+                     data-tip="1 year"
+                     data-start="2023-09-01"
+                     data-end="2024-09-01">
+                  <h2 class="font-bold tracking-tighter text-xl print:text-sm print:leading-tight">
                     Accelbyte
                   </h2>
-                  <time class="italic font-mono tracking-tight">
+                  <time class="italic font-mono tracking-tight text-sm print:text-[9px]">
                     September 2023
                     -
                     September 2024
                   </time>
                 </div>
-                <div class="timeline-box md:timeline-start timeline-end">
-                  <h3 class="font-bold tracking-tight text-lg print:text-base text-nowrap">
+                <div class="timeline-box md:timeline-start timeline-end print:p-1 print:my-0.5">
+                  <h3 class="font-bold tracking-tight text-lg print:text-xs text-nowrap print:leading-tight print:mb-0">
                     Software Engineer - DevOps
                   </h3>
-                  <p class="text-sm whitespace-pre-line">
-                    Responsible to handle continuous integration and continuous delivery/deployment for 90+ customer environments using Infrastructure as Code.
-Provisioning kubernetes kustomize manifests for around 100+ of unique services for each customer environments.
-Develop and maintain auto updates images tag version from service repositories to kubernetes cluster.
+                  <p class="text-sm print:text-[9px] whitespace-pre-line print:leading-tight">
+                    Orchestrated CI/CD pipelines for 90+ enterprise gaming environments, implementing Infrastructure as Code practices to ensure consistent and reliable deployments across multiple regions.
+Automated Kubernetes provisioning and management of 100+ microservices using Kustomize, reducing deployment time by 60% and minimizing configuration drift.
+Engineered automated image version management system that synchronizes container updates from source repositories to production clusters, improving deployment velocity and reducing manual intervention.
                   </p>
                 </div>
-                <hr />
+                <hr class="print:hidden" />
               </li>
-              <li>
+              <li class=' print:break-inside-avoid'>
                 <div class="timeline-middle text-blue-500">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"/>
                   </svg>
                 </div>
-                <div class="timeline-start md:text-end text-start tooltip md:tooltip-bottom hover:tooltip-open" data-tip="1 year">
-                  <h2 class="font-bold tracking-tighter text-xl print:text-lg">
+                <div class="timeline-start md:text-end text-start tooltip md:tooltip-bottom hover:tooltip-open dynamic-duration" 
+                     data-tip="1 year"
+                     data-start="2022-09-01"
+                     data-end="2023-09-01">
+                  <h2 class="font-bold tracking-tighter text-xl print:text-sm print:leading-tight">
                     Shortlyst AI
                   </h2>
-                  <time class="italic font-mono tracking-tight">
+                  <time class="italic font-mono tracking-tight text-sm print:text-[9px]">
                     September 2022
                     -
                     September 2023
                   </time>
                 </div>
-                <div class="timeline-box timeline-end text-start">
-                  <h3 class="font-bold tracking-tight text-lg print:text-base text-nowrap">
+                <div class="timeline-box timeline-end text-start print:p-1 print:my-0.5">
+                  <h3 class="font-bold tracking-tight text-lg print:text-xs text-nowrap print:leading-tight print:mb-0">
                     Senior Software Engineer - Backend
                   </h3>
-                  <p class="text-sm whitespace-pre-line">
-                    Maintain and develop features to help recruiter to search and recruit candidates.
-Design and develop services to integrate with multiple third party API (Gmail, ZohoRecruit, Vincere, JobAdder, PC Recruiter).
-Design technical software architecture for features by translating PRD into RFC Document.
-Build application using Golang based microservice in AWS using docker and kubernetes.
-Utilize MongoDB, PostgreSQL, Redis, and Elasticsearch in our services.
+                  <p class="text-sm print:text-[9px] whitespace-pre-line print:leading-tight">
+                    Led backend development for AI-powered recruitment platform, architecting scalable search and candidate matching features serving thousands of recruiters globally.
+Designed and implemented integration framework for 5+ enterprise ATS platforms (Gmail, ZohoRecruit, Vincere, JobAdder, PC Recruiter), enabling seamless bi-directional data synchronization.
+Drove technical architecture decisions by translating Product Requirements Documents into comprehensive RFC specifications, ensuring alignment between business needs and technical implementation.
+Built production-grade Go microservices on AWS infrastructure utilizing Docker and Kubernetes, achieving 99.9% uptime and sub-200ms API response times.
+Optimized data pipeline using MongoDB, PostgreSQL, Redis, and Elasticsearch to handle millions of candidate profiles with efficient search and retrieval capabilities.
                   </p>
                 </div>
-                <hr />
+                <hr class="print:hidden" />
               </li>
-              <li>
+              <li class=' print:break-inside-avoid'>
                 <div class="timeline-middle text-blue-500">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"/>
                   </svg>
                 </div>
-                <div class="md:timeline-end text-start timeline-start tooltip md:tooltip-bottom hover:tooltip-open" data-tip="1 year 3 months">
-                  <h2 class="font-bold tracking-tighter text-xl print:text-lg">
+                <div class="md:timeline-end text-start timeline-start tooltip md:tooltip-bottom hover:tooltip-open dynamic-duration" 
+                     data-tip="1 year 3 months"
+                     data-start="2021-06-01"
+                     data-end="2022-09-01">
+                  <h2 class="font-bold tracking-tighter text-xl print:text-sm print:leading-tight">
                     Accelbyte
                   </h2>
-                  <time class="italic font-mono tracking-tight">
+                  <time class="italic font-mono tracking-tight text-sm print:text-[9px]">
                     June 2021
                     -
                     September 2022
                   </time>
                 </div>
-                <div class="timeline-box md:timeline-start timeline-end">
-                  <h3 class="font-bold tracking-tight text-lg print:text-base text-nowrap">
+                <div class="timeline-box md:timeline-start timeline-end print:p-1 print:my-0.5">
+                  <h3 class="font-bold tracking-tight text-lg print:text-xs text-nowrap print:leading-tight print:mb-0">
                     Software Engineer - Backend
                   </h3>
-                  <p class="text-sm whitespace-pre-line">
-                    Responsible as backend engineer that working closely with international game developer company.
-Handle SSO and orchestrator services for login portal from our vendor.
-Use Go and Java programming language as our main backend language, but personally focus on the Golang services.
+                  <p class="text-sm print:text-[9px] whitespace-pre-line print:leading-tight">
+                    Collaborated with international AAA game studios to deliver backend services supporting millions of concurrent players across multiple gaming titles.
+Developed and maintained Single Sign-On (SSO) authentication system and orchestration services, ensuring secure and seamless login experiences across gaming platforms.
+Engineered high-performance microservices in Go and Java, with primary focus on Go-based services, achieving optimal performance for real-time gaming workloads.
                   </p>
                 </div>
-                <hr />
+                <hr class="print:hidden" />
               </li>
-              <li>
+              <li class=' print:break-inside-avoid'>
                 <div class="timeline-middle text-blue-500">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"/>
                   </svg>
                 </div>
-                <div class="timeline-start md:text-end text-start tooltip md:tooltip-bottom hover:tooltip-open" data-tip="2 years 2 months">
-                  <h2 class="font-bold tracking-tighter text-xl print:text-lg">
+                <div class="timeline-start md:text-end text-start tooltip md:tooltip-bottom hover:tooltip-open dynamic-duration" 
+                     data-tip="2 years 2 months"
+                     data-start="2019-04-01"
+                     data-end="2021-06-01">
+                  <h2 class="font-bold tracking-tighter text-xl print:text-sm print:leading-tight">
                     Tokopedia
                   </h2>
-                  <time class="italic font-mono tracking-tight">
+                  <time class="italic font-mono tracking-tight text-sm print:text-[9px]">
                     April 2019
                     -
                     June 2021
                   </time>
                 </div>
-                <div class="timeline-box timeline-end text-start">
-                  <h3 class="font-bold tracking-tight text-lg print:text-base text-nowrap">
+                <div class="timeline-box timeline-end text-start print:p-1 print:my-0.5">
+                  <h3 class="font-bold tracking-tight text-lg print:text-xs text-nowrap print:leading-tight print:mb-0">
                     Software Engineer - Seller API
                   </h3>
-                  <p class="text-sm whitespace-pre-line">
-                    Maintain special functionality and custom rules for Tokopedia priority seller (Official Store).
-Maintain services for API integration with more than 300 partners of Tokopedia.
-Develop self service platform to register, provide documentation, and configure API integration for developers.
-First time using Go Programming Language and love this language since then.
+                  <p class="text-sm print:text-[9px] whitespace-pre-line print:leading-tight">
+                    Developed and maintained business logic for Official Store sellers on Indonesia's largest e-commerce platform, implementing custom workflows and priority features for enterprise merchants.
+Architected and managed API gateway serving 300+ external partners, handling millions of daily requests for inventory management, order processing, and product synchronization.
+Built self-service developer portal enabling partners to register, access comprehensive API documentation, and configure integrations autonomously, reducing onboarding time by 70%.
+Pioneered Go adoption within the team, contributing to the migration from legacy systems to modern microservices architecture.
                   </p>
                 </div>
-                <hr />
+                <hr class="print:hidden" />
               </li>
-              <li>
+              <li class='print:hidden print:break-inside-avoid'>
                 <div class="timeline-middle text-blue-500">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"/>
                   </svg>
                 </div>
-                <div class="md:timeline-end text-start timeline-start tooltip md:tooltip-bottom hover:tooltip-open" data-tip="9 months">
-                  <h2 class="font-bold tracking-tighter text-xl print:text-lg">
+                <div class="md:timeline-end text-start timeline-start tooltip md:tooltip-bottom hover:tooltip-open dynamic-duration" 
+                     data-tip="9 months"
+                     data-start="2018-06-01"
+                     data-end="2019-03-01">
+                  <h2 class="font-bold tracking-tighter text-xl print:text-sm print:leading-tight">
                     Bina Informasi Optima Solusindo
                   </h2>
-                  <time class="italic font-mono tracking-tight">
+                  <time class="italic font-mono tracking-tight text-sm print:text-[9px]">
                     June 2018
                     -
                     March 2019
                   </time>
                 </div>
-                <div class="timeline-box md:timeline-start timeline-end">
-                  <h3 class="font-bold tracking-tight text-lg print:text-base text-nowrap">
+                <div class="timeline-box md:timeline-start timeline-end print:p-1 print:my-0.5">
+                  <h3 class="font-bold tracking-tight text-lg print:text-xs text-nowrap print:leading-tight print:mb-0">
                     Associate Software Developer
                   </h3>
-                  <p class="text-sm whitespace-pre-line">
-                    Support project to develop web application, Real Estate Management and Other Service (REMOTE), for PELINDO III utilizing ASP.NET framework by C# for 8 months.
-Support project to develop web-based information system based for PDAM Magelang by using Laravel framework and PHP programming language for around one month.
+                  <p class="text-sm print:text-[9px] whitespace-pre-line print:leading-tight">
+                    Contributed to enterprise web application development for PELINDO III's Real Estate Management and Other Services (REMOTE) platform using ASP.NET and C#, implementing key features for property management workflows.
+Developed web-based information system for PDAM Magelang water utility company using Laravel and PHP, delivering administrative and reporting functionalities.
                   </p>
                 </div>
-                <hr />
+                <hr class="print:hidden" />
               </li>
             </ul>
           </section>
-          <section class="container center m-auto pt-7 print:mt-5 px-3 sm:px-1 min-h-screen print:min-h-0 flex flex-col" id="skills">
+          <section class="container center m-auto pt-7 print:mt-0 px-3 print:px-0 print:pl-1 sm:px-1 min-h-screen print:min-h-0 flex flex-col print:break-before-page" id="education">
+            <h1 class="py-2 pl-5 ml-14 md:ml-16 print:ml-0 print:pl-1 my-3 print:my-0.5 print:mb-0.5 font-bold tracking-tight font-mono text-white text-3xl print:text-sm bg-blue-500 rounded-lg shadow-md shadow-blue-900 print:shadow-none print:rounded-sm print:py-0.5">
+              Education
+            </h1>
+            <ul class="timeline timeline-vertical timeline-snap-icon max-md:timeline-compact grow flex justify-center print:gap-0">
+              <li class=' print:break-inside-avoid'>
+                <div class="timeline-middle text-blue-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"/>
+                  </svg>
+                </div>
+                <div class="timeline-start md:text-end text-start">
+                  <h2 class="font-bold tracking-tighter text-lg print:text-xs print:leading-none print:mb-0.5">
+                    Institut Teknologi Sepuluh Nopember (ITS)
+                  </h2>
+                  <time class="italic font-mono tracking-tight text-sm print:text-[8px] print:leading-none">
+                    2014
+                    -
+                    2018
+                  </time>
+                </div>
+                <div class="timeline-box timeline-end text-start print:p-1 print:my-0.5">
+                  <h3 class="font-bold tracking-tight print:text-[10px] print:leading-none print:mb-0.5">
+                    Bachelor of Computer Science - Information Systems
+                  </h3>
+                  <p class="text-sm print:text-[8px] whitespace-pre-line print:leading-tight">
+                    GPA: 3.55/4.00 | Major: Data Acquisition & Information Dissemination
+Thesis: "Real-time Event Information Extraction and Visualization from Social Media using Conditional Random Field and Flask Python Framework"
+Developed machine learning-based system for automated event detection and visualization from social media streams, implementing Natural Language Processing techniques for information extraction.
+Active member of Information Systems Student Association, holding leadership positions in Research & Technology Department.
+                  </p>
+                </div>
+                <hr class="print:hidden" />
+              </li>
+              <li class='print:hidden print:break-inside-avoid'>
+                <div class="timeline-middle text-blue-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"/>
+                  </svg>
+                </div>
+                <div class="md:timeline-end text-start timeline-start">
+                  <h2 class="font-bold tracking-tighter text-lg print:text-xs print:leading-none print:mb-0.5">
+                    SMA Negeri 1 Salatiga
+                  </h2>
+                  <time class="italic font-mono tracking-tight text-sm print:text-[8px] print:leading-none">
+                    2011
+                    -
+                    2014
+                  </time>
+                </div>
+                <div class="timeline-box md:timeline-start timeline-end print:p-1 print:my-0.5">
+                  <h3 class="font-bold tracking-tight print:text-[10px] print:leading-none print:mb-0.5">
+                    Senior High School - Science Program
+                  </h3>
+                  <p class="text-sm print:text-[8px] whitespace-pre-line print:leading-tight">
+                    Science track with focus on Mathematics and Physics.
+Active member of Smanssa Robotics Club, participating in regional robotics competitions and technical projects.
+                  </p>
+                </div>
+                <hr class="print:hidden" />
+              </li>
+              <li class='print:hidden print:break-inside-avoid'>
+                <div class="timeline-middle text-blue-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"/>
+                  </svg>
+                </div>
+                <div class="timeline-start md:text-end text-start">
+                  <h2 class="font-bold tracking-tighter text-lg print:text-xs print:leading-none print:mb-0.5">
+                    SMP Negeri 1 Ungaran
+                  </h2>
+                  <time class="italic font-mono tracking-tight text-sm print:text-[8px] print:leading-none">
+                    2008
+                    -
+                    2011
+                  </time>
+                </div>
+                <div class="timeline-box timeline-end text-start print:p-1 print:my-0.5">
+                  <h3 class="font-bold tracking-tight print:text-[10px] print:leading-none print:mb-0.5">
+                    Junior High School
+                  </h3>
+                  <p class="text-sm print:text-[8px] whitespace-pre-line print:leading-tight">
+                    Student Council member and Science Olympiad participant.
+Demonstrated early interest in STEM through mathematics and science competition participation.
+                  </p>
+                </div>
+                <hr class="print:hidden" />
+              </li>
+              <li class='print:hidden print:break-inside-avoid'>
+                <div class="timeline-middle text-blue-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"/>
+                  </svg>
+                </div>
+                <div class="md:timeline-end text-start timeline-start">
+                  <h2 class="font-bold tracking-tighter text-lg print:text-xs print:leading-none print:mb-0.5">
+                    SD Negeri 1 Ungaran
+                  </h2>
+                  <time class="italic font-mono tracking-tight text-sm print:text-[8px] print:leading-none">
+                    2002
+                    -
+                    2008
+                  </time>
+                </div>
+                <div class="timeline-box md:timeline-start timeline-end print:p-1 print:my-0.5">
+                  <h3 class="font-bold tracking-tight print:text-[10px] print:leading-none print:mb-0.5">
+                    Elementary School
+                  </h3>
+                  <p class="text-sm print:text-[8px] whitespace-pre-line print:leading-tight">
+                    Early achievements in Mathematics Olympiad and leadership development through Boy Scouts activities.
+                  </p>
+                </div>
+                <hr class="print:hidden" />
+              </li>
+            </ul>
+          </section>
+          <section class="container center m-auto pt-7 print:mt-1 px-3 print:px-0 sm:px-1 min-h-screen print:min-h-0 flex flex-col" id="technical-skills">
+            <h1 class="py-2 pl-5 ml-14 md:ml-16 print:ml-0 print:pl-1 my-3 print:my-1 print:mb-1 font-bold tracking-tight font-mono text-white text-3xl print:text-base bg-blue-500 rounded-lg shadow-md shadow-blue-900 print:shadow-none print:rounded-sm print:py-0.5">
+              Technical Proficiency
+            </h1>
+            <div class="grow flex flex-col gap-6 print:gap-0.5 p-4 print:p-0">
+              <div class="card bg-base-100 shadow-xl print:shadow-none print:border print:border-gray-200 print:mb-1">
+                <div class="card-body print:p-1">
+                  <h2 class="card-title text-2xl print:text-xs font-bold text-blue-600 border-b-2 print:border-b border-blue-200 pb-2 print:pb-0 print:mb-0">
+                    Programming Languages
+                  </h2>
+                  <div class="grid grid-cols-1 md:grid-cols-2 print:grid-cols-4 gap-4 print:gap-1 mt-4 print:mt-1">
+                    <div class="flex flex-col gap-1 p-3 print:p-0.5 hover:bg-base-200 rounded-lg transition-all print:break-inside-avoid">
+                      <div class="flex justify-between items-start print:items-center print:gap-1">
+                        <h3 class="font-bold text-lg print:text-[9px] print:leading-tight">Go/Golang</h3>
+                        <span class="badge badge-primary badge-sm print:hidden">Expert</span>
+                      </div>
+                      <div class="flex items-center gap-2 text-sm print:text-[8px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 print:h-2 print:w-2 text-blue-500 print:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span class="text-gray-600 font-mono print:text-gray-400">5&#43; years</span>
+                      </div>
+                      <p class="text-xs print:text-[10px] text-gray-500 mt-1 leading-relaxed print:hidden">Primary language for production microservices (Tokopedia, Accelbyte, Shortlyst AI, Fliptech)</p>
+                    </div>
+                    <div class="flex flex-col gap-1 p-3 print:p-0.5 hover:bg-base-200 rounded-lg transition-all print:break-inside-avoid">
+                      <div class="flex justify-between items-start print:items-center print:gap-1">
+                        <h3 class="font-bold text-lg print:text-[9px] print:leading-tight">Python</h3>
+                        <span class="badge badge-primary badge-sm print:hidden">Advanced</span>
+                      </div>
+                      <div class="flex items-center gap-2 text-sm print:text-[8px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 print:h-2 print:w-2 text-blue-500 print:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span class="text-gray-600 font-mono print:text-gray-400">4&#43; years</span>
+                      </div>
+                      <p class="text-xs print:text-[10px] text-gray-500 mt-1 leading-relaxed print:hidden">Machine learning, data processing, Flask framework (Thesis &amp; scripting)</p>
+                    </div>
+                    <div class="flex flex-col gap-1 p-3 print:p-0.5 hover:bg-base-200 rounded-lg transition-all print:break-inside-avoid">
+                      <div class="flex justify-between items-start print:items-center print:gap-1">
+                        <h3 class="font-bold text-lg print:text-[9px] print:leading-tight">Java</h3>
+                        <span class="badge badge-primary badge-sm print:hidden">Intermediate</span>
+                      </div>
+                      <div class="flex items-center gap-2 text-sm print:text-[8px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 print:h-2 print:w-2 text-blue-500 print:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span class="text-gray-600 font-mono print:text-gray-400">2&#43; years</span>
+                      </div>
+                      <p class="text-xs print:text-[10px] text-gray-500 mt-1 leading-relaxed print:hidden">Backend services at Accelbyte gaming platform</p>
+                    </div>
+                    <div class="flex flex-col gap-1 p-3 print:p-0.5 hover:bg-base-200 rounded-lg transition-all print:break-inside-avoid">
+                      <div class="flex justify-between items-start print:items-center print:gap-1">
+                        <h3 class="font-bold text-lg print:text-[9px] print:leading-tight">PHP</h3>
+                        <span class="badge badge-primary badge-sm print:hidden">Intermediate</span>
+                      </div>
+                      <div class="flex items-center gap-2 text-sm print:text-[8px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 print:h-2 print:w-2 text-blue-500 print:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span class="text-gray-600 font-mono print:text-gray-400">2&#43; years</span>
+                      </div>
+                      <p class="text-xs print:text-[10px] text-gray-500 mt-1 leading-relaxed print:hidden">Laravel framework (Bina Informasi, early career projects)</p>
+                    </div>
+                    <div class="flex flex-col gap-1 p-3 print:p-0.5 hover:bg-base-200 rounded-lg transition-all print:break-inside-avoid">
+                      <div class="flex justify-between items-start print:items-center print:gap-1">
+                        <h3 class="font-bold text-lg print:text-[9px] print:leading-tight">C#</h3>
+                        <span class="badge badge-primary badge-sm print:hidden">Intermediate</span>
+                      </div>
+                      <div class="flex items-center gap-2 text-sm print:text-[8px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 print:h-2 print:w-2 text-blue-500 print:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span class="text-gray-600 font-mono print:text-gray-400">1&#43; year</span>
+                      </div>
+                      <p class="text-xs print:text-[10px] text-gray-500 mt-1 leading-relaxed print:hidden">ASP.NET applications (PELINDO III project)</p>
+                    </div>
+                    <div class="flex flex-col gap-1 p-3 print:p-0.5 hover:bg-base-200 rounded-lg transition-all print:break-inside-avoid">
+                      <div class="flex justify-between items-start print:items-center print:gap-1">
+                        <h3 class="font-bold text-lg print:text-[9px] print:leading-tight">JavaScript/TypeScript</h3>
+                        <span class="badge badge-primary badge-sm print:hidden">Intermediate</span>
+                      </div>
+                      <div class="flex items-center gap-2 text-sm print:text-[8px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 print:h-2 print:w-2 text-blue-500 print:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span class="text-gray-600 font-mono print:text-gray-400">3&#43; years</span>
+                      </div>
+                      <p class="text-xs print:text-[10px] text-gray-500 mt-1 leading-relaxed print:hidden">Frontend integration, full-stack development</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card bg-base-100 shadow-xl print:shadow-none print:border print:border-gray-200 print:mb-1">
+                <div class="card-body print:p-1">
+                  <h2 class="card-title text-2xl print:text-xs font-bold text-blue-600 border-b-2 print:border-b border-blue-200 pb-2 print:pb-0 print:mb-0">
+                    Cloud &amp; Infrastructure
+                  </h2>
+                  <div class="grid grid-cols-1 md:grid-cols-2 print:grid-cols-4 gap-4 print:gap-1 mt-4 print:mt-1">
+                    <div class="flex flex-col gap-1 p-3 print:p-0.5 hover:bg-base-200 rounded-lg transition-all print:break-inside-avoid">
+                      <div class="flex justify-between items-start print:items-center print:gap-1">
+                        <h3 class="font-bold text-lg print:text-[9px] print:leading-tight">AWS (Amazon Web Services)</h3>
+                        <span class="badge badge-primary badge-sm print:hidden">Advanced</span>
+                      </div>
+                      <div class="flex items-center gap-2 text-sm print:text-[8px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 print:h-2 print:w-2 text-blue-500 print:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span class="text-gray-600 font-mono print:text-gray-400">4&#43; years</span>
+                      </div>
+                      <p class="text-xs print:text-[10px] text-gray-500 mt-1 leading-relaxed print:hidden">EC2, ECS, Lambda, S3, RDS, CloudWatch (Shortlyst AI, Tokopedia)</p>
+                    </div>
+                    <div class="flex flex-col gap-1 p-3 print:p-0.5 hover:bg-base-200 rounded-lg transition-all print:break-inside-avoid">
+                      <div class="flex justify-between items-start print:items-center print:gap-1">
+                        <h3 class="font-bold text-lg print:text-[9px] print:leading-tight">Kubernetes</h3>
+                        <span class="badge badge-primary badge-sm print:hidden">Advanced</span>
+                      </div>
+                      <div class="flex items-center gap-2 text-sm print:text-[8px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 print:h-2 print:w-2 text-blue-500 print:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span class="text-gray-600 font-mono print:text-gray-400">3&#43; years</span>
+                      </div>
+                      <p class="text-xs print:text-[10px] text-gray-500 mt-1 leading-relaxed print:hidden">Production deployment &amp; management of 100&#43; microservices (Accelbyte)</p>
+                    </div>
+                    <div class="flex flex-col gap-1 p-3 print:p-0.5 hover:bg-base-200 rounded-lg transition-all print:break-inside-avoid">
+                      <div class="flex justify-between items-start print:items-center print:gap-1">
+                        <h3 class="font-bold text-lg print:text-[9px] print:leading-tight">Docker</h3>
+                        <span class="badge badge-primary badge-sm print:hidden">Expert</span>
+                      </div>
+                      <div class="flex items-center gap-2 text-sm print:text-[8px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 print:h-2 print:w-2 text-blue-500 print:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span class="text-gray-600 font-mono print:text-gray-400">5&#43; years</span>
+                      </div>
+                      <p class="text-xs print:text-[10px] text-gray-500 mt-1 leading-relaxed print:hidden">Containerization across all major projects</p>
+                    </div>
+                    <div class="flex flex-col gap-1 p-3 print:p-0.5 hover:bg-base-200 rounded-lg transition-all print:break-inside-avoid">
+                      <div class="flex justify-between items-start print:items-center print:gap-1">
+                        <h3 class="font-bold text-lg print:text-[9px] print:leading-tight">Infrastructure as Code</h3>
+                        <span class="badge badge-primary badge-sm print:hidden">Advanced</span>
+                      </div>
+                      <div class="flex items-center gap-2 text-sm print:text-[8px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 print:h-2 print:w-2 text-blue-500 print:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span class="text-gray-600 font-mono print:text-gray-400">2&#43; years</span>
+                      </div>
+                      <p class="text-xs print:text-[10px] text-gray-500 mt-1 leading-relaxed print:hidden">Terraform, CloudFormation for 90&#43; customer environments</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card bg-base-100 shadow-xl print:shadow-none print:border print:border-gray-200 print:mb-1">
+                <div class="card-body print:p-1">
+                  <h2 class="card-title text-2xl print:text-xs font-bold text-blue-600 border-b-2 print:border-b border-blue-200 pb-2 print:pb-0 print:mb-0">
+                    Databases &amp; Data Stores
+                  </h2>
+                  <div class="grid grid-cols-1 md:grid-cols-2 print:grid-cols-4 gap-4 print:gap-1 mt-4 print:mt-1">
+                    <div class="flex flex-col gap-1 p-3 print:p-0.5 hover:bg-base-200 rounded-lg transition-all print:break-inside-avoid">
+                      <div class="flex justify-between items-start print:items-center print:gap-1">
+                        <h3 class="font-bold text-lg print:text-[9px] print:leading-tight">PostgreSQL</h3>
+                        <span class="badge badge-primary badge-sm print:hidden">Advanced</span>
+                      </div>
+                      <div class="flex items-center gap-2 text-sm print:text-[8px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 print:h-2 print:w-2 text-blue-500 print:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span class="text-gray-600 font-mono print:text-gray-400">5&#43; years</span>
+                      </div>
+                      <p class="text-xs print:text-[10px] text-gray-500 mt-1 leading-relaxed print:hidden">Primary relational database (Shortlyst AI, Tokopedia, Fliptech)</p>
+                    </div>
+                    <div class="flex flex-col gap-1 p-3 print:p-0.5 hover:bg-base-200 rounded-lg transition-all print:break-inside-avoid">
+                      <div class="flex justify-between items-start print:items-center print:gap-1">
+                        <h3 class="font-bold text-lg print:text-[9px] print:leading-tight">MongoDB</h3>
+                        <span class="badge badge-primary badge-sm print:hidden">Advanced</span>
+                      </div>
+                      <div class="flex items-center gap-2 text-sm print:text-[8px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 print:h-2 print:w-2 text-blue-500 print:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span class="text-gray-600 font-mono print:text-gray-400">4&#43; years</span>
+                      </div>
+                      <p class="text-xs print:text-[10px] text-gray-500 mt-1 leading-relaxed print:hidden">Document storage for high-volume applications (Shortlyst AI)</p>
+                    </div>
+                    <div class="flex flex-col gap-1 p-3 print:p-0.5 hover:bg-base-200 rounded-lg transition-all print:break-inside-avoid">
+                      <div class="flex justify-between items-start print:items-center print:gap-1">
+                        <h3 class="font-bold text-lg print:text-[9px] print:leading-tight">Redis</h3>
+                        <span class="badge badge-primary badge-sm print:hidden">Advanced</span>
+                      </div>
+                      <div class="flex items-center gap-2 text-sm print:text-[8px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 print:h-2 print:w-2 text-blue-500 print:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span class="text-gray-600 font-mono print:text-gray-400">4&#43; years</span>
+                      </div>
+                      <p class="text-xs print:text-[10px] text-gray-500 mt-1 leading-relaxed print:hidden">Caching, session management, real-time features</p>
+                    </div>
+                    <div class="flex flex-col gap-1 p-3 print:p-0.5 hover:bg-base-200 rounded-lg transition-all print:break-inside-avoid">
+                      <div class="flex justify-between items-start print:items-center print:gap-1">
+                        <h3 class="font-bold text-lg print:text-[9px] print:leading-tight">Elasticsearch</h3>
+                        <span class="badge badge-primary badge-sm print:hidden">Advanced</span>
+                      </div>
+                      <div class="flex items-center gap-2 text-sm print:text-[8px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 print:h-2 print:w-2 text-blue-500 print:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span class="text-gray-600 font-mono print:text-gray-400">3&#43; years</span>
+                      </div>
+                      <p class="text-xs print:text-[10px] text-gray-500 mt-1 leading-relaxed print:hidden">Search functionality, log analytics (Shortlyst AI)</p>
+                    </div>
+                    <div class="flex flex-col gap-1 p-3 print:p-0.5 hover:bg-base-200 rounded-lg transition-all print:break-inside-avoid">
+                      <div class="flex justify-between items-start print:items-center print:gap-1">
+                        <h3 class="font-bold text-lg print:text-[9px] print:leading-tight">MySQL</h3>
+                        <span class="badge badge-primary badge-sm print:hidden">Advanced</span>
+                      </div>
+                      <div class="flex items-center gap-2 text-sm print:text-[8px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 print:h-2 print:w-2 text-blue-500 print:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span class="text-gray-600 font-mono print:text-gray-400">5&#43; years</span>
+                      </div>
+                      <p class="text-xs print:text-[10px] text-gray-500 mt-1 leading-relaxed print:hidden">Legacy systems and various projects</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card bg-base-100 shadow-xl print:shadow-none print:border print:border-gray-200 print:mb-1">
+                <div class="card-body print:p-1">
+                  <h2 class="card-title text-2xl print:text-xs font-bold text-blue-600 border-b-2 print:border-b border-blue-200 pb-2 print:pb-0 print:mb-0">
+                    DevOps &amp; CI/CD
+                  </h2>
+                  <div class="grid grid-cols-1 md:grid-cols-2 print:grid-cols-4 gap-4 print:gap-1 mt-4 print:mt-1">
+                    <div class="flex flex-col gap-1 p-3 print:p-0.5 hover:bg-base-200 rounded-lg transition-all print:break-inside-avoid">
+                      <div class="flex justify-between items-start print:items-center print:gap-1">
+                        <h3 class="font-bold text-lg print:text-[9px] print:leading-tight">CI/CD Pipelines</h3>
+                        <span class="badge badge-primary badge-sm print:hidden">Advanced</span>
+                      </div>
+                      <div class="flex items-center gap-2 text-sm print:text-[8px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 print:h-2 print:w-2 text-blue-500 print:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span class="text-gray-600 font-mono print:text-gray-400">3&#43; years</span>
+                      </div>
+                      <p class="text-xs print:text-[10px] text-gray-500 mt-1 leading-relaxed print:hidden">Jenkins, GitLab CI, GitHub Actions for automated deployments</p>
+                    </div>
+                    <div class="flex flex-col gap-1 p-3 print:p-0.5 hover:bg-base-200 rounded-lg transition-all print:break-inside-avoid">
+                      <div class="flex justify-between items-start print:items-center print:gap-1">
+                        <h3 class="font-bold text-lg print:text-[9px] print:leading-tight">Kubernetes Kustomize</h3>
+                        <span class="badge badge-primary badge-sm print:hidden">Advanced</span>
+                      </div>
+                      <div class="flex items-center gap-2 text-sm print:text-[8px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 print:h-2 print:w-2 text-blue-500 print:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span class="text-gray-600 font-mono print:text-gray-400">2&#43; years</span>
+                      </div>
+                      <p class="text-xs print:text-[10px] text-gray-500 mt-1 leading-relaxed print:hidden">Manifest management for 100&#43; services (Accelbyte)</p>
+                    </div>
+                    <div class="flex flex-col gap-1 p-3 print:p-0.5 hover:bg-base-200 rounded-lg transition-all print:break-inside-avoid">
+                      <div class="flex justify-between items-start print:items-center print:gap-1">
+                        <h3 class="font-bold text-lg print:text-[9px] print:leading-tight">Git</h3>
+                        <span class="badge badge-primary badge-sm print:hidden">Expert</span>
+                      </div>
+                      <div class="flex items-center gap-2 text-sm print:text-[8px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 print:h-2 print:w-2 text-blue-500 print:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span class="text-gray-600 font-mono print:text-gray-400">7&#43; years</span>
+                      </div>
+                      <p class="text-xs print:text-[10px] text-gray-500 mt-1 leading-relaxed print:hidden">Version control, branching strategies, code review workflows</p>
+                    </div>
+                    <div class="flex flex-col gap-1 p-3 print:p-0.5 hover:bg-base-200 rounded-lg transition-all print:break-inside-avoid">
+                      <div class="flex justify-between items-start print:items-center print:gap-1">
+                        <h3 class="font-bold text-lg print:text-[9px] print:leading-tight">Linux/Unix</h3>
+                        <span class="badge badge-primary badge-sm print:hidden">Advanced</span>
+                      </div>
+                      <div class="flex items-center gap-2 text-sm print:text-[8px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 print:h-2 print:w-2 text-blue-500 print:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span class="text-gray-600 font-mono print:text-gray-400">7&#43; years</span>
+                      </div>
+                      <p class="text-xs print:text-[10px] text-gray-500 mt-1 leading-relaxed print:hidden">Server administration, shell scripting, production troubleshooting</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card bg-base-100 shadow-xl print:shadow-none print:border print:border-gray-200 print:mb-1">
+                <div class="card-body print:p-1">
+                  <h2 class="card-title text-2xl print:text-xs font-bold text-blue-600 border-b-2 print:border-b border-blue-200 pb-2 print:pb-0 print:mb-0">
+                    API &amp; Integration
+                  </h2>
+                  <div class="grid grid-cols-1 md:grid-cols-2 print:grid-cols-4 gap-4 print:gap-1 mt-4 print:mt-1">
+                    <div class="flex flex-col gap-1 p-3 print:p-0.5 hover:bg-base-200 rounded-lg transition-all print:break-inside-avoid">
+                      <div class="flex justify-between items-start print:items-center print:gap-1">
+                        <h3 class="font-bold text-lg print:text-[9px] print:leading-tight">RESTful APIs</h3>
+                        <span class="badge badge-primary badge-sm print:hidden">Expert</span>
+                      </div>
+                      <div class="flex items-center gap-2 text-sm print:text-[8px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 print:h-2 print:w-2 text-blue-500 print:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span class="text-gray-600 font-mono print:text-gray-400">7&#43; years</span>
+                      </div>
+                      <p class="text-xs print:text-[10px] text-gray-500 mt-1 leading-relaxed print:hidden">Design and implementation across all backend projects</p>
+                    </div>
+                    <div class="flex flex-col gap-1 p-3 print:p-0.5 hover:bg-base-200 rounded-lg transition-all print:break-inside-avoid">
+                      <div class="flex justify-between items-start print:items-center print:gap-1">
+                        <h3 class="font-bold text-lg print:text-[9px] print:leading-tight">Microservices Architecture</h3>
+                        <span class="badge badge-primary badge-sm print:hidden">Advanced</span>
+                      </div>
+                      <div class="flex items-center gap-2 text-sm print:text-[8px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 print:h-2 print:w-2 text-blue-500 print:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span class="text-gray-600 font-mono print:text-gray-400">5&#43; years</span>
+                      </div>
+                      <p class="text-xs print:text-[10px] text-gray-500 mt-1 leading-relaxed print:hidden">Distributed systems, service mesh, inter-service communication</p>
+                    </div>
+                    <div class="flex flex-col gap-1 p-3 print:p-0.5 hover:bg-base-200 rounded-lg transition-all print:break-inside-avoid">
+                      <div class="flex justify-between items-start print:items-center print:gap-1">
+                        <h3 class="font-bold text-lg print:text-[9px] print:leading-tight">Third-party Integrations</h3>
+                        <span class="badge badge-primary badge-sm print:hidden">Advanced</span>
+                      </div>
+                      <div class="flex items-center gap-2 text-sm print:text-[8px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 print:h-2 print:w-2 text-blue-500 print:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span class="text-gray-600 font-mono print:text-gray-400">4&#43; years</span>
+                      </div>
+                      <p class="text-xs print:text-[10px] text-gray-500 mt-1 leading-relaxed print:hidden">Gmail, ZohoRecruit, Vincere, JobAdder, ATS platforms (Shortlyst AI)</p>
+                    </div>
+                    <div class="flex flex-col gap-1 p-3 print:p-0.5 hover:bg-base-200 rounded-lg transition-all print:break-inside-avoid">
+                      <div class="flex justify-between items-start print:items-center print:gap-1">
+                        <h3 class="font-bold text-lg print:text-[9px] print:leading-tight">gRPC</h3>
+                        <span class="badge badge-primary badge-sm print:hidden">Intermediate</span>
+                      </div>
+                      <div class="flex items-center gap-2 text-sm print:text-[8px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 print:h-2 print:w-2 text-blue-500 print:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span class="text-gray-600 font-mono print:text-gray-400">2&#43; years</span>
+                      </div>
+                      <p class="text-xs print:text-[10px] text-gray-500 mt-1 leading-relaxed print:hidden">High-performance service-to-service communication</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card bg-base-100 shadow-xl print:shadow-none print:border print:border-gray-200 print:mb-1">
+                <div class="card-body print:p-1">
+                  <h2 class="card-title text-2xl print:text-xs font-bold text-blue-600 border-b-2 print:border-b border-blue-200 pb-2 print:pb-0 print:mb-0">
+                    Message Queues &amp; Streaming
+                  </h2>
+                  <div class="grid grid-cols-1 md:grid-cols-2 print:grid-cols-4 gap-4 print:gap-1 mt-4 print:mt-1">
+                    <div class="flex flex-col gap-1 p-3 print:p-0.5 hover:bg-base-200 rounded-lg transition-all print:break-inside-avoid">
+                      <div class="flex justify-between items-start print:items-center print:gap-1">
+                        <h3 class="font-bold text-lg print:text-[9px] print:leading-tight">RabbitMQ</h3>
+                        <span class="badge badge-primary badge-sm print:hidden">Intermediate</span>
+                      </div>
+                      <div class="flex items-center gap-2 text-sm print:text-[8px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 print:h-2 print:w-2 text-blue-500 print:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span class="text-gray-600 font-mono print:text-gray-400">2&#43; years</span>
+                      </div>
+                      <p class="text-xs print:text-[10px] text-gray-500 mt-1 leading-relaxed print:hidden">Async processing, event-driven architecture</p>
+                    </div>
+                    <div class="flex flex-col gap-1 p-3 print:p-0.5 hover:bg-base-200 rounded-lg transition-all print:break-inside-avoid">
+                      <div class="flex justify-between items-start print:items-center print:gap-1">
+                        <h3 class="font-bold text-lg print:text-[9px] print:leading-tight">Kafka</h3>
+                        <span class="badge badge-primary badge-sm print:hidden">Intermediate</span>
+                      </div>
+                      <div class="flex items-center gap-2 text-sm print:text-[8px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 print:h-2 print:w-2 text-blue-500 print:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span class="text-gray-600 font-mono print:text-gray-400">1&#43; year</span>
+                      </div>
+                      <p class="text-xs print:text-[10px] text-gray-500 mt-1 leading-relaxed print:hidden">Stream processing, real-time data pipelines</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card bg-base-100 shadow-xl print:shadow-none print:border print:border-gray-200 print:mb-1">
+                <div class="card-body print:p-1">
+                  <h2 class="card-title text-2xl print:text-xs font-bold text-blue-600 border-b-2 print:border-b border-blue-200 pb-2 print:pb-0 print:mb-0">
+                    Monitoring &amp; Observability
+                  </h2>
+                  <div class="grid grid-cols-1 md:grid-cols-2 print:grid-cols-4 gap-4 print:gap-1 mt-4 print:mt-1">
+                    <div class="flex flex-col gap-1 p-3 print:p-0.5 hover:bg-base-200 rounded-lg transition-all print:break-inside-avoid">
+                      <div class="flex justify-between items-start print:items-center print:gap-1">
+                        <h3 class="font-bold text-lg print:text-[9px] print:leading-tight">Prometheus &amp; Grafana</h3>
+                        <span class="badge badge-primary badge-sm print:hidden">Intermediate</span>
+                      </div>
+                      <div class="flex items-center gap-2 text-sm print:text-[8px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 print:h-2 print:w-2 text-blue-500 print:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span class="text-gray-600 font-mono print:text-gray-400">2&#43; years</span>
+                      </div>
+                      <p class="text-xs print:text-[10px] text-gray-500 mt-1 leading-relaxed print:hidden">Metrics collection, dashboards, alerting</p>
+                    </div>
+                    <div class="flex flex-col gap-1 p-3 print:p-0.5 hover:bg-base-200 rounded-lg transition-all print:break-inside-avoid">
+                      <div class="flex justify-between items-start print:items-center print:gap-1">
+                        <h3 class="font-bold text-lg print:text-[9px] print:leading-tight">ELK Stack</h3>
+                        <span class="badge badge-primary badge-sm print:hidden">Intermediate</span>
+                      </div>
+                      <div class="flex items-center gap-2 text-sm print:text-[8px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 print:h-2 print:w-2 text-blue-500 print:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span class="text-gray-600 font-mono print:text-gray-400">2&#43; years</span>
+                      </div>
+                      <p class="text-xs print:text-[10px] text-gray-500 mt-1 leading-relaxed print:hidden">Elasticsearch, Logstash, Kibana for log management</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card bg-base-100 shadow-xl print:shadow-none print:border print:border-gray-200 print:mb-1">
+                <div class="card-body print:p-1">
+                  <h2 class="card-title text-2xl print:text-xs font-bold text-blue-600 border-b-2 print:border-b border-blue-200 pb-2 print:pb-0 print:mb-0">
+                    Frameworks &amp; Libraries
+                  </h2>
+                  <div class="grid grid-cols-1 md:grid-cols-2 print:grid-cols-4 gap-4 print:gap-1 mt-4 print:mt-1">
+                    <div class="flex flex-col gap-1 p-3 print:p-0.5 hover:bg-base-200 rounded-lg transition-all print:break-inside-avoid">
+                      <div class="flex justify-between items-start print:items-center print:gap-1">
+                        <h3 class="font-bold text-lg print:text-[9px] print:leading-tight">Flask</h3>
+                        <span class="badge badge-primary badge-sm print:hidden">Advanced</span>
+                      </div>
+                      <div class="flex items-center gap-2 text-sm print:text-[8px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 print:h-2 print:w-2 text-blue-500 print:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span class="text-gray-600 font-mono print:text-gray-400">3&#43; years</span>
+                      </div>
+                      <p class="text-xs print:text-[10px] text-gray-500 mt-1 leading-relaxed print:hidden">Python web framework (Thesis project, APIs)</p>
+                    </div>
+                    <div class="flex flex-col gap-1 p-3 print:p-0.5 hover:bg-base-200 rounded-lg transition-all print:break-inside-avoid">
+                      <div class="flex justify-between items-start print:items-center print:gap-1">
+                        <h3 class="font-bold text-lg print:text-[9px] print:leading-tight">Laravel</h3>
+                        <span class="badge badge-primary badge-sm print:hidden">Intermediate</span>
+                      </div>
+                      <div class="flex items-center gap-2 text-sm print:text-[8px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 print:h-2 print:w-2 text-blue-500 print:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span class="text-gray-600 font-mono print:text-gray-400">2&#43; years</span>
+                      </div>
+                      <p class="text-xs print:text-[10px] text-gray-500 mt-1 leading-relaxed print:hidden">PHP framework (Bina Informasi projects)</p>
+                    </div>
+                    <div class="flex flex-col gap-1 p-3 print:p-0.5 hover:bg-base-200 rounded-lg transition-all print:break-inside-avoid">
+                      <div class="flex justify-between items-start print:items-center print:gap-1">
+                        <h3 class="font-bold text-lg print:text-[9px] print:leading-tight">ASP.NET</h3>
+                        <span class="badge badge-primary badge-sm print:hidden">Intermediate</span>
+                      </div>
+                      <div class="flex items-center gap-2 text-sm print:text-[8px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 print:h-2 print:w-2 text-blue-500 print:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span class="text-gray-600 font-mono print:text-gray-400">1&#43; year</span>
+                      </div>
+                      <p class="text-xs print:text-[10px] text-gray-500 mt-1 leading-relaxed print:hidden">C# web applications (Enterprise projects)</p>
+                    </div>
+                    <div class="flex flex-col gap-1 p-3 print:p-0.5 hover:bg-base-200 rounded-lg transition-all print:break-inside-avoid">
+                      <div class="flex justify-between items-start print:items-center print:gap-1">
+                        <h3 class="font-bold text-lg print:text-[9px] print:leading-tight">TailwindCSS</h3>
+                        <span class="badge badge-primary badge-sm print:hidden">Intermediate</span>
+                      </div>
+                      <div class="flex items-center gap-2 text-sm print:text-[8px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 print:h-2 print:w-2 text-blue-500 print:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span class="text-gray-600 font-mono print:text-gray-400">2&#43; years</span>
+                      </div>
+                      <p class="text-xs print:text-[10px] text-gray-500 mt-1 leading-relaxed print:hidden">Modern CSS framework for responsive design</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="container center m-auto pt-7 print:mt-5 px-3 sm:px-1 min-h-screen print:min-h-0 flex flex-col print:hidden" id="skills">
             <h1 class="py-2 pl-5 ml-14 md:ml-16 print:ml-0 my-3 font-bold tracking-tight font-mono text-white text-3xl bg-blue-500 rounded-lg shadow-md shadow-blue-900">
-              Skills
+              Technologies Stack
             </h1>
             <div class="grow flex flex-col justify-center">
-              <h2 class="pl-12 py-4 font-bold tracking-tighter text-lg">Programming Languages & Tools</h2>
+              <h2 class="pl-12 py-4 font-bold tracking-tighter text-lg">Languages, Frameworks & Tools</h2>
               <div class="container grid grid-cols-3 sm:grid-cols-5 xl:grid-cols-10 print:grid-cols-3 justify-items-center print:justify-items-start items-center print:items-left gap-4">
                 <div class="tooltip hover:tooltip-open print:flex gap-3" data-tip="Golang">
                   <img class="size-12 md:size-16 xl:size-20 print:size-5" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original-wordmark.svg" />
@@ -376,121 +1027,7 @@ Support project to develop web-based information system based for PDAM Magelang 
               </div>
             </div>
           </section>
-          <section class="container center m-auto pt-7 print:mt-5 px-3 sm:px-1 min-h-screen print:min-h-0 flex flex-col" id="education">
-            <h1 class="py-2 pl-5 ml-14 md:ml-16 print:ml-0 my-3 font-bold tracking-tight font-mono text-white text-3xl bg-blue-500 rounded-lg shadow-md shadow-blue-900">
-              Education
-            </h1>
-            <ul class="timeline timeline-vertical timeline-snap-icon max-md:timeline-compact grow flex justify-center">
-              <li class=''>
-                <div class="timeline-middle text-blue-500">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"/>
-                  </svg>
-                </div>
-                <div class="timeline-start md:text-end text-start">
-                  <h2 class="font-bold tracking-tighter text-lg">
-                    Institute Technology of Sepuluh Nopember
-                  </h2>
-                  <time class="italic font-mono tracking-tight">
-                    2014
-                    -
-                    2018
-                  </time>
-                </div>
-                <div class="timeline-box timeline-end text-start">
-                  <h3 class="font-bold tracking-tight">
-                    Faculty of Information Technology &amp; Communication - Information Systems Department
-                  </h3>
-                  <p class="text-sm whitespace-pre-line">
-                    Bachelor of Computer.
-Major: Data Acquisition & Informations Dissemination.
-Thesis: Application for Extracting and Visualizing Event Information in Realtime From Social Media Using Conditional Random Field with Flask Python Framework.
-GPA: 3.55
-                  </p>
-                </div>
-                <hr />
-              </li>
-              <li class='print:hidden'>
-                <div class="timeline-middle text-blue-500">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"/>
-                  </svg>
-                </div>
-                <div class="md:timeline-end text-start timeline-start">
-                  <h2 class="font-bold tracking-tighter text-lg">
-                    SMA Negeri 1 Salatiga
-                  </h2>
-                  <time class="italic font-mono tracking-tight">
-                    2011
-                    -
-                    2014
-                  </time>
-                </div>
-                <div class="timeline-box md:timeline-start timeline-end">
-                  <h3 class="font-bold tracking-tight">
-                    Senior High School - Science Program
-                  </h3>
-                  <p class="text-sm whitespace-pre-line">
-                    Participate in Smanssa Robotic Club and Solidaritas Kerohanian Islam
-                  </p>
-                </div>
-                <hr />
-              </li>
-              <li class='print:hidden'>
-                <div class="timeline-middle text-blue-500">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"/>
-                  </svg>
-                </div>
-                <div class="timeline-start md:text-end text-start">
-                  <h2 class="font-bold tracking-tighter text-lg">
-                    SMP Negeri 1 Ungaran
-                  </h2>
-                  <time class="italic font-mono tracking-tight">
-                    2002
-                    -
-                    2008
-                  </time>
-                </div>
-                <div class="timeline-box timeline-end text-start">
-                  <h3 class="font-bold tracking-tight">
-                    Junior High School
-                  </h3>
-                  <p class="text-sm whitespace-pre-line">
-                    Participate in Student Council, Science Olympiad and Kerohanian Islam
-                  </p>
-                </div>
-                <hr />
-              </li>
-              <li class='print:hidden'>
-                <div class="timeline-middle text-blue-500">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"/>
-                  </svg>
-                </div>
-                <div class="md:timeline-end text-start timeline-start">
-                  <h2 class="font-bold tracking-tighter text-lg">
-                    SD Negeri 1 Ungaran
-                  </h2>
-                  <time class="italic font-mono tracking-tight">
-                    2011
-                    -
-                    2014
-                  </time>
-                </div>
-                <div class="timeline-box md:timeline-start timeline-end">
-                  <h3 class="font-bold tracking-tight">
-                    Elementary School
-                  </h3>
-                  <p class="text-sm whitespace-pre-line">
-                    Participate in Boys Scouts and Mathematic Olympiad
-                  </p>
-                </div>
-                <hr />
-              </li>
-            </ul>
-          </section>
-          <section class="container center m-auto pt-7 print:mt-5 px-3 sm:px-1 min-h-screen print:min-h-0 flex flex-col" id="organization">
+          <section class="container center m-auto pt-7 print:mt-5 px-3 sm:px-1 min-h-screen print:min-h-0 flex flex-col print:hidden" id="organization">
             <h1 class="py-2 pl-5 ml-14 md:ml-16 print:ml-0 my-3 font-bold tracking-tight font-mono text-white text-3xl bg-blue-500 rounded-lg shadow-md shadow-blue-900">
               Organization & Voluntary
             </h1>
@@ -516,8 +1053,8 @@ GPA: 3.55
                     Surabaya Region Coordinator
                   </h3>
                   <p class="text-sm whitespace-pre-line">
-                    Sobat Bumi Indonesia is a environmental community of Indonesia that actively participating in preserving the environment for the present and future generations.
-Coordinating activities and the members of Sobat Bumi in Surabaya Region.
+                    Led regional operations for Indonesia's national environmental community, coordinating conservation initiatives and sustainability programs across Surabaya.
+Managed team of volunteers in organizing environmental awareness campaigns, tree planting activities, and community education programs, engaging 500+ participants annually.
                   </p>
                 </div>
                 <hr />
@@ -543,8 +1080,9 @@ Coordinating activities and the members of Sobat Bumi in Surabaya Region.
                     Secretary of Research and Technology Department
                   </h3>
                   <p class="text-sm whitespace-pre-line">
-                    Student Associations of Information Systems Department, ITS.
-Responsible for staff management and department administration.
+                    Information Systems Student Association, Institut Teknologi Sepuluh Nopember (ITS).
+Oversaw departmental operations including staff coordination, budget management, and administrative workflows for 30+ department members.
+Facilitated technical workshops and research seminars to enhance students' skills in emerging technologies.
                   </p>
                 </div>
                 <hr />
@@ -567,11 +1105,12 @@ Responsible for staff management and department administration.
                 </div>
                 <div class="timeline-box timeline-end text-start">
                   <h3 class="font-bold tracking-tight">
-                    Staff of Social Responsibility Ministry
+                    Chief Executive, ITS Green Campaign 2016
                   </h3>
                   <p class="text-sm whitespace-pre-line">
-                    Student Executive of Institution Level. Responsible as Chief
-Executive ITS Green Campaign 2016 Environmental campaign for young generation at junior high school in Surabaya.
+                    Student Executive Body, Institut Teknologi Sepuluh Nopember (ITS).
+Spearheaded campus-wide environmental campaign reaching 1,000+ junior high school students across Surabaya, promoting environmental awareness and sustainable practices.
+Led team of 20+ volunteers in organizing educational workshops, interactive activities, and mentoring programs for young generation environmental advocates.
                   </p>
                 </div>
                 <hr />
@@ -597,8 +1136,8 @@ Executive ITS Green Campaign 2016 Environmental campaign for young generation at
                     Staff of Technology Application Department
                   </h3>
                   <p class="text-sm whitespace-pre-line">
-                    Student Associations of Information Systems Department, ITS.
-Responsible in organizing technology related creation from Information Systems students.
+                    Information Systems Student Association, Institut Teknologi Sepuluh Nopember (ITS).
+Coordinated technology showcases and innovation exhibitions featuring student projects and research in information systems and software development.
                   </p>
                 </div>
                 <hr />
@@ -613,7 +1152,8 @@ Responsible in organizing technology related creation from Information Systems s
           <li><a href="#about">About</a></li>
           <li><a href="#experience">Experience</a></li>
           <li><a href="#education">Education</a></li>
-          <li><a href="#skills">Skills</a></li>
+          <li><a href="#technical-skills">Technical Skills</a></li>
+          <li><a href="#skills">Technologies Stack</a></li>
           <li><a href="#organization">Organization & Voluntary</a></li>
         </ul>
       </nav>

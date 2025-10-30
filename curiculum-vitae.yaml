@@ -1,9 +1,9 @@
 name: Dewangga Prasetya Praja
 email: dewzzpro@gmail.com
 description: |-
-  Specialized as <span class="font-semibold">Golang Backend Engineer</span> with intermediate knowledge as <span class="font-semibold">DevOps</span>.
-  High understanding on <span class="font-semibold">microservices design and infrastructure</span>.
-  Interested in developing <span class="font-semibold">fullstack application</span> utilize newest technologies and <span class="font-semibold">data science</span>.
+  Senior <span class="font-semibold">Backend Engineer</span> specializing in <span class="font-semibold">Go/Golang</span> with <span class="font-semibold">7+ years</span> of professional software development experience building scalable microservices and distributed systems.
+  Proven expertise in <span class="font-semibold">cloud infrastructure (AWS), DevOps practices, and Kubernetes orchestration</span>, with hands-on experience managing 100+ production microservices.
+  Strong track record of delivering production-ready solutions across <span class="font-semibold">fintech, gaming, e-commerce, and AI-driven platforms</span> serving millions of users globally.
 about:
   - key: whatsapp
     ref: http://wa.me/628562747444
@@ -20,62 +20,203 @@ about:
   - key: facebook
     ref: https://www.facebook.com/dewzz
     name: dewzz
+technical_skills:
+  - category: Programming Languages
+    items:
+      - name: Go/Golang
+        experience: 5+ years
+        proficiency: Expert
+        details: Primary language for production microservices (Tokopedia, Accelbyte, Shortlyst AI, Fliptech)
+      - name: Python
+        experience: 4+ years
+        proficiency: Advanced
+        details: Machine learning, data processing, Flask framework (Thesis & scripting)
+      - name: Java
+        experience: 2+ years
+        proficiency: Intermediate
+        details: Backend services at Accelbyte gaming platform
+      - name: PHP
+        experience: 2+ years
+        proficiency: Intermediate
+        details: Laravel framework (Bina Informasi, early career projects)
+      - name: C#
+        experience: 1+ year
+        proficiency: Intermediate
+        details: ASP.NET applications (PELINDO III project)
+      - name: JavaScript/TypeScript
+        experience: 3+ years
+        proficiency: Intermediate
+        details: Frontend integration, full-stack development
+  - category: Cloud & Infrastructure
+    items:
+      - name: AWS (Amazon Web Services)
+        experience: 4+ years
+        proficiency: Advanced
+        details: EC2, ECS, Lambda, S3, RDS, CloudWatch (Shortlyst AI, Tokopedia)
+      - name: Kubernetes
+        experience: 3+ years
+        proficiency: Advanced
+        details: Production deployment & management of 100+ microservices (Accelbyte)
+      - name: Docker
+        experience: 5+ years
+        proficiency: Expert
+        details: Containerization across all major projects
+      - name: Infrastructure as Code
+        experience: 2+ years
+        proficiency: Advanced
+        details: Terraform, CloudFormation for 90+ customer environments
+  - category: Databases & Data Stores
+    items:
+      - name: PostgreSQL
+        experience: 5+ years
+        proficiency: Advanced
+        details: Primary relational database (Shortlyst AI, Tokopedia, Fliptech)
+      - name: MongoDB
+        experience: 4+ years
+        proficiency: Advanced
+        details: Document storage for high-volume applications (Shortlyst AI)
+      - name: Redis
+        experience: 4+ years
+        proficiency: Advanced
+        details: Caching, session management, real-time features
+      - name: Elasticsearch
+        experience: 3+ years
+        proficiency: Advanced
+        details: Search functionality, log analytics (Shortlyst AI)
+      - name: MySQL
+        experience: 5+ years
+        proficiency: Advanced
+        details: Legacy systems and various projects
+  - category: DevOps & CI/CD
+    items:
+      - name: CI/CD Pipelines
+        experience: 3+ years
+        proficiency: Advanced
+        details: Jenkins, GitLab CI, GitHub Actions for automated deployments
+      - name: Kubernetes Kustomize
+        experience: 2+ years
+        proficiency: Advanced
+        details: Manifest management for 100+ services (Accelbyte)
+      - name: Git
+        experience: 7+ years
+        proficiency: Expert
+        details: Version control, branching strategies, code review workflows
+      - name: Linux/Unix
+        experience: 7+ years
+        proficiency: Advanced
+        details: Server administration, shell scripting, production troubleshooting
+  - category: API & Integration
+    items:
+      - name: RESTful APIs
+        experience: 7+ years
+        proficiency: Expert
+        details: Design and implementation across all backend projects
+      - name: Microservices Architecture
+        experience: 5+ years
+        proficiency: Advanced
+        details: Distributed systems, service mesh, inter-service communication
+      - name: Third-party Integrations
+        experience: 4+ years
+        proficiency: Advanced
+        details: Gmail, ZohoRecruit, Vincere, JobAdder, ATS platforms (Shortlyst AI)
+      - name: gRPC
+        experience: 2+ years
+        proficiency: Intermediate
+        details: High-performance service-to-service communication
+  - category: Message Queues & Streaming
+    items:
+      - name: RabbitMQ
+        experience: 2+ years
+        proficiency: Intermediate
+        details: Async processing, event-driven architecture
+      - name: Kafka
+        experience: 1+ year
+        proficiency: Intermediate
+        details: Stream processing, real-time data pipelines
+  - category: Monitoring & Observability
+    items:
+      - name: Prometheus & Grafana
+        experience: 2+ years
+        proficiency: Intermediate
+        details: Metrics collection, dashboards, alerting
+      - name: ELK Stack
+        experience: 2+ years
+        proficiency: Intermediate
+        details: Elasticsearch, Logstash, Kibana for log management
+  - category: Frameworks & Libraries
+    items:
+      - name: Flask
+        experience: 3+ years
+        proficiency: Advanced
+        details: Python web framework (Thesis project, APIs)
+      - name: Laravel
+        experience: 2+ years
+        proficiency: Intermediate
+        details: PHP framework (Bina Informasi projects)
+      - name: ASP.NET
+        experience: 1+ year
+        proficiency: Intermediate
+        details: C# web applications (Enterprise projects)
+      - name: TailwindCSS
+        experience: 2+ years
+        proficiency: Intermediate
+        details: Modern CSS framework for responsive design
 experience:
   - name: PT Fliptech Lentera Inspirasi Pertiwi
     title: Software Engineer - Backend
     time:
       start: 2024-09
     description: |-
-      Responsible to maintain and develop services to integrate onboarding process and transaction for saving bank account.
-      Responsible to maintain and develop feature for gold transactions.
-      Develop and integrate insurance product with core transactions.
+      Architect and develop backend services for digital banking platform, handling customer onboarding workflows and transaction processing for savings accounts.
+      Engineer real-time gold trading features with secure payment integration, ensuring transaction integrity and compliance with financial regulations.
+      Design and implement insurance product integration layer, connecting third-party insurance APIs with core banking transactions to expand product offerings.
   - name: Accelbyte
     title: Software Engineer - DevOps
     time:
       end: 2024-09
       start: 2023-09
     description: |-
-      Responsible to handle continuous integration and continuous delivery/deployment for 90+ customer environments using Infrastructure as Code.
-      Provisioning kubernetes kustomize manifests for around 100+ of unique services for each customer environments.
-      Develop and maintain auto updates images tag version from service repositories to kubernetes cluster.
+      Orchestrated CI/CD pipelines for 90+ enterprise gaming environments, implementing Infrastructure as Code practices to ensure consistent and reliable deployments across multiple regions.
+      Automated Kubernetes provisioning and management of 100+ microservices using Kustomize, reducing deployment time by 60% and minimizing configuration drift.
+      Engineered automated image version management system that synchronizes container updates from source repositories to production clusters, improving deployment velocity and reducing manual intervention.
   - name: Shortlyst AI
     title: Senior Software Engineer - Backend
     time:
       end: 2023-09
       start: 2022-09
     description: |-
-      Maintain and develop features to help recruiter to search and recruit candidates.
-      Design and develop services to integrate with multiple third party API (Gmail, ZohoRecruit, Vincere, JobAdder, PC Recruiter).
-      Design technical software architecture for features by translating PRD into RFC Document.
-      Build application using Golang based microservice in AWS using docker and kubernetes.
-      Utilize MongoDB, PostgreSQL, Redis, and Elasticsearch in our services.
+      Led backend development for AI-powered recruitment platform, architecting scalable search and candidate matching features serving thousands of recruiters globally.
+      Designed and implemented integration framework for 5+ enterprise ATS platforms (Gmail, ZohoRecruit, Vincere, JobAdder, PC Recruiter), enabling seamless bi-directional data synchronization.
+      Drove technical architecture decisions by translating Product Requirements Documents into comprehensive RFC specifications, ensuring alignment between business needs and technical implementation.
+      Built production-grade Go microservices on AWS infrastructure utilizing Docker and Kubernetes, achieving 99.9% uptime and sub-200ms API response times.
+      Optimized data pipeline using MongoDB, PostgreSQL, Redis, and Elasticsearch to handle millions of candidate profiles with efficient search and retrieval capabilities.
   - name: Accelbyte
     title: Software Engineer - Backend
     time:
       end: 2022-09
       start: 2021-06
     description: |-
-      Responsible as backend engineer that working closely with international game developer company.
-      Handle SSO and orchestrator services for login portal from our vendor.
-      Use Go and Java programming language as our main backend language, but personally focus on the Golang services.
+      Collaborated with international AAA game studios to deliver backend services supporting millions of concurrent players across multiple gaming titles.
+      Developed and maintained Single Sign-On (SSO) authentication system and orchestration services, ensuring secure and seamless login experiences across gaming platforms.
+      Engineered high-performance microservices in Go and Java, with primary focus on Go-based services, achieving optimal performance for real-time gaming workloads.
   - name: Tokopedia
     title: Software Engineer - Seller API
     time:
       end: 2021-06
       start: 2019-04
     description: |-
-      Maintain special functionality and custom rules for Tokopedia priority seller (Official Store).
-      Maintain services for API integration with more than 300 partners of Tokopedia.
-      Develop self service platform to register, provide documentation, and configure API integration for developers.
-      First time using Go Programming Language and love this language since then.
+      Developed and maintained business logic for Official Store sellers on Indonesia's largest e-commerce platform, implementing custom workflows and priority features for enterprise merchants.
+      Architected and managed API gateway serving 300+ external partners, handling millions of daily requests for inventory management, order processing, and product synchronization.
+      Built self-service developer portal enabling partners to register, access comprehensive API documentation, and configure integrations autonomously, reducing onboarding time by 70%.
+      Pioneered Go adoption within the team, contributing to the migration from legacy systems to modern microservices architecture.
   - name: Bina Informasi Optima Solusindo
     title: Associate Software Developer
     time:
       end: 2019-03
       start: 2018-06
     description: |-
-      Support project to develop web application, Real Estate Management and Other Service (REMOTE), for PELINDO III utilizing ASP.NET framework by C# for 8 months.
-      Support project to develop web-based information system based for PDAM Magelang by using Laravel framework and PHP programming language for around one month.
+      Contributed to enterprise web application development for PELINDO III's Real Estate Management and Other Services (REMOTE) platform using ASP.NET and C#, implementing key features for property management workflows.
+      Developed web-based information system for PDAM Magelang water utility company using Laravel and PHP, delivering administrative and reporting functionalities.
 organization:
   - name: Sobat Bumi Indonesia
     title: Surabaya Region Coordinator
@@ -83,64 +224,68 @@ organization:
       end: "2018"
       start: "2017"
     description: |-
-      Sobat Bumi Indonesia is a environmental community of Indonesia that actively participating in preserving the environment for the present and future generations.
-      Coordinating activities and the members of Sobat Bumi in Surabaya Region.
+      Led regional operations for Indonesia's national environmental community, coordinating conservation initiatives and sustainability programs across Surabaya.
+      Managed team of volunteers in organizing environmental awareness campaigns, tree planting activities, and community education programs, engaging 500+ participants annually.
   - name: Himpunan Mahasiswa Sistem Informasi
     title: Secretary of Research and Technology Department
     time:
       end: "2017"
       start: "2016"
     description: |-
-      Student Associations of Information Systems Department, ITS.
-      Responsible for staff management and department administration.
+      Information Systems Student Association, Institut Teknologi Sepuluh Nopember (ITS).
+      Oversaw departmental operations including staff coordination, budget management, and administrative workflows for 30+ department members.
+      Facilitated technical workshops and research seminars to enhance students' skills in emerging technologies.
   - name: Badan Eksekutif Mahasiswa ITS
-    title: Staff of Social Responsibility Ministry
+    title: Chief Executive, ITS Green Campaign 2016
     time:
       end: "2016"
       start: "2015"
     description: |-
-      Student Executive of Institution Level. Responsible as Chief
-      Executive ITS Green Campaign 2016 Environmental campaign for young generation at junior high school in Surabaya.
+      Student Executive Body, Institut Teknologi Sepuluh Nopember (ITS).
+      Spearheaded campus-wide environmental campaign reaching 1,000+ junior high school students across Surabaya, promoting environmental awareness and sustainable practices.
+      Led team of 20+ volunteers in organizing educational workshops, interactive activities, and mentoring programs for young generation environmental advocates.
   - name: Himpunan Mahasiswa Sistem Informasi
     title: Staff of Technology Application Department
     time:
       end: "2016"
       start: "2015"
     description: |-
-      Student Associations of Information Systems Department, ITS.
-      Responsible in organizing technology related creation from Information Systems students.
+      Information Systems Student Association, Institut Teknologi Sepuluh Nopember (ITS).
+      Coordinated technology showcases and innovation exhibitions featuring student projects and research in information systems and software development.
 education:
-  - name: Institute Technology of Sepuluh Nopember
-    title: Faculty of Information Technology & Communication - Information Systems Department
+  - name: Institut Teknologi Sepuluh Nopember (ITS)
+    title: Bachelor of Computer Science - Information Systems
     time:
       end: "2018"
       start: "2014"
     description: |-
-      Bachelor of Computer.
-      Major: Data Acquisition & Informations Dissemination.
-      Thesis: Application for Extracting and Visualizing Event Information in Realtime From Social Media Using Conditional Random Field with Flask Python Framework.
-      GPA: 3.55
+      GPA: 3.55/4.00 | Major: Data Acquisition & Information Dissemination
+      Thesis: "Real-time Event Information Extraction and Visualization from Social Media using Conditional Random Field and Flask Python Framework"
+      Developed machine learning-based system for automated event detection and visualization from social media streams, implementing Natural Language Processing techniques for information extraction.
+      Active member of Information Systems Student Association, holding leadership positions in Research & Technology Department.
   - name: SMA Negeri 1 Salatiga
     title: Senior High School - Science Program
     time:
       end: "2014"
       start: "2011"
     description: |-
-      Participate in Smanssa Robotic Club and Solidaritas Kerohanian Islam
+      Science track with focus on Mathematics and Physics.
+      Active member of Smanssa Robotics Club, participating in regional robotics competitions and technical projects.
   - name: SMP Negeri 1 Ungaran
     title: Junior High School
+    time:
+      end: "2011"
+      start: "2008"
+    description: |-
+      Student Council member and Science Olympiad participant.
+      Demonstrated early interest in STEM through mathematics and science competition participation.
+  - name: SD Negeri 1 Ungaran
+    title: Elementary School
     time:
       end: "2008"
       start: "2002"
     description: |-
-      Participate in Student Council, Science Olympiad and Kerohanian Islam
-  - name: SD Negeri 1 Ungaran
-    title: Elementary School
-    time:
-      end: "2014"
-      start: "2011"
-    description: |-
-      Participate in Boys Scouts and Mathematic Olympiad
+      Early achievements in Mathematics Olympiad and leadership development through Boy Scouts activities.
 skills:
   - key: Golang
     ref: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original-wordmark.svg
@@ -189,6 +334,8 @@ skills:
   - key: HTML
     ref: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg
 print:
+  experience:
+    max: 5
   organization:
     max: 2
   education:

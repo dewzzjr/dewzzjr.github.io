@@ -8,5 +8,54 @@
     <link rel="icon" type="image/x-icon" href="https://pkg.go.dev/static/shared/logo/go-white.svg">
     <link href="public/main.css" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/6f48c57228.js" crossorigin="anonymous"></script>
+    <script>
+      // Dynamic duration calculator for tooltips
+      function calculateDuration(startDate, endDate) {
+        const start = new Date(startDate);
+        const end = endDate ? new Date(endDate) : new Date();
+        
+        let years = end.getFullYear() - start.getFullYear();
+        let months = end.getMonth() - start.getMonth();
+        
+        if (months < 0) {
+          years--;
+          months += 12;
+        }
+        
+        const parts = [];
+        if (years > 0) {
+          parts.push(`${years} year${years !== 1 ? 's' : ''}`);
+        }
+        if (months > 0) {
+          parts.push(`${months} month${months !== 1 ? 's' : ''}`);
+        }
+        if (parts.length === 0) {
+          parts.push('Less than a month');
+        }
+        
+        return parts.join(' ');
+      }
+      
+      function updateDynamicDurations() {
+        document.querySelectorAll('.dynamic-duration').forEach(element => {
+          const startDate = element.getAttribute('data-start');
+          const endDate = element.getAttribute('data-end');
+          const isOngoing = element.getAttribute('data-ongoing') === 'true';
+          
+          if (startDate) {
+            const duration = calculateDuration(startDate, endDate);
+            element.setAttribute('data-tip', duration);
+          }
+        });
+      }
+      
+      // Update on page load
+      document.addEventListener('DOMContentLoaded', () => {
+        updateDynamicDurations();
+        
+        // Update every hour for ongoing positions
+        setInterval(updateDynamicDurations, 3600000);
+      });
+    </script>
   </head>
 {{- end }}

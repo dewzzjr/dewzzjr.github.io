@@ -8,15 +8,28 @@ import (
 )
 
 type Structure struct {
-	Name         string               `yaml:"name"`
-	Email        string               `yaml:"email"`
-	Description  template.HTML        `yaml:"description"`
-	About        []KeyRef             `yaml:"about"`
-	Skills       []KeyRef             `yaml:"skills"`
-	Experience   []Section[YearMonth] `yaml:"experience"`
-	Organization []Section[string]    `yaml:"organization"`
-	Education    []Section[string]    `yaml:"education"`
-	Print        map[string]Options   `yaml:"print"`
+	Name            string               `yaml:"name"`
+	Email           string               `yaml:"email"`
+	Description     template.HTML        `yaml:"description"`
+	About           []KeyRef             `yaml:"about"`
+	TechnicalSkills []TechnicalCategory  `yaml:"technical_skills"`
+	Skills          []KeyRef             `yaml:"skills"`
+	Experience      []Section[YearMonth] `yaml:"experience"`
+	Organization    []Section[string]    `yaml:"organization"`
+	Education       []Section[string]    `yaml:"education"`
+	Print           map[string]Options   `yaml:"print"`
+}
+
+type TechnicalCategory struct {
+	Category string          `yaml:"category"`
+	Items    []TechnicalItem `yaml:"items"`
+}
+
+type TechnicalItem struct {
+	Name        string `yaml:"name"`
+	Experience  string `yaml:"experience"`
+	Proficiency string `yaml:"proficiency"`
+	Details     string `yaml:"details"`
 }
 
 type KeyRef struct {

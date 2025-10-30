@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@media print {
+  #about {
+    display: none !important;
+  }
+  #about * {
+    display: none !important;
+  }
+  #print {
+    display: flex !important;
+  }
+}

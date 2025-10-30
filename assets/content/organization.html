@@ -1,5 +1,5 @@
 {{- define "organization" }}
-          <section class="container center m-auto pt-7 print:mt-5 px-3 sm:px-1 min-h-screen print:min-h-0 flex flex-col" id="organization">
+          <section class="container center m-auto pt-7 print:mt-5 px-3 sm:px-1 min-h-screen print:min-h-0 flex flex-col print:hidden" id="organization">
             <h1 class="py-2 pl-5 ml-14 md:ml-16 print:ml-0 my-3 font-bold tracking-tight font-mono text-white text-3xl bg-blue-500 rounded-lg shadow-md shadow-blue-900">
               Organization & Voluntary
             </h1>
@@ -28,7 +28,7 @@
                     {{- if $organization.Time.End }}
                     {{ $organization.Time.End  }}
                     {{- else }}
-                    Now
+                    Present
                     {{- end }}
                   </time>
                 </div>

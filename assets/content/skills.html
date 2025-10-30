@@ -1,10 +1,10 @@
 {{- define "skills" }}
-          <section class="container center m-auto pt-7 print:mt-5 px-3 sm:px-1 min-h-screen print:min-h-0 flex flex-col" id="skills">
+          <section class="container center m-auto pt-7 print:mt-5 px-3 sm:px-1 min-h-screen print:min-h-0 flex flex-col print:hidden" id="skills">
             <h1 class="py-2 pl-5 ml-14 md:ml-16 print:ml-0 my-3 font-bold tracking-tight font-mono text-white text-3xl bg-blue-500 rounded-lg shadow-md shadow-blue-900">
-              Skills
+              Technologies Stack
             </h1>
             <div class="grow flex flex-col justify-center">
-              <h2 class="pl-12 py-4 font-bold tracking-tighter text-lg">Programming Languages & Tools</h2>
+              <h2 class="pl-12 py-4 font-bold tracking-tighter text-lg">Languages, Frameworks & Tools</h2>
               <div class="container grid grid-cols-3 sm:grid-cols-5 xl:grid-cols-10 print:grid-cols-3 justify-items-center print:justify-items-start items-center print:items-left gap-4">
                 {{- range $skill := .Skills }}
                 <div class="tooltip hover:tooltip-open print:flex gap-3" data-tip="{{ $skill.Key }}">
